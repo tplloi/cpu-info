@@ -20,7 +20,7 @@
     </queries>
 
     <application
-        android:name="com.kgurgul.roy93group.CpuInfoApp"
+        android:name=".CpuInfoApp"
         android:allowBackup="true"
         android:enableOnBackInvokedCallback="true"
         android:icon="@mipmap/ic_launcher"
@@ -34,7 +34,7 @@
         tools:targetApi="tiramisu">
 
         <activity
-            android:name="com.kgurgul.cpuinfo.features.HostActivity"
+            android:name=".features.HostActivity"
             android:exported="true"
             android:theme="@style/AppThemeBase.Launcher">
             <intent-filter>
@@ -44,7 +44,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.kgurgul.cpuinfo.features.applications.StorageUsageService" />
+        <service android:name=".features.applications.StorageUsageService" />
 
         <service android:name=".features.ramwidget.RefreshService" />
 

@@ -23,7 +23,7 @@
 
         <variable
             name="viewModel"
-            type="com.kgurgul.cpuinfo.features.temperature.TemperatureViewModel" />
+            type="com.roy93group.cpuinfo.features.temperature.TemperatureViewModel" />
 
     </data>
 

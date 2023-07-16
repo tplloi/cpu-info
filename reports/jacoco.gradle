@@ -58,8 +58,8 @@ task jacocoTestReport(type: JacocoReport, dependsOn: 'testDebugUnitTest') {
             '**/*_*Factory*.*', //Dagger2 generated code
             '*/*Component*.*', //Dagger2 generated code
             '**/*Module*.*', //Dagger2 generated code
-            '**/com/kgurgul/cpuinfo/di/**/*', // Dagger classes
-            '**/com/kgurgul/cpuinfo/databinding/**/*', // Android Data Binding
+            '**/com/roy93group/cpuinfo/di/**/*', // Dagger classes
+            '**/com/roy93group/cpuinfo/databinding/**/*', // Android Data Binding
             '**/android/databinding/**/*', // Android Data Binding
             '**/com/bumptech/glide/**/*', // Glide
             '**/*Activity*.class',

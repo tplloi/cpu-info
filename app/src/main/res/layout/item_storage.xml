@@ -32,7 +32,7 @@
         android:textStyle="bold"
         tools:text="Internal: 1.3GB / 4GB" />
 
-    <com.kgurgul.roy93group.widgets.progress.IconRoundCornerProgressBar
+    <com.roy93group.cpuinfo.widgets.progress.IconRoundCornerProgressBar
         android:id="@+id/storage_progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

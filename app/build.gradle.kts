@@ -12,7 +12,7 @@ kapt {
 }
 
 android {
-    namespace = "com.kgurgul.cpuinfo"
+    namespace = "com.roy93group.cpuinfo"
     compileSdk = Versions.COMPILE_SDK
 
     defaultConfig {

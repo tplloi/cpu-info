@@ -22,7 +22,7 @@
 
         <variable
             name="viewModel"
-            type="com.kgurgul.cpuinfo.features.applications.ApplicationsViewModel" />
+            type="com.roy93group.cpuinfo.features.applications.ApplicationsViewModel" />
 
     </data>
 
@@ -38,7 +38,7 @@
             app:onRefreshListener="@{() -> viewModel.refreshApplicationsList()}"
             app:refreshing="@{safeUnbox(viewModel.isLoading)}">
 
-            <com.kgurgul.roy93group.widgets.swiperv.SwipeMenuRecyclerView
+            <com.roy93group.cpuinfo.widgets.swiperv.SwipeMenuRecyclerView
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

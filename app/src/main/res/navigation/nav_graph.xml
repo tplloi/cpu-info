@@ -21,31 +21,31 @@
 
     <fragment
         android:id="@+id/hardware"
-        android:name="com.kgurgul.cpuinfo.features.information.InfoContainerFragment"
+        android:name="com.roy93group.cpuinfo.features.information.InfoContainerFragment"
         android:label="@string/hardware"
         tools:layout="@layout/fragment_info" />
 
     <fragment
         android:id="@+id/applications"
-        android:name="com.kgurgul.cpuinfo.features.applications.ApplicationsFragment"
+        android:name="com.roy93group.cpuinfo.features.applications.ApplicationsFragment"
         android:label="@string/applications"
         tools:layout="@layout/fragment_applications" />
 
     <fragment
         android:id="@+id/processes"
-        android:name="com.kgurgul.cpuinfo.features.processes.ProcessesFragment"
+        android:name="com.roy93group.cpuinfo.features.processes.ProcessesFragment"
         android:label="@string/processes"
         tools:layout="@layout/fragment_processes" />
 
     <fragment
         android:id="@+id/temperature"
-        android:name="com.kgurgul.cpuinfo.features.temperature.TemperatureFragment"
+        android:name="com.roy93group.cpuinfo.features.temperature.TemperatureFragment"
         android:label="@string/temperature"
         tools:layout="@layout/fragment_temperature" />
 
     <fragment
         android:id="@+id/settings"
-        android:name="com.kgurgul.cpuinfo.features.settings.SettingsFragment"
+        android:name="com.roy93group.cpuinfo.features.settings.SettingsFragment"
         android:label="@string/settings" />
 
 </navigation>
