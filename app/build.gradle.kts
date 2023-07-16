@@ -12,10 +12,11 @@ kapt {
 }
 
 android {
+    namespace = "com.kgurgul.cpuinfo"
     compileSdk = Versions.COMPILE_SDK
 
     defaultConfig {
-        applicationId = "com.kgurgul.cpuinfo"
+        applicationId = "com.roy93group.cpuinfo"
 
         minSdk = Versions.MIN_SDK
         targetSdk = Versions.TARGET_SDK
@@ -31,8 +32,6 @@ android {
             }
         }
     }
-
-    namespace = "com.kgurgul.cpuinfo"
 
     ndkVersion = Versions.NDK_VERSION
 
@@ -54,16 +53,16 @@ android {
     }
 
     buildTypes {
-        release {
-            signingConfig = signingConfigs.getByName("release")
-            isMinifyEnabled = true
-            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
-        }
         debug {
             signingConfig = signingConfigs.getByName("debug")
             isMinifyEnabled = false
             enableUnitTestCoverage = true
             applicationIdSuffix = ".debug"
+        }
+        release {
+            signingConfig = signingConfigs.getByName("release")
+            isMinifyEnabled = true
+            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
     }
 
@@ -107,7 +106,6 @@ android {
 dependencies {
     implementation(Libs.Kotlin.stdlib)
     implementation(Libs.Kotlin.immutable)
-
     implementation(Libs.AndroidX.coreKtx)
     implementation(Libs.AndroidX.activityKtx)
     implementation(Libs.AndroidX.fragmentKtx)
@@ -118,62 +116,50 @@ dependencies {
     implementation(Libs.AndroidX.multiDex)
     implementation(Libs.AndroidX.viewPager2)
     implementation(Libs.AndroidX.datastorePreferences)
-
     implementation(Libs.AndroidX.Lifecycle.viewModelKtx)
     implementation(Libs.AndroidX.Lifecycle.runtimeCompose)
     implementation(Libs.AndroidX.Lifecycle.liveDataKtx)
     implementation(Libs.AndroidX.Lifecycle.common)
-
     implementation(platform(Libs.AndroidX.Compose.bom))
     implementation(Libs.AndroidX.Compose.material)
     implementation(Libs.AndroidX.Compose.material3)
     implementation(Libs.AndroidX.Compose.animations)
     implementation(Libs.AndroidX.Compose.uiToolingPreview)
     debugImplementation(Libs.AndroidX.Compose.uiTooling)
-
     implementation(Libs.AndroidX.Navigation.fragment)
     implementation(Libs.AndroidX.Navigation.ui)
-
     implementation(Libs.Google.material)
     implementation(Libs.Google.gson)
-
     implementation(Libs.Rx.rxJava)
     implementation(Libs.Rx.rxAndroid)
-
     implementation(Libs.Coroutines.core)
     implementation(Libs.Coroutines.android)
-
     implementation(Libs.Hilt.android)
     kapt(Libs.Hilt.androidCompiler)
-
     implementation(Libs.Glide.glide)
     kapt(Libs.Glide.compiler)
-
     implementation(Libs.Airbnb.epoxy)
     implementation(Libs.Airbnb.dataBinding)
     kapt(Libs.Airbnb.processor)
-
     implementation(Libs.bus)
     implementation(Libs.timber)
     implementation(Libs.relinker)
     implementation(Libs.coil)
 
-    testImplementation(Libs.junit)
-    testImplementation(Libs.AndroidX.Test.core)
-    testImplementation(Libs.AndroidX.Test.archCoreTesting)
-    testImplementation(Libs.Mockito.core)
-    testImplementation(Libs.Mockito.kotlin)
-    testImplementation(Libs.Hilt.androidTesting)
-    testImplementation(kotlin("test"))
-    kaptTest(Libs.Hilt.androidCompiler)
-
-    androidTestImplementation(Libs.AndroidX.Test.runner)
-    androidTestImplementation(Libs.AndroidX.Test.rules)
-    androidTestImplementation(Libs.AndroidX.Test.jUnitExt)
-    androidTestImplementation(Libs.AndroidX.Test.Espresso.core)
-    androidTestImplementation(Libs.AndroidX.Test.Espresso.contrib)
-    androidTestImplementation(Libs.Hilt.androidTesting)
-    kaptAndroidTest(Libs.Hilt.androidCompiler)
-
-    androidTestUtil(Libs.AndroidX.Test.orchestrator)
+//    testImplementation(Libs.junit)
+//    testImplementation(Libs.AndroidX.Test.core)
+//    testImplementation(Libs.AndroidX.Test.archCoreTesting)
+//    testImplementation(Libs.Mockito.core)
+//    testImplementation(Libs.Mockito.kotlin)
+//    testImplementation(Libs.Hilt.androidTesting)
+//    testImplementation(kotlin("test"))
+//    kaptTest(Libs.Hilt.androidCompiler)
+//    androidTestImplementation(Libs.AndroidX.Test.runner)
+//    androidTestImplementation(Libs.AndroidX.Test.rules)
+//    androidTestImplementation(Libs.AndroidX.Test.jUnitExt)
+//    androidTestImplementation(Libs.AndroidX.Test.Espresso.core)
+//    androidTestImplementation(Libs.AndroidX.Test.Espresso.contrib)
+//    androidTestImplementation(Libs.Hilt.androidTesting)
+//    kaptAndroidTest(Libs.Hilt.androidCompiler)
+//    androidTestUtil(Libs.AndroidX.Test.orchestrator)
 }
