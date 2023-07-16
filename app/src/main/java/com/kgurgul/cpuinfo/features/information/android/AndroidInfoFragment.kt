@@ -19,8 +19,8 @@ package com.kgurgul.cpuinfo.features.information.android
 import androidx.fragment.app.viewModels
 import com.kgurgul.cpuinfo.features.information.base.BaseRvFragment
 import com.kgurgul.cpuinfo.features.information.base.InfoItemsAdapter
-import com.kgurgul.cpuinfo.utils.DividerItemDecoration
-import com.kgurgul.cpuinfo.utils.lifecycleawarelist.ListLiveDataObserver
+import com.kgurgul.roy93group.utils.DividerItemDecoration
+import com.kgurgul.roy93group.utils.lifecycleawarelist.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

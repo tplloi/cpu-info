@@ -4,8 +4,8 @@ import com.kgurgul.cpuinfo.data.provider.CpuDataNativeProvider
 import com.kgurgul.cpuinfo.data.provider.CpuDataProvider
 import com.kgurgul.cpuinfo.domain.ImmutableInteractor
 import com.kgurgul.cpuinfo.domain.model.CpuData
-import com.kgurgul.cpuinfo.utils.DispatchersProvider
-import com.kgurgul.cpuinfo.utils.Utils
+import com.kgurgul.roy93group.utils.DispatchersProvider
+import com.kgurgul.roy93group.utils.Utils
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject

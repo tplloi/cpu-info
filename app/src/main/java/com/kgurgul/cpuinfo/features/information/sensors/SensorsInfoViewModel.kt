@@ -21,9 +21,9 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import androidx.lifecycle.ViewModel
-import com.kgurgul.cpuinfo.utils.lifecycleawarelist.ListLiveData
-import com.kgurgul.cpuinfo.utils.round1
-import com.kgurgul.cpuinfo.utils.runOnApiAbove
+import com.kgurgul.roy93group.utils.lifecycleawarelist.ListLiveData
+import com.kgurgul.roy93group.utils.round1
+import com.kgurgul.roy93group.utils.runOnApiAbove
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

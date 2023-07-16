@@ -17,6 +17,9 @@
 package com.kgurgul.cpuinfo.utils.lifecycleawarelist
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import com.kgurgul.roy93group.utils.lifecycleawarelist.ListLiveData
+import com.kgurgul.roy93group.utils.lifecycleawarelist.ListLiveDataChangeEvent
+import com.kgurgul.roy93group.utils.lifecycleawarelist.ListLiveDataState
 import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.Test
@@ -30,7 +33,8 @@ class ListLiveDataTest {
     fun add() {
         /* Given */
         val listLiveData = ListLiveData<TestData>()
-        val expectedEvent = ListLiveDataChangeEvent(ListLiveDataState.ITEM_RANGE_INSERTED,
+        val expectedEvent = ListLiveDataChangeEvent(
+            ListLiveDataState.ITEM_RANGE_INSERTED,
                 0, 1)
 
         /* When */
@@ -47,7 +51,8 @@ class ListLiveDataTest {
         /* Given */
         val listLiveData = ListLiveData<TestData>()
         listLiveData.add(TestData("old"))
-        val expectedEvent = ListLiveDataChangeEvent(ListLiveDataState.ITEM_RANGE_INSERTED,
+        val expectedEvent = ListLiveDataChangeEvent(
+            ListLiveDataState.ITEM_RANGE_INSERTED,
                 0, 1)
 
         /* When */
@@ -63,7 +68,8 @@ class ListLiveDataTest {
     fun addAll() {
         /* Given */
         val listLiveData = ListLiveData<TestData>()
-        val expectedEvent = ListLiveDataChangeEvent(ListLiveDataState.ITEM_RANGE_INSERTED,
+        val expectedEvent = ListLiveDataChangeEvent(
+            ListLiveDataState.ITEM_RANGE_INSERTED,
                 0, 2)
 
         /* When */
@@ -83,7 +89,8 @@ class ListLiveDataTest {
         /* Given */
         val listLiveData = ListLiveData<TestData>()
         listLiveData.add(TestData("old"))
-        val expectedEvent = ListLiveDataChangeEvent(ListLiveDataState.ITEM_RANGE_INSERTED,
+        val expectedEvent = ListLiveDataChangeEvent(
+            ListLiveDataState.ITEM_RANGE_INSERTED,
                 0, 2)
 
         /* When */
@@ -104,7 +111,8 @@ class ListLiveDataTest {
         val listLiveData = ListLiveData<TestData>()
         listLiveData.add(TestData("old1"))
         listLiveData.add(TestData("old2"))
-        val expectedEvent = ListLiveDataChangeEvent(ListLiveDataState.ITEM_RANGE_REMOVED,
+        val expectedEvent = ListLiveDataChangeEvent(
+            ListLiveDataState.ITEM_RANGE_REMOVED,
                 0, 2)
 
         /* When */
@@ -121,7 +129,8 @@ class ListLiveDataTest {
         val listLiveData = ListLiveData<TestData>()
         listLiveData.add(TestData("old1"))
         listLiveData.add(TestData("old2"))
-        val expectedEvent = ListLiveDataChangeEvent(ListLiveDataState.ITEM_RANGE_REMOVED,
+        val expectedEvent = ListLiveDataChangeEvent(
+            ListLiveDataState.ITEM_RANGE_REMOVED,
                 0, 1)
 
         /* When */
@@ -140,7 +149,8 @@ class ListLiveDataTest {
         val itemToRemove = TestData("old1")
         val itemNotAdded = TestData("old2")
         listLiveData.add(itemToRemove)
-        val expectedEvent = ListLiveDataChangeEvent(ListLiveDataState.ITEM_RANGE_REMOVED,
+        val expectedEvent = ListLiveDataChangeEvent(
+            ListLiveDataState.ITEM_RANGE_REMOVED,
                 0, 1)
 
         /* When */
@@ -161,7 +171,8 @@ class ListLiveDataTest {
         listLiveData.add(TestData("old1"))
         listLiveData.add(TestData("old2"))
         val itemToSet = TestData("new1")
-        val expectedEvent = ListLiveDataChangeEvent(ListLiveDataState.ITEM_RANGE_CHANGED,
+        val expectedEvent = ListLiveDataChangeEvent(
+            ListLiveDataState.ITEM_RANGE_CHANGED,
                 1, 1)
 
         /* When */
@@ -188,7 +199,8 @@ class ListLiveDataTest {
         /* Then */
         assertEquals(2, listLiveData.size)
         assertEquals("new1", listLiveData[0].name)
-        assertEquals(ListLiveDataState.CHANGED,
+        assertEquals(
+            ListLiveDataState.CHANGED,
                 listLiveData.listStatusChangeNotificator.value!!.listLiveDataState)
     }
 

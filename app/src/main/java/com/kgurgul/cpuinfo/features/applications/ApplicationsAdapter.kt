@@ -26,10 +26,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.kgurgul.cpuinfo.R
-import com.kgurgul.cpuinfo.utils.Utils
-import com.kgurgul.cpuinfo.utils.glide.GlideApp
-import com.kgurgul.cpuinfo.utils.runOnApiBelow
-import com.kgurgul.cpuinfo.widgets.swiperv.SwipeHorizontalMenuLayout
+import com.kgurgul.roy93group.utils.Utils
+import com.kgurgul.roy93group.utils.glide.GlideApp
+import com.kgurgul.roy93group.utils.runOnApiBelow
+import com.kgurgul.roy93group.widgets.swiperv.SwipeHorizontalMenuLayout
 
 
 /**

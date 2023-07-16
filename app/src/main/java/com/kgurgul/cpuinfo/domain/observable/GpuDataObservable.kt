@@ -3,7 +3,7 @@ package com.kgurgul.cpuinfo.domain.observable
 import com.kgurgul.cpuinfo.data.provider.GpuDataProvider
 import com.kgurgul.cpuinfo.domain.MutableInteractor
 import com.kgurgul.cpuinfo.domain.model.GpuData
-import com.kgurgul.cpuinfo.utils.DispatchersProvider
+import com.kgurgul.roy93group.utils.DispatchersProvider
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 

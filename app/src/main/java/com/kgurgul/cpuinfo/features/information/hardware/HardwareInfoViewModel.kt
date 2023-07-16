@@ -32,9 +32,9 @@ import com.kgurgul.cpuinfo.R
 import com.kgurgul.cpuinfo.features.settings.SettingsFragment
 import com.kgurgul.cpuinfo.features.temperature.TemperatureFormatter
 import com.kgurgul.cpuinfo.features.temperature.TemperatureProvider
-import com.kgurgul.cpuinfo.utils.Utils
-import com.kgurgul.cpuinfo.utils.lifecycleawarelist.ListLiveData
-import com.kgurgul.cpuinfo.utils.round2
+import com.kgurgul.roy93group.utils.Utils
+import com.kgurgul.roy93group.utils.lifecycleawarelist.ListLiveData
+import com.kgurgul.roy93group.utils.round2
 import dagger.hilt.android.lifecycle.HiltViewModel
 import timber.log.Timber
 import java.io.File

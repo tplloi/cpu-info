@@ -22,9 +22,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kgurgul.cpuinfo.R
-import com.kgurgul.cpuinfo.utils.Utils
-import com.kgurgul.cpuinfo.utils.round2
-import com.kgurgul.cpuinfo.widgets.progress.IconRoundCornerProgressBar
+import com.kgurgul.roy93group.utils.Utils
+import com.kgurgul.roy93group.utils.round2
+import com.kgurgul.roy93group.widgets.progress.IconRoundCornerProgressBar
 
 /**
  * Adapter for items in [StorageInfoFragment]

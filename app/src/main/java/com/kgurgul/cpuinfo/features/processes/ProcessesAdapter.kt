@@ -23,7 +23,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kgurgul.cpuinfo.R
-import com.kgurgul.cpuinfo.utils.Utils
+import com.kgurgul.roy93group.utils.Utils
 
 /**
  * Simple adapter for processes

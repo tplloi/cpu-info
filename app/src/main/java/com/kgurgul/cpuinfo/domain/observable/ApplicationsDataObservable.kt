@@ -10,9 +10,9 @@ import com.kgurgul.cpuinfo.data.provider.ApplicationsDataProvider
 import com.kgurgul.cpuinfo.domain.MutableInteractor
 import com.kgurgul.cpuinfo.domain.model.ExtendedApplicationData
 import com.kgurgul.cpuinfo.domain.model.SortOrder
-import com.kgurgul.cpuinfo.utils.DispatchersProvider
-import com.kgurgul.cpuinfo.utils.wrapToResultFlow
-import com.kgurgul.cpuinfo.utils.wrappers.Result
+import com.kgurgul.roy93group.utils.DispatchersProvider
+import com.kgurgul.roy93group.utils.wrapToResultFlow
+import com.kgurgul.roy93group.utils.wrappers.Result
 import kotlinx.coroutines.flow.Flow
 import java.io.File
 import javax.inject.Inject

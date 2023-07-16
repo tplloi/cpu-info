@@ -17,6 +17,7 @@
 package com.kgurgul.cpuinfo.utils
 
 import android.content.SharedPreferences
+import com.kgurgul.roy93group.utils.Prefs
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test

@@ -26,8 +26,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.kgurgul.cpuinfo.R
 import com.kgurgul.cpuinfo.databinding.ActivityHostLayoutBinding
-import com.kgurgul.cpuinfo.utils.runOnApiAbove
-import com.kgurgul.cpuinfo.utils.setupEdgeToEdge
+import com.kgurgul.roy93group.utils.runOnApiAbove
+import com.kgurgul.roy93group.utils.setupEdgeToEdge
 import dagger.hilt.android.AndroidEntryPoint
 
 /**

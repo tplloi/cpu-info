@@ -21,9 +21,9 @@ import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel
 import com.kgurgul.cpuinfo.R
 import com.kgurgul.cpuinfo.features.temperature.list.TemperatureItem
-import com.kgurgul.cpuinfo.utils.NonNullMutableLiveData
-import com.kgurgul.cpuinfo.utils.Prefs
-import com.kgurgul.cpuinfo.utils.lifecycleawarelist.ListLiveData
+import com.kgurgul.roy93group.utils.NonNullMutableLiveData
+import com.kgurgul.roy93group.utils.Prefs
+import com.kgurgul.roy93group.utils.lifecycleawarelist.ListLiveData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable

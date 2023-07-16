@@ -22,9 +22,9 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.kgurgul.cpuinfo.R
-import com.kgurgul.cpuinfo.ui.theme.CpuInfoTheme
-import com.kgurgul.cpuinfo.utils.Utils
-import com.kgurgul.cpuinfo.utils.uninstallApp
+import com.kgurgul.roy93group.ui.theme.CpuInfoTheme
+import com.kgurgul.roy93group.utils.Utils
+import com.kgurgul.roy93group.utils.uninstallApp
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 

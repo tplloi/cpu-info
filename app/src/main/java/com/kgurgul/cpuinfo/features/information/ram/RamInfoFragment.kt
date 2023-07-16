@@ -29,7 +29,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.kgurgul.cpuinfo.R
 import com.kgurgul.cpuinfo.databinding.FragmentRecyclerViewBinding
 import com.kgurgul.cpuinfo.features.information.base.BaseFragment
-import com.kgurgul.cpuinfo.utils.runOnApiBelow
+import com.kgurgul.roy93group.utils.runOnApiBelow
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

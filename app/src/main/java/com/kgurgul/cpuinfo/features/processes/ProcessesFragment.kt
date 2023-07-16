@@ -31,8 +31,8 @@ import androidx.recyclerview.widget.SimpleItemAnimator
 import com.kgurgul.cpuinfo.R
 import com.kgurgul.cpuinfo.databinding.FragmentProcessesBinding
 import com.kgurgul.cpuinfo.features.information.base.BaseFragment
-import com.kgurgul.cpuinfo.utils.DividerItemDecoration
-import com.kgurgul.cpuinfo.utils.lifecycleawarelist.ListLiveDataObserver
+import com.kgurgul.roy93group.utils.DividerItemDecoration
+import com.kgurgul.roy93group.utils.lifecycleawarelist.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

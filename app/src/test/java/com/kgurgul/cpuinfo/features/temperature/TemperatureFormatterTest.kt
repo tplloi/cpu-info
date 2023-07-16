@@ -16,7 +16,7 @@
 
 package com.kgurgul.cpuinfo.features.temperature
 
-import com.kgurgul.cpuinfo.utils.Prefs
+import com.kgurgul.roy93group.utils.Prefs
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.mockito.ArgumentMatchers.anyString

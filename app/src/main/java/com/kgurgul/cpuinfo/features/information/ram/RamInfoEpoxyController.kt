@@ -4,7 +4,7 @@ import android.content.Context
 import com.airbnb.epoxy.TypedEpoxyController
 import com.kgurgul.cpuinfo.R
 import com.kgurgul.cpuinfo.itemValue
-import com.kgurgul.cpuinfo.utils.Utils
+import com.kgurgul.roy93group.utils.Utils
 import com.kgurgul.cpuinfo.verticalDivider
 
 class RamInfoEpoxyController(

@@ -43,14 +43,14 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.kgurgul.cpuinfo.R
 import com.kgurgul.cpuinfo.domain.model.ExtendedApplicationData
-import com.kgurgul.cpuinfo.ui.components.CpuSnackbar
-import com.kgurgul.cpuinfo.ui.components.CpuSwitchBox
-import com.kgurgul.cpuinfo.ui.components.DraggableBox
-import com.kgurgul.cpuinfo.ui.components.SurfaceTopAppBar
-import com.kgurgul.cpuinfo.ui.theme.CpuInfoTheme
-import com.kgurgul.cpuinfo.ui.theme.rowActionIconSize
-import com.kgurgul.cpuinfo.ui.theme.spacingSmall
-import com.kgurgul.cpuinfo.ui.theme.spacingXSmall
+import com.kgurgul.roy93group.ui.components.CpuSnackbar
+import com.kgurgul.roy93group.ui.components.CpuSwitchBox
+import com.kgurgul.roy93group.ui.components.DraggableBox
+import com.kgurgul.roy93group.ui.components.SurfaceTopAppBar
+import com.kgurgul.roy93group.ui.theme.CpuInfoTheme
+import com.kgurgul.roy93group.ui.theme.rowActionIconSize
+import com.kgurgul.roy93group.ui.theme.spacingSmall
+import com.kgurgul.roy93group.ui.theme.spacingXSmall
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.coroutines.launch
 

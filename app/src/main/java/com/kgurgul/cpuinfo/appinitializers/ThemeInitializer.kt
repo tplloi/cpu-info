@@ -2,7 +2,7 @@ package com.kgurgul.cpuinfo.appinitializers
 
 import android.app.Application
 import android.content.SharedPreferences
-import com.kgurgul.cpuinfo.utils.ThemeHelper
+import com.kgurgul.roy93group.utils.ThemeHelper
 import javax.inject.Inject
 
 /**

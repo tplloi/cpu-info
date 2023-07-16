@@ -37,12 +37,12 @@ import com.google.android.material.snackbar.Snackbar
 import com.kgurgul.cpuinfo.R
 import com.kgurgul.cpuinfo.databinding.FragmentApplicationsBinding
 import com.kgurgul.cpuinfo.features.information.base.BaseFragment
-import com.kgurgul.cpuinfo.utils.DividerItemDecoration
-import com.kgurgul.cpuinfo.utils.Utils
-import com.kgurgul.cpuinfo.utils.lifecycleawarelist.ListLiveDataObserver
-import com.kgurgul.cpuinfo.utils.uninstallApp
-import com.kgurgul.cpuinfo.utils.wrappers.EventObserver
-import com.kgurgul.cpuinfo.widgets.swiperv.SwipeMenuRecyclerView
+import com.kgurgul.roy93group.utils.DividerItemDecoration
+import com.kgurgul.roy93group.utils.Utils
+import com.kgurgul.roy93group.utils.lifecycleawarelist.ListLiveDataObserver
+import com.kgurgul.roy93group.utils.uninstallApp
+import com.kgurgul.roy93group.utils.wrappers.EventObserver
+import com.kgurgul.roy93group.widgets.swiperv.SwipeMenuRecyclerView
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
 

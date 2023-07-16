@@ -1,7 +1,7 @@
 package com.kgurgul.cpuinfo.domain.action
 
 import com.kgurgul.cpuinfo.domain.ResultInteractor
-import com.kgurgul.cpuinfo.utils.DispatchersProvider
+import com.kgurgul.roy93group.utils.DispatchersProvider
 import javax.inject.Inject
 
 class RamCleanupAction @Inject constructor(

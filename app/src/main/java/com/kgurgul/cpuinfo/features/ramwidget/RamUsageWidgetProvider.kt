@@ -29,8 +29,8 @@ import android.os.Build
 import android.widget.RemoteViews
 import com.kgurgul.cpuinfo.R
 import com.kgurgul.cpuinfo.features.HostActivity
-import com.kgurgul.cpuinfo.utils.runOnApiBelow
-import com.kgurgul.cpuinfo.widgets.arc.ArcProgress
+import com.kgurgul.roy93group.utils.runOnApiBelow
+import com.kgurgul.roy93group.widgets.arc.ArcProgress
 import org.greenrobot.eventbus.EventBus
 import timber.log.Timber
 

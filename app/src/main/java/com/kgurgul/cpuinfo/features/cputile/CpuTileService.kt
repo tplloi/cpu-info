@@ -6,7 +6,7 @@ import android.service.quicksettings.TileService
 import androidx.annotation.RequiresApi
 import com.kgurgul.cpuinfo.R
 import com.kgurgul.cpuinfo.data.provider.CpuDataProvider
-import com.kgurgul.cpuinfo.utils.DispatchersProvider
+import com.kgurgul.roy93group.utils.DispatchersProvider
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job

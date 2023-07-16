@@ -16,6 +16,7 @@
 
 package com.kgurgul.cpuinfo.utils
 
+import com.kgurgul.roy93group.utils.Utils
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

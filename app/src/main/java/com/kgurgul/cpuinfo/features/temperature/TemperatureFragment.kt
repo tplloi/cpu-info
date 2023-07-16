@@ -25,7 +25,7 @@ import com.kgurgul.cpuinfo.R
 import com.kgurgul.cpuinfo.databinding.FragmentTemperatureBinding
 import com.kgurgul.cpuinfo.features.information.base.BaseFragment
 import com.kgurgul.cpuinfo.features.temperature.list.TemperatureAdapter
-import com.kgurgul.cpuinfo.utils.lifecycleawarelist.ListLiveDataObserver
+import com.kgurgul.roy93group.utils.lifecycleawarelist.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

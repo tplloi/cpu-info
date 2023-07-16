@@ -21,8 +21,8 @@ import android.os.Build
 import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat
 import com.kgurgul.cpuinfo.R
-import com.kgurgul.cpuinfo.utils.ThemeHelper
-import com.kgurgul.cpuinfo.utils.runOnApiAbove
+import com.kgurgul.roy93group.utils.ThemeHelper
+import com.kgurgul.roy93group.utils.runOnApiAbove
 
 class SettingsFragment : PreferenceFragmentCompat(),
     SharedPreferences.OnSharedPreferenceChangeListener {

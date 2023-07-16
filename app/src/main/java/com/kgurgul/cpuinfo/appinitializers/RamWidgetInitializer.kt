@@ -6,7 +6,7 @@ import android.content.Intent
 import android.os.Build
 import com.kgurgul.cpuinfo.R
 import com.kgurgul.cpuinfo.features.ramwidget.RamUsageWidgetProvider
-import com.kgurgul.cpuinfo.utils.runOnApiBelow
+import com.kgurgul.roy93group.utils.runOnApiBelow
 import timber.log.Timber
 import javax.inject.Inject
 

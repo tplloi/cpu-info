@@ -20,7 +20,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.BatteryManager
-import com.kgurgul.cpuinfo.utils.Utils
+import com.kgurgul.roy93group.utils.Utils
 import dagger.hilt.android.qualifiers.ApplicationContext
 import io.reactivex.rxjava3.core.Maybe
 import io.reactivex.rxjava3.core.Observable
