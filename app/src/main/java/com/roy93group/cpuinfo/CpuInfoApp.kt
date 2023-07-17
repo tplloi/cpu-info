@@ -26,6 +26,7 @@ import javax.inject.Inject
  *
  * @author roy93group
  */
+//TODO permission ad_id
 @HiltAndroidApp
 class CpuInfoApp : MultiDexApplication() {
 
