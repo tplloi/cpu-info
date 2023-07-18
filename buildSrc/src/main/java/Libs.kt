@@ -1,22 +1,16 @@
 object Libs {
 
     const val androidGradlePlugin = "com.android.tools.build:gradle:8.0.2"
-
     const val bus = "org.greenrobot:eventbus:3.3.1"
-
     const val timber = "com.jakewharton.timber:timber:5.0.1"
-
     const val relinker = "com.getkeepsafe.relinker:relinker:1.4.5"
-
     const val junit = "junit:junit:4.13.2"
-
     const val coil = "io.coil-kt:coil-compose:2.4.0"
 
     object Kotlin {
         private const val version = "1.8.22"
         const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version"
         const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
-
         const val immutable = "org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.5"
     }
 
@@ -64,22 +58,21 @@ object Libs {
             const val uiToolingPreview = "androidx.compose.ui:ui-tooling-preview"
         }
 
-        object Test {
-            private const val version = "1.5.0"
-            const val core = "androidx.test:core:$version"
-            const val runner = "androidx.test:runner:1.5.2"
-            const val rules = "androidx.test:rules:$version"
-
-            const val archCoreTesting = "androidx.arch.core:core-testing:2.2.0"
-            const val jUnitExt = "androidx.test.ext:junit:1.1.5"
-            const val orchestrator = "androidx.test:orchestrator:1.4.2"
-
-            object Espresso {
-                private const val version = "3.5.1"
-                const val core = "androidx.test.espresso:espresso-core:$version"
-                const val contrib = "androidx.test.espresso:espresso-contrib:$version"
-            }
-        }
+//        object Test {
+//            private const val version = "1.5.0"
+//            const val core = "androidx.test:core:$version"
+//            const val runner = "androidx.test:runner:1.5.2"
+//            const val rules = "androidx.test:rules:$version"
+//            const val archCoreTesting = "androidx.arch.core:core-testing:2.2.0"
+//            const val jUnitExt = "androidx.test.ext:junit:1.1.5"
+//            const val orchestrator = "androidx.test:orchestrator:1.4.2"
+//
+//            object Espresso {
+//                private const val version = "3.5.1"
+//                const val core = "androidx.test.espresso:espresso-core:$version"
+//                const val contrib = "androidx.test.espresso:espresso-contrib:$version"
+//            }
+//        }
     }
 
     object Google {
@@ -113,10 +106,10 @@ object Libs {
         const val dataBinding = "com.airbnb.android:epoxy-databinding:$version"
     }
 
-    object Mockito {
-        const val core = "org.mockito:mockito-core:5.4.0"
-        const val kotlin = "org.mockito.kotlin:mockito-kotlin:5.0.0"
-    }
+//    object Mockito {
+//        const val core = "org.mockito:mockito-core:5.4.0"
+//        const val kotlin = "org.mockito.kotlin:mockito-kotlin:5.0.0"
+//    }
 
     object GradleVersion {
         const val version = "0.47.0"

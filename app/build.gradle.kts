@@ -20,8 +20,8 @@ android {
 
         minSdk = Versions.MIN_SDK
         targetSdk = Versions.TARGET_SDK
-        versionCode = Versions.VERSION_CODE
-        versionName = Versions.VERSION_NAME
+        versionCode = 20230718
+        versionName = "2023.07.18"
 
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled = true
