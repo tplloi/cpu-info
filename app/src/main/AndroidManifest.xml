@@ -59,7 +59,7 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/ram_widget_provider" />
+                android:resource="@xml/widget_ram_provider" />
         </receiver>
 
         <service

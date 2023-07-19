@@ -21,7 +21,7 @@ class RamWidgetInitializer @Inject constructor() : AppInitializer {
             Timber.d("updateRamWidget()")
             val intent = Intent(application, RamUsageWidgetProvider::class.java)
             intent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
-            val ids = intArrayOf(R.xml.ram_widget_provider)
+            val ids = intArrayOf(R.xml.widget_ram_provider)
             intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
             application.sendBroadcast(intent)
         }
