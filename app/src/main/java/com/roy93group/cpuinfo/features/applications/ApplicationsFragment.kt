@@ -76,12 +76,12 @@ class ApplicationsFragment : BaseFragment<FragmentApplicationsBinding>(
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-                menuInflater.inflate(R.menu.apps_menu, menu)
+                menuInflater.inflate(R.menu.menu_apps, menu)
             }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 return when (menuItem.itemId) {
-                    R.id.action_sorting -> {
+                    R.id.actionSorting -> {
                         viewModel.changeAppsSorting()
                         true
                     }

@@ -46,13 +46,13 @@ class RamInfoFragment : BaseFragment<FragmentRecyclerViewBinding>(R.layout.fragm
         menuHost.addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
                 runOnApiBelow(24) {
-                    menuInflater.inflate(R.menu.ram_menu, menu)
+                    menuInflater.inflate(R.menu.menu_ram, menu)
                 }
             }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 return when (menuItem.itemId) {
-                    R.id.action_gc -> {
+                    R.id.actionGc -> {
                         viewModel.onClearRamClicked()
                         Snackbar.make(
                             binding.mainContainer, getString(R.string.running_gc),
