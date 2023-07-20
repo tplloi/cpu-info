@@ -15,7 +15,7 @@
     </data>
 
     <LinearLayout
-        android:id="@+id/item_container"
+        android:id="@+id/itemContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -23,7 +23,7 @@
         android:paddingRight="8dp">
 
         <TextView
-            android:id="@+id/title_tv"
+            android:id="@+id/titleTv"
             style="@style/TextBody2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             tools:text="Soc name" />
 
         <TextView
-            android:id="@+id/value_tv"
+            android:id="@+id/valueTv"
             style="@style/TextBody2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

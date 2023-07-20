@@ -16,7 +16,7 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/item_container"
+    android:id="@+id/itemContainer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?attr/selectableItemBackground"
@@ -26,7 +26,7 @@
     android:padding="10dp">
 
     <TextView
-        android:id="@+id/title_tv"
+        android:id="@+id/titleTv"
         style="@style/TextBody2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
         tools:ignore="RtlHardcoded" />
 
     <TextView
-        android:id="@+id/value_tv"
+        android:id="@+id/valueTv"
         style="@style/TextBody2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

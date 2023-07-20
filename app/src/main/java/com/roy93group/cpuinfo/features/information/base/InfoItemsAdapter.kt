@@ -63,12 +63,12 @@ class InfoItemsAdapter(
         onClickListener: OnClickListener?
     ) : RecyclerView.ViewHolder(itemView) {
 
-        private val titleTv: TextView = itemView.findViewById(R.id.title_tv)
-        private val valueTv: TextView = itemView.findViewById(R.id.value_tv)
+        private val titleTv: TextView = itemView.findViewById(R.id.titleTv)
+        private val valueTv: TextView = itemView.findViewById(R.id.valueTv)
         private var item: Pair<String, String>? = null
 
         init {
-            itemView.findViewById<LinearLayout>(R.id.item_container).setOnLongClickListener { _ ->
+            itemView.findViewById<LinearLayout>(R.id.itemContainer).setOnLongClickListener { _ ->
                 item?.let {
                     if (it.second.isNotEmpty()) {
                         onClickListener?.onItemLongPressed(it)
