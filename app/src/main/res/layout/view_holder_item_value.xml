@@ -14,7 +14,7 @@
 
     </data>
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/itemContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
         android:paddingLeft="8dp"
         android:paddingRight="8dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTv"
             style="@style/TextBody2"
             android:layout_width="0dp"
@@ -35,7 +35,7 @@
             tools:ignore="RtlHardcoded"
             tools:text="Soc name" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/valueTv"
             style="@style/TextBody2"
             android:layout_width="0dp"
@@ -45,6 +45,6 @@
             android:text="@{value}"
             tools:text="Name 865" />
 
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </layout>
