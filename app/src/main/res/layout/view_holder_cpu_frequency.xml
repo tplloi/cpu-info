@@ -27,20 +27,19 @@
 
     </data>
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="8dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextBody2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{currentFrequencyDescription}"
             android:textStyle="bold"
             tools:text="Core 0: 400MHz" />
-
 
         <com.roy93group.cpuinfo.widgets.progress.IconRoundCornerProgressBar
             android:layout_width="match_parent"
@@ -55,13 +54,13 @@
             app:progressColor="@color/accent"
             app:radius="10dp" />
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:orientation="horizontal">
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextAnnotation2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -73,15 +72,15 @@
                 android:layout_height="0dp"
                 android:layout_weight="1" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextAnnotation2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@{maxFrequencyDescription}"
                 tools:text="25000Mhz" />
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </layout>
