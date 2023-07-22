@@ -43,7 +43,7 @@ class InfoItemsAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SingleItemViewHolder {
         val layout = if (layoutType == LayoutType.HORIZONTAL_LAYOUT)
-            R.layout.item_value else R.layout.v_item_value_vertical
+            R.layout.v_item_value else R.layout.v_item_value_vertical
         return SingleItemViewHolder(
             LayoutInflater.from(parent.context).inflate(
                 layout, parent,
