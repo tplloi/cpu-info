@@ -52,12 +52,12 @@ class ProcessesAdapter(private val processList: List<ProcessItem>) :
         processList.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nameTv: TextView = itemView.findViewById(R.id.proc_name_tv)
-        val pidTv: TextView = itemView.findViewById(R.id.proc_pid_tv)
-        val ppidTv: TextView = itemView.findViewById(R.id.proc_ppid_tv)
-        val nicenessTv: TextView = itemView.findViewById(R.id.proc_nic_tv)
-        val userTv: TextView = itemView.findViewById(R.id.proc_user_tv)
-        val rssTv: TextView = itemView.findViewById(R.id.proc_rss_tv)
-        val vsizeTv: TextView = itemView.findViewById(R.id.proc_vsize_tv)
+        val nameTv: TextView = itemView.findViewById(R.id.procNameTv)
+        val pidTv: TextView = itemView.findViewById(R.id.procPidTv)
+        val ppidTv: TextView = itemView.findViewById(R.id.procPpidTv)
+        val nicenessTv: TextView = itemView.findViewById(R.id.procNicTv)
+        val userTv: TextView = itemView.findViewById(R.id.procUserTv)
+        val rssTv: TextView = itemView.findViewById(R.id.procRssTv)
+        val vsizeTv: TextView = itemView.findViewById(R.id.procVsizeTv)
     }
 }

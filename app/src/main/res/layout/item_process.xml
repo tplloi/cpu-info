@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2017 KG Soft
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~     http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
-
+<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -30,7 +15,7 @@
         tools:ignore="RtlHardcoded,UselessParent">
 
         <TextView
-            android:id="@+id/proc_name_tv"
+            android:id="@+id/procNameTv"
             style="@style/TextBody1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,7 +29,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/proc_pid_tv"
+                android:id="@+id/procPidTv"
                 style="@style/TextBody2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -53,7 +38,7 @@
                 tools:text="PID: 25" />
 
             <TextView
-                android:id="@+id/proc_ppid_tv"
+                android:id="@+id/procPpidTv"
                 style="@style/TextBody2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -70,7 +55,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/proc_nic_tv"
+                android:id="@+id/procNicTv"
                 style="@style/TextBody2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -79,7 +64,7 @@
                 tools:text="NICENESS: 0" />
 
             <TextView
-                android:id="@+id/proc_user_tv"
+                android:id="@+id/procUserTv"
                 style="@style/TextBody2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -96,7 +81,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/proc_rss_tv"
+                android:id="@+id/procRssTv"
                 style="@style/TextBody2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -105,7 +90,7 @@
                 tools:text="RSS: 0" />
 
             <TextView
-                android:id="@+id/proc_vsize_tv"
+                android:id="@+id/procVsizeTv"
                 style="@style/TextBody2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
