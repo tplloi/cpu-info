@@ -119,8 +119,8 @@ public abstract class BaseRoundCornerProgressBar extends LinearLayout {
         LayoutInflater.from(context).inflate(initLayout(), this);
         // Initial default view
         layoutBackground = findViewById(R.id.layout_background);
-        layoutProgress = findViewById(R.id.layout_progress);
-        layoutSecondaryProgress = findViewById(R.id.layout_secondary_progress);
+        layoutProgress = findViewById(R.id.layoutProgress);
+        layoutSecondaryProgress = findViewById(R.id.layoutSecondaryProgress);
 
         initView();
     }

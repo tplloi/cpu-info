@@ -101,7 +101,7 @@ public class IconRoundCornerProgressBar extends AnimatedRoundCornerProgressBar {
 
     @Override
     protected void initView() {
-        ivProgressIcon = findViewById(R.id.iv_progress_icon);
+        ivProgressIcon = findViewById(R.id.ivProgressIcon);
         ivProgressIcon.setOnClickListener(view -> {
             if (iconClickListener != null) {
                 iconClickListener.onIconClick();
