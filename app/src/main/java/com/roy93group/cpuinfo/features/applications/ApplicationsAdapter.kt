@@ -59,15 +59,15 @@ class ApplicationsAdapter(
         private val storageLabel: String = itemView.context.getString(R.string.storage_used)
         private val calculatingLabel: String = itemView.context.getString(R.string.calculating)
 
-        private val iconIv: ImageView = itemView.findViewById(R.id.app_icon)
-        private val nameTv: TextView = itemView.findViewById(R.id.app_name)
-        private val packageTv: TextView = itemView.findViewById(R.id.app_package)
-        private val storageTv: TextView = itemView.findViewById(R.id.storage_usage)
+        private val iconIv: ImageView = itemView.findViewById(R.id.appIcon)
+        private val nameTv: TextView = itemView.findViewById(R.id.appName)
+        private val packageTv: TextView = itemView.findViewById(R.id.appPackage)
+        private val storageTv: TextView = itemView.findViewById(R.id.storageUsage)
         private val sml: SwipeHorizontalMenuLayout = itemView.findViewById(R.id.sml)
         private val mainContainer: View = itemView.findViewById(R.id.smContentView)
         private val settingsV: View = itemView.findViewById(R.id.settings)
         private val deleteView: View = itemView.findViewById(R.id.delete)
-        private val nativeButtonIV: ImageView = itemView.findViewById(R.id.native_button)
+        private val nativeButtonIV: ImageView = itemView.findViewById(R.id.nativeButton)
 
         @SuppressLint("SetTextI18n")
         fun bind(app: ExtendedAppInfo, appClickListener: ItemClickListener) {
