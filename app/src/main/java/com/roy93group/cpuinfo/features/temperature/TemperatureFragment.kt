@@ -22,7 +22,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.roy93group.cpuinfo.R
-import com.roy93group.cpuinfo.databinding.FragmentTemperatureBinding
+import com.roy93group.cpuinfo.databinding.FTemperatureBinding
 import com.roy93group.cpuinfo.features.information.base.BaseFragment
 import com.roy93group.cpuinfo.features.temperature.list.TemperatureAdapter
 import com.roy93group.cpuinfo.utils.lifecycleawarelist.ListLiveDataObserver
@@ -30,8 +30,8 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class TemperatureFragment : BaseFragment<FragmentTemperatureBinding>(
-    R.layout.fragment_temperature
+class TemperatureFragment : BaseFragment<FTemperatureBinding>(
+    R.layout.f_temperature
 ) {
 
     private val viewModel: TemperatureViewModel by viewModels()
