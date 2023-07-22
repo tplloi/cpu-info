@@ -34,6 +34,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.customview.view.AbsSavedState;
 
 /**
@@ -114,7 +115,7 @@ public class IconRoundCornerProgressBar extends AnimatedRoundCornerProgressBar {
     }
 
     @Override
-    protected void drawProgress(@NonNull LinearLayout layoutProgress,
+    protected void drawProgress(@NonNull LinearLayoutCompat layoutProgress,
                                 @NonNull GradientDrawable progressDrawable,
                                 float max,
                                 float progress,

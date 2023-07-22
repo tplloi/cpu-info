@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.FloatRange;
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.customview.view.AbsSavedState;
 
 import com.roy93group.cpuinfo.R;
@@ -173,10 +174,10 @@ public abstract class AnimatedRoundCornerProgressBar extends BaseRoundCornerProg
         return isSecondaryProgressAnimating;
     }
 
-    protected void onProgressChangeAnimationUpdate(LinearLayout layout, float current, float to) {
+    protected void onProgressChangeAnimationUpdate(LinearLayoutCompat layout, float current, float to) {
     }
 
-    protected void onProgressChangeAnimationEnd(LinearLayout layout) {
+    protected void onProgressChangeAnimationEnd(LinearLayoutCompat layout) {
     }
 
     protected void stopProgressAnimationImmediately() {
