@@ -122,8 +122,8 @@ class NewApplicationsFragment : Fragment() {
                     .inflate(R.layout.dialog_native_libs, null)
                 val arrayAdapter = ArrayAdapter(
                     requireContext(),
-                    R.layout.item_native_libs,
-                    R.id.native_name_tv,
+                    R.layout.v_item_native_libs,
+                    R.id.nativeNameTv,
                     event.nativeLibs,
                 )
                 dialogLayout.findViewById<ListView>(R.id.dialog_lv).apply {

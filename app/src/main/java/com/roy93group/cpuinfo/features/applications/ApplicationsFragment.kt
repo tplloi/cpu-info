@@ -208,8 +208,8 @@ class ApplicationsFragment : BaseFragment<FragmentApplicationsBinding>(
 
         val listView: ListView = dialogLayout.findViewById(R.id.dialog_lv)
         val arrayAdapter = ArrayAdapter(
-            requireContext(), R.layout.item_native_libs,
-            R.id.native_name_tv, libs
+            requireContext(), R.layout.v_item_native_libs,
+            R.id.nativeNameTv, libs
         )
         listView.adapter = arrayAdapter
         listView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
