@@ -47,9 +47,9 @@ class StorageAdapter(private val storageList: List<StorageItem>) :
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val storageDescriptionTv: TextView =
-            itemView.findViewById(R.id.storage_description_tv)
+            itemView.findViewById(R.id.storageDescriptionTv)
         private val storageProgress: IconRoundCornerProgressBar =
-            itemView.findViewById(R.id.storage_progress)
+            itemView.findViewById(R.id.storageProgress)
 
         fun bindViewHolder(storageItem: StorageItem) {
             val totalReadable = Utils.humanReadableByteCount(storageItem.storageTotal)
