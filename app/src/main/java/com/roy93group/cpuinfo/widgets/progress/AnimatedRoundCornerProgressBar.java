@@ -174,10 +174,10 @@ public abstract class AnimatedRoundCornerProgressBar extends BaseRoundCornerProg
         return isSecondaryProgressAnimating;
     }
 
-    protected void onProgressChangeAnimationUpdate(LinearLayoutCompat layout, float current, float to) {
+    protected void onProgressChangeAnimationUpdate(LinearLayout layout, float current, float to) {
     }
 
-    protected void onProgressChangeAnimationEnd(LinearLayoutCompat layout) {
+    protected void onProgressChangeAnimationEnd(LinearLayout layout) {
     }
 
     protected void stopProgressAnimationImmediately() {

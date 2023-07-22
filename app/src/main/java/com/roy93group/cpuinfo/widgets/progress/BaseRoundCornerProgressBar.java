@@ -35,7 +35,6 @@ import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.Px;
-import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.customview.view.AbsSavedState;
 
 import com.roy93group.cpuinfo.R;
@@ -52,9 +51,9 @@ public abstract class BaseRoundCornerProgressBar extends LinearLayout {
     protected final static int DEFAULT_PROGRESS_RADIUS = 30;
     protected final static int DEFAULT_BACKGROUND_PADDING = 0;
 
-    protected LinearLayoutCompat layoutBackground;
-    protected LinearLayoutCompat layoutProgress;
-    protected LinearLayoutCompat layoutSecondaryProgress;
+    protected LinearLayout layoutBackground;
+    protected LinearLayout layoutProgress;
+    protected LinearLayout layoutSecondaryProgress;
 
     protected GradientDrawable progressDrawable;
     protected GradientDrawable secondaryProgressDrawable;
@@ -100,7 +99,7 @@ public abstract class BaseRoundCornerProgressBar extends LinearLayout {
     protected abstract void initView();
 
     // Draw a progress by sub class
-    protected abstract void drawProgress(@NonNull LinearLayoutCompat layoutProgress,
+    protected abstract void drawProgress(@NonNull LinearLayout layoutProgress,
                                          @NonNull GradientDrawable progressDrawable,
                                          float max,
                                          float progress,
@@ -264,7 +263,7 @@ public abstract class BaseRoundCornerProgressBar extends LinearLayout {
     }
 
     // Change progress position by depending on isReverse flag
-    private void setupProgressReversing(@NonNull LinearLayoutCompat layoutProgress, boolean isReverse) {
+    private void setupProgressReversing(@NonNull LinearLayout layoutProgress, boolean isReverse) {
         RelativeLayout.LayoutParams progressParams = (RelativeLayout.LayoutParams) layoutProgress.getLayoutParams();
         removeLayoutParamsRule(progressParams);
         if (isReverse) {
