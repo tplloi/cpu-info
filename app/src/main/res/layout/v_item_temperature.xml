@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/temp_item_container"
@@ -8,7 +8,7 @@
     android:orientation="horizontal"
     android:padding="@dimen/temp_item_margin">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/temperatureIv"
         android:layout_width="@dimen/temp_image_size"
         android:layout_height="@dimen/temp_image_size"
@@ -17,7 +17,7 @@
         app:tint="?attr/colorOnBackground"
         tools:src="@mipmap/ic_launcher" />
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -25,7 +25,7 @@
         android:orientation="vertical"
         tools:ignore="RtlHardcoded">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/temperatureTypeTv"
             style="@style/TextBody1"
             android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
             android:layout_marginBottom="4dp"
             tools:text="@string/cpu_temperature" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/temperatureTv"
             style="@style/TextH7"
             android:layout_width="wrap_content"
@@ -41,6 +41,6 @@
             android:textStyle="bold"
             tools:text="50" />
 
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-</LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
