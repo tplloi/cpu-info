@@ -36,7 +36,7 @@ import javax.microedition.khronos.opengles.GL10
  *
  */
 @AndroidEntryPoint
-class GpuInfoFragment : BaseFragment<FRecyclerViewBinding>(R.layout.f_recycler_view) {
+class FragmentGpuInfo : BaseFragment<FRecyclerViewBinding>(R.layout.f_recycler_view) {
 
     private val viewModel: ViewModelGpuInfo by viewModels()
 
@@ -77,7 +77,7 @@ class GpuInfoFragment : BaseFragment<FRecyclerViewBinding>(R.layout.f_recycler_v
         super.onViewCreated(view, savedInstanceState)
         val controller = GpuInfoEpoxyController(requireContext())
         binding.recyclerView.adapter = controller.adapter
-        viewModel.viewState.observe(viewLifecycleOwner, { controller.setData(it) })
+        viewModel.viewState.observe(viewLifecycleOwner) { controller.setData(it) }
     }
 
     override fun onResume() {
