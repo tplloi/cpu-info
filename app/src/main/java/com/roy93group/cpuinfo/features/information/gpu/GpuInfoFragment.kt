@@ -38,7 +38,7 @@ import javax.microedition.khronos.opengles.GL10
 @AndroidEntryPoint
 class GpuInfoFragment : BaseFragment<FRecyclerViewBinding>(R.layout.f_recycler_view) {
 
-    private val viewModel: GpuInfoViewModel by viewModels()
+    private val viewModel: ViewModelGpuInfo by viewModels()
 
     private var glSurfaceView: GLSurfaceView? = null
     private val handler = Handler(Looper.getMainLooper())
