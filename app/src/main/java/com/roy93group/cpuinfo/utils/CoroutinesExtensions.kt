@@ -25,6 +25,7 @@ fun <T> wrapToResultFlow(block: suspend () -> T): Flow<MyResult<T>> = flow {
  * [MyResult.Loading] and finish with [MyResult.Success] in case of success otherwise it will emit
  * [MyResult.Error].
  */
+@Suppress("unused")
 fun <T> (suspend () -> T).asResultFlow(): Flow<MyResult<T>> = flow {
     emit(MyResult.Loading)
     try {
