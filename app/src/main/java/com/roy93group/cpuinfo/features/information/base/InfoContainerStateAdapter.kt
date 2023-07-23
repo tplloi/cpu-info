@@ -23,7 +23,7 @@ import com.roy93group.cpuinfo.features.information.android.AndroidInfoFragment
 import com.roy93group.cpuinfo.features.information.cpu.CpuInfoFragment
 import com.roy93group.cpuinfo.features.information.gpu.GpuInfoFragment
 import com.roy93group.cpuinfo.features.information.hardware.HardwareInfoFragment
-import com.roy93group.cpuinfo.features.information.ram.RamInfoFragment
+import com.roy93group.cpuinfo.features.information.ram.FragmentRamInfo
 import com.roy93group.cpuinfo.features.information.screen.FragmentScreenInfo
 import com.roy93group.cpuinfo.features.information.sensors.FragmentSensorsInfo
 import com.roy93group.cpuinfo.features.information.storage.FragmentStorageInfo
@@ -37,7 +37,7 @@ class InfoContainerStateAdapter(fragment: Fragment) : FragmentStateAdapter(fragm
         when (position) {
             CPU_POS -> CpuInfoFragment()
             GPU_POS -> GpuInfoFragment()
-            RAM_POS -> RamInfoFragment()
+            RAM_POS -> FragmentRamInfo()
             STORAGE_POS -> FragmentStorageInfo()
             SCREEN_POS -> FragmentScreenInfo()
             ANDROID_POS -> AndroidInfoFragment()
