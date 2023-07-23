@@ -119,14 +119,14 @@ class NewApplicationsFragment : Fragment() {
 
             is NewApplicationsViewModel.Event.ShowNativeLibraries -> {
                 val dialogLayout = LayoutInflater.from(context)
-                    .inflate(R.layout.dialog_native_libs, null)
+                    .inflate(R.layout.dlg_native_libs, null)
                 val arrayAdapter = ArrayAdapter(
                     requireContext(),
                     R.layout.v_item_native_libs,
                     R.id.nativeNameTv,
                     event.nativeLibs,
                 )
-                dialogLayout.findViewById<ListView>(R.id.dialog_lv).apply {
+                dialogLayout.findViewById<ListView>(R.id.dialogLv).apply {
                     adapter = arrayAdapter
                     onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
                         Utils.searchInGoogle(requireContext(), event.nativeLibs[position])

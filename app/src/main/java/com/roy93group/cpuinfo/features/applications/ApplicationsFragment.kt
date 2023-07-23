@@ -202,11 +202,11 @@ class ApplicationsFragment : BaseFragment<FApplicationsBinding>(
     private fun showNativeListDialog(nativeLibsDir: String) {
         val builder = MaterialAlertDialogBuilder(requireContext())
         val inflater = LayoutInflater.from(context)
-        val dialogLayout = inflater.inflate(R.layout.dialog_native_libs, null)
+        val dialogLayout = inflater.inflate(R.layout.dlg_native_libs, null)
         val nativeDirFile = File(nativeLibsDir)
         val libs = nativeDirFile.listFiles()?.map { it.name } ?: emptyList()
 
-        val listView: ListView = dialogLayout.findViewById(R.id.dialog_lv)
+        val listView: ListView = dialogLayout.findViewById(R.id.dialogLv)
         val arrayAdapter = ArrayAdapter(
             requireContext(), R.layout.v_item_native_libs,
             R.id.nativeNameTv, libs
