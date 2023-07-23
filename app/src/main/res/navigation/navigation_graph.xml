@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/hardware"
-        android:name="com.roy93group.cpuinfo.features.information.InfoContainerFragment"
+        android:name="com.roy93group.cpuinfo.features.information.FragmentInfoContainer"
         android:label="@string/hardware"
         tools:layout="@layout/f_info" />
 

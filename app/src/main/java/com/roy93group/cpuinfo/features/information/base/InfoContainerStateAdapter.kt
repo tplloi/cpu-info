@@ -26,7 +26,7 @@ import com.roy93group.cpuinfo.features.information.hardware.HardwareInfoFragment
 import com.roy93group.cpuinfo.features.information.ram.RamInfoFragment
 import com.roy93group.cpuinfo.features.information.screen.ScreenInfoFragment
 import com.roy93group.cpuinfo.features.information.sensors.SensorsInfoFragment
-import com.roy93group.cpuinfo.features.information.storage.StorageInfoFragment
+import com.roy93group.cpuinfo.features.information.storage.FragmentStorageInfo
 
 /**
  * Simple view pager for info fragments
@@ -38,7 +38,7 @@ class InfoContainerStateAdapter(fragment: Fragment) : FragmentStateAdapter(fragm
             CPU_POS -> CpuInfoFragment()
             GPU_POS -> GpuInfoFragment()
             RAM_POS -> RamInfoFragment()
-            STORAGE_POS -> StorageInfoFragment()
+            STORAGE_POS -> FragmentStorageInfo()
             SCREEN_POS -> ScreenInfoFragment()
             ANDROID_POS -> AndroidInfoFragment()
             HARDWARE_POS -> HardwareInfoFragment()
