@@ -20,7 +20,7 @@ import javax.inject.Inject
 //TODO ad applovin
 
 //done
-//TODO icon launcher
+//icon launcher
 
 @HiltAndroidApp
 class MyApp : MultiDexApplication() {
