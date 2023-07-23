@@ -25,7 +25,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.roy93group.cpuinfo.R
-import com.roy93group.cpuinfo.databinding.ActivityHostLayoutBinding
+import com.roy93group.cpuinfo.databinding.AHostLayoutBinding
 import com.roy93group.cpuinfo.utils.runOnApiAbove
 import com.roy93group.cpuinfo.utils.setupEdgeToEdge
 import dagger.hilt.android.AndroidEntryPoint
@@ -37,12 +37,12 @@ import dagger.hilt.android.AndroidEntryPoint
 class HostActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
-    private lateinit var binding: ActivityHostLayoutBinding
+    private lateinit var binding: AHostLayoutBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppThemeBase)
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_host_layout)
+        binding = DataBindingUtil.setContentView(this, R.layout.a_host_layout)
         setupEdgeToEdge()
         setupNavigation()
         setSupportActionBar(binding.toolbar)
@@ -57,7 +57,7 @@ class HostActivity : AppCompatActivity() {
 
     private fun setupNavigation() {
         navController =
-            (supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment)
+            (supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment)
                 .navController
         navController.addOnDestinationChangedListener { _, destination, _ ->
             setToolbarTitleAndElevation(destination.label.toString())
@@ -76,7 +76,7 @@ class HostActivity : AppCompatActivity() {
     @SuppressLint("NewApi")
     private fun setToolbarTitleAndElevation(title: String) {
         binding.toolbar.title = title
-       // binding.toolbar.isVisible = navController.currentDestination?.id != R.id.applications
+        // binding.toolbar.isVisible = navController.currentDestination?.id != R.id.applications
         if (navController.currentDestination?.id == R.id.hardware) {
             binding.toolbar.elevation = 0f
         } else {
