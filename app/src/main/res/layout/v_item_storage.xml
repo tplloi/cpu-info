@@ -28,7 +28,7 @@
         app:backgroundPadding="5dp"
         app:iconPadding="10dp"
         app:iconSize="40dp"
-        app:iconSrc="@drawable/root"
+        app:iconSrc="@drawable/ic_root"
         app:max="100.0"
         app:progressColor="@color/accent"
         app:radius="10dp" />

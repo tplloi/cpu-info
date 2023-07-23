@@ -80,7 +80,7 @@ class StorageInfoViewModel @Inject constructor(
         val internalTotal = getTotalMemorySize(MemoryType.INTERNAL)
         val internalUsed = internalTotal - getAvailableMemorySize(MemoryType.INTERNAL)
         val internalMemory = StorageItem(
-            resources.getString(R.string.internal), R.drawable.root,
+            resources.getString(R.string.internal), R.drawable.ic_root,
             internalTotal, internalUsed
         )
 
@@ -90,7 +90,7 @@ class StorageInfoViewModel @Inject constructor(
             val externalUsed = externalTotal - getAvailableMemorySize(MemoryType.EXTERNAL)
             externalMemory = StorageItem(
                 resources.getString(R.string.external),
-                R.drawable.folder, externalTotal, externalUsed
+                R.drawable.ic_folder, externalTotal, externalUsed
             )
         }
         return Pair(internalMemory, externalMemory)
@@ -111,14 +111,14 @@ class StorageInfoViewModel @Inject constructor(
                         val sdUsed = sdTotal - sdCardFile.usableSpace
                         val sdMemory = StorageItem(
                             resources.getString(R.string.external),
-                            R.drawable.sdcard, sdTotal, sdUsed
+                            R.drawable.ic_sdcard, sdTotal, sdUsed
                         )
                         listLiveData.add(sdMemory)
                     }
                 }, {
                     Timber.i("Cannot find SD card file")
                     val storageItem = listLiveData.find { storageItem ->
-                        storageItem.iconRes == R.drawable.sdcard
+                        storageItem.iconRes == R.drawable.ic_sdcard
                     }
                     if (storageItem != null) {
                         listLiveData.remove(storageItem)

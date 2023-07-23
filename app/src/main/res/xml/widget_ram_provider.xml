@@ -3,6 +3,6 @@
     android:initialLayout="@layout/v_widget"
     android:minWidth="40dp"
     android:minHeight="40dp"
-    android:previewImage="@drawable/ram_preview"
+    android:previewImage="@drawable/ic_ram_preview"
     android:resizeMode="horizontal|vertical"
     android:updatePeriodMillis="5000" />
