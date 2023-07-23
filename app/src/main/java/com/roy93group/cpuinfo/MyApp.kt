@@ -12,7 +12,6 @@ import javax.inject.Inject
  */
 
 //TODO change color primary
-//TODO icon launcher
 //TODO keystore
 //TODO rate, more, share, fb fan page, policy
 //TODO firebase
@@ -21,6 +20,7 @@ import javax.inject.Inject
 //TODO ad applovin
 
 //done
+//TODO icon launcher
 
 @HiltAndroidApp
 class MyApp : MultiDexApplication() {
