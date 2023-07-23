@@ -1,5 +1,8 @@
 package com.roy93group.cpuinfo.domain.model
 
+import androidx.annotation.Keep
+
+@Keep
 data class CpuData(
     val processorName: String,
     val abi: String,
