@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.SimpleItemAnimator
 import com.roy93group.cpuinfo.R
 import com.roy93group.cpuinfo.databinding.FTemperatureBinding
 import com.roy93group.cpuinfo.features.information.base.BaseFragment
-import com.roy93group.cpuinfo.features.temperature.list.TemperatureAdapter
+import com.roy93group.cpuinfo.features.temperature.list.AdapterTemperature
 import com.roy93group.cpuinfo.utils.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -41,17 +41,17 @@ class FragmentTemperature : BaseFragment<FTemperatureBinding>(
     }
 
     private fun setupRecycleView() {
-        val temperatureAdapter = TemperatureAdapter(
+        val adapterTemperature = AdapterTemperature(
             temperatureFormatter,
             viewModel.temperatureListLiveData
         )
         viewModel.temperatureListLiveData.listStatusChangeNotificator.observe(
             viewLifecycleOwner,
-            ListLiveDataObserver(temperatureAdapter)
+            ListLiveDataObserver(adapterTemperature)
         )
         binding.apply {
             tempRv.layoutManager = LinearLayoutManager(requireContext())
-            tempRv.adapter = temperatureAdapter
+            tempRv.adapter = adapterTemperature
             (tempRv.itemAnimator as? SimpleItemAnimator)?.supportsChangeAnimations = false
         }
     }
