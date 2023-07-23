@@ -22,7 +22,7 @@ import com.roy93group.cpuinfo.R
 import com.roy93group.cpuinfo.features.information.android.AndroidInfoFragment
 import com.roy93group.cpuinfo.features.information.cpu.CpuInfoFragment
 import com.roy93group.cpuinfo.features.information.gpu.GpuInfoFragment
-import com.roy93group.cpuinfo.features.information.hardware.HardwareInfoFragment
+import com.roy93group.cpuinfo.features.information.hardware.FragmentHardwareInfo
 import com.roy93group.cpuinfo.features.information.ram.FragmentRamInfo
 import com.roy93group.cpuinfo.features.information.screen.FragmentScreenInfo
 import com.roy93group.cpuinfo.features.information.sensors.FragmentSensorsInfo
@@ -41,7 +41,7 @@ class InfoContainerStateAdapter(fragment: Fragment) : FragmentStateAdapter(fragm
             STORAGE_POS -> FragmentStorageInfo()
             SCREEN_POS -> FragmentScreenInfo()
             ANDROID_POS -> AndroidInfoFragment()
-            HARDWARE_POS -> HardwareInfoFragment()
+            HARDWARE_POS -> FragmentHardwareInfo()
             SENSORS_POS -> FragmentSensorsInfo()
             else -> throw IllegalArgumentException("Unknown position for ViewPager2")
         }
