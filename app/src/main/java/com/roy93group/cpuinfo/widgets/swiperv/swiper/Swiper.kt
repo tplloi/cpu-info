@@ -1,58 +1,42 @@
-package com.roy93group.cpuinfo.widgets.swiperv.swiper;
+package com.roy93group.cpuinfo.widgets.swiperv.swiper
 
-import android.view.View;
-import android.widget.OverScroller;
+import android.view.View
+import android.widget.OverScroller
 
-import kotlin.Suppress;
+abstract class Swiper(val direction: Int, val menuView: View) {
+    @JvmField
+    protected var mChecker: Checker
 
-public abstract class Swiper {
-
-    protected static final int BEGIN_DIRECTION = 1;
-    protected static final int END_DIRECTION = -1;
-
-    private final int direction;
-    private final View menuView;
-    protected Checker mChecker;
-
-    public Swiper(int direction, View menuView) {
-        this.direction = direction;
-        this.menuView = menuView;
-        mChecker = new Checker();
+    init {
+        mChecker = Checker()
     }
 
-    public abstract boolean isMenuOpen(final int scrollDis);
+    abstract fun isMenuOpen(scrollDis: Int): Boolean
+    abstract fun isMenuOpenNotEqual(scrollDis: Int): Boolean
+    abstract fun autoOpenMenu(scroller: OverScroller?, scrollDis: Int, duration: Int)
+    abstract fun autoCloseMenu(scroller: OverScroller?, scrollDis: Int, duration: Int)
+    abstract fun checkXY(x: Int, y: Int): Checker?
+    abstract fun isClickOnContentView(contentView: View?, clickPoint: Float): Boolean
+    val menuWidth: Int
+        get() = menuView.width
 
-    public abstract boolean isMenuOpenNotEqual(final int scrollDis);
+    @get:Suppress("unused")
+    val menuHeight: Int
+        get() = menuView.height
 
-    public abstract void autoOpenMenu(OverScroller scroller, int scrollDis, int duration);
+    class Checker {
+        @JvmField
+        var x = 0
 
-    public abstract void autoCloseMenu(OverScroller scroller, int scrollDis, int duration);
+        @JvmField
+        var y = 0
 
-    public abstract Checker checkXY(int x, int y);
-
-    public abstract boolean isClickOnContentView(View contentView, float clickPoint);
-
-    public int getDirection() {
-        return direction;
+        @JvmField
+        var shouldResetSwiper = false
     }
 
-    public View getMenuView() {
-        return menuView;
+    companion object {
+        protected const val BEGIN_DIRECTION = 1
+        protected const val END_DIRECTION = -1
     }
-
-    public int getMenuWidth() {
-        return getMenuView().getWidth();
-    }
-
-    @Suppress(names = "unused")
-    public int getMenuHeight() {
-        return getMenuView().getHeight();
-    }
-
-    public static final class Checker {
-        public int x;
-        public int y;
-        public boolean shouldResetSwiper;
-    }
-
 }
