@@ -8,7 +8,7 @@ import java.io.RandomAccessFile
 import java.util.regex.Pattern
 import javax.inject.Inject
 
-class CpuDataProvider @Inject constructor() {
+class DataProviderCpu @Inject constructor() {
 
     fun getAbi(): String {
         return if (Build.VERSION.SDK_INT >= 21) {

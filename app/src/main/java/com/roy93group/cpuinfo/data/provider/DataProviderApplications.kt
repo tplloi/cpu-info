@@ -5,7 +5,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import javax.inject.Inject
 
-class ApplicationsDataProvider @Inject constructor(
+class DataProviderApplications @Inject constructor(
     private val packageManager: PackageManager
 ) {
 

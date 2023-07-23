@@ -4,7 +4,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class CpuDataNativeProvider @Inject constructor() {
+class DataNativeProviderCpu @Inject constructor() {
 
     external fun initLibrary()
 

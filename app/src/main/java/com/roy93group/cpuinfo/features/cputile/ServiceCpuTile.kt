@@ -5,7 +5,7 @@ import android.os.Build
 import android.service.quicksettings.TileService
 import androidx.annotation.RequiresApi
 import com.roy93group.cpuinfo.R
-import com.roy93group.cpuinfo.data.provider.CpuDataProvider
+import com.roy93group.cpuinfo.data.provider.DataProviderCpu
 import com.roy93group.cpuinfo.utils.DispatchersProvider
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
@@ -22,7 +22,7 @@ import kotlin.coroutines.CoroutineContext
 class ServiceCpuTile : TileService(), CoroutineScope {
 
     @Inject
-    lateinit var cpuDataProvider: CpuDataProvider
+    lateinit var dataProviderCpu: DataProviderCpu
 
     @Inject
     lateinit var dispatchersProvider: DispatchersProvider
@@ -34,11 +34,11 @@ class ServiceCpuTile : TileService(), CoroutineScope {
     private var refreshingJob: Job? = null
 
     private val minMaxAvg: Pair<Long, Long> by lazy {
-        val cpuCount = cpuDataProvider.getNumberOfCores()
+        val cpuCount = dataProviderCpu.getNumberOfCores()
         val minFreq = mutableListOf<Long>()
         val maxFreq = mutableListOf<Long>()
         for (i in 0 until cpuCount) {
-            val minMax = cpuDataProvider.getMinMaxFreq(i)
+            val minMax = dataProviderCpu.getMinMaxFreq(i)
             minFreq.add(minMax.first)
             maxFreq.add(minMax.second)
         }
@@ -90,10 +90,10 @@ class ServiceCpuTile : TileService(), CoroutineScope {
     }
 
     private fun averageCPUFreq(): Long {
-        val cpuCount = cpuDataProvider.getNumberOfCores()
+        val cpuCount = dataProviderCpu.getNumberOfCores()
         var sumFreq = 0L
         for (i in 0 until cpuCount) {
-            sumFreq += cpuDataProvider.getCurrentFreq(i)
+            sumFreq += dataProviderCpu.getCurrentFreq(i)
         }
         return (sumFreq / cpuCount)
     }

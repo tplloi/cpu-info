@@ -13,6 +13,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import dagger.multibindings.IntoSet
 
+@Suppress("unused")
 @Module
 @InstallIn(SingletonComponent::class)
 abstract class AppModuleBinds {

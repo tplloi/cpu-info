@@ -3,7 +3,7 @@ package com.roy93group.cpuinfo.data.provider
 import android.app.ActivityManager
 import javax.inject.Inject
 
-class RamDataProvider @Inject constructor(
+class DataProviderRam @Inject constructor(
     private val activityManager: ActivityManager
 ) {
 

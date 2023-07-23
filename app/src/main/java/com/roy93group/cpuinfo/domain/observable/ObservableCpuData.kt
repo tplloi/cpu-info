@@ -1,7 +1,7 @@
 package com.roy93group.cpuinfo.domain.observable
 
-import com.roy93group.cpuinfo.data.provider.CpuDataNativeProvider
-import com.roy93group.cpuinfo.data.provider.CpuDataProvider
+import com.roy93group.cpuinfo.data.provider.DataNativeProviderCpu
+import com.roy93group.cpuinfo.data.provider.DataProviderCpu
 import com.roy93group.cpuinfo.domain.ImmutableInteractor
 import com.roy93group.cpuinfo.domain.model.CpuData
 import com.roy93group.cpuinfo.utils.DispatchersProvider
@@ -12,37 +12,37 @@ import javax.inject.Inject
 
 class ObservableCpuData @Inject constructor(
     dispatchersProvider: DispatchersProvider,
-    private val cpuDataProvider: CpuDataProvider,
-    private val cpuDataNativeProvider: CpuDataNativeProvider
+    private val dataProviderCpu: DataProviderCpu,
+    private val dataNativeProviderCpu: DataNativeProviderCpu
 ) : ImmutableInteractor<Unit, CpuData>() {
 
     override val dispatcher = dispatchersProvider.io
 
     override fun createObservable(params: Unit) = flow {
         while (true) {
-            val processorName = cpuDataNativeProvider.getCpuName()
-            val abi = cpuDataProvider.getAbi()
-            val coreNumber = cpuDataProvider.getNumberOfCores()
-            val hasArmNeon = cpuDataNativeProvider.hasArmNeon()
+            val processorName = dataNativeProviderCpu.getCpuName()
+            val abi = dataProviderCpu.getAbi()
+            val coreNumber = dataProviderCpu.getNumberOfCores()
+            val hasArmNeon = dataNativeProviderCpu.hasArmNeon()
             val frequencies = mutableListOf<CpuData.Frequency>()
-            val l1dCaches = cpuDataNativeProvider.getL1dCaches()
+            val l1dCaches = dataNativeProviderCpu.getL1dCaches()
                 ?.joinToString(separator = "\n") { Utils.humanReadableByteCount(it.toLong()) }
                 ?: ""
-            val l1iCaches = cpuDataNativeProvider.getL1iCaches()
+            val l1iCaches = dataNativeProviderCpu.getL1iCaches()
                 ?.joinToString(separator = "\n") { Utils.humanReadableByteCount(it.toLong()) }
                 ?: ""
-            val l2Caches = cpuDataNativeProvider.getL2Caches()
+            val l2Caches = dataNativeProviderCpu.getL2Caches()
                 ?.joinToString(separator = "\n") { Utils.humanReadableByteCount(it.toLong()) }
                 ?: ""
-            val l3Caches = cpuDataNativeProvider.getL3Caches()
+            val l3Caches = dataNativeProviderCpu.getL3Caches()
                 ?.joinToString(separator = "\n") { Utils.humanReadableByteCount(it.toLong()) }
                 ?: ""
-            val l4Caches = cpuDataNativeProvider.getL4Caches()
+            val l4Caches = dataNativeProviderCpu.getL4Caches()
                 ?.joinToString(separator = "\n") { Utils.humanReadableByteCount(it.toLong()) }
                 ?: ""
             for (i in 0 until coreNumber) {
-                val (min, max) = cpuDataProvider.getMinMaxFreq(i)
-                val current = cpuDataProvider.getCurrentFreq(i)
+                val (min, max) = dataProviderCpu.getMinMaxFreq(i)
+                val current = dataProviderCpu.getCurrentFreq(i)
                 frequencies.add(CpuData.Frequency(min, max, current))
             }
             emit(

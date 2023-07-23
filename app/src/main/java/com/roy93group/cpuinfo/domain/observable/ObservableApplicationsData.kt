@@ -6,7 +6,7 @@ import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
-import com.roy93group.cpuinfo.data.provider.ApplicationsDataProvider
+import com.roy93group.cpuinfo.data.provider.DataProviderApplications
 import com.roy93group.cpuinfo.domain.MutableInteractor
 import com.roy93group.cpuinfo.domain.model.ExtendedApplicationData
 import com.roy93group.cpuinfo.domain.model.SortOrder
@@ -19,7 +19,7 @@ import javax.inject.Inject
 
 class ObservableApplicationsData @Inject constructor(
     dispatchersProvider: DispatchersProvider,
-    private val applicationsDataProvider: ApplicationsDataProvider,
+    private val dataProviderApplications: DataProviderApplications,
     private val packageManager: PackageManager
 ) : MutableInteractor<ObservableApplicationsData.Params, MyResult<List<ExtendedApplicationData>>>() {
 
@@ -27,7 +27,7 @@ class ObservableApplicationsData @Inject constructor(
 
     override fun createObservable(params: Params): Flow<MyResult<List<ExtendedApplicationData>>> {
         return wrapToResultFlow {
-            val apps = applicationsDataProvider.getInstalledApplications(params.withSystemApps)
+            val apps = dataProviderApplications.getInstalledApplications(params.withSystemApps)
                 .map {
                     ExtendedApplicationData(
                         name = it.loadLabel(packageManager).toString(),

@@ -7,7 +7,7 @@ import android.os.Build
 import com.roy93group.cpuinfo.R
 import javax.inject.Inject
 
-class GpuDataProvider @Inject constructor(
+class DataProviderGpu @Inject constructor(
     private val activityManager: ActivityManager,
     private val packageManager: PackageManager,
     private val resources: Resources,
