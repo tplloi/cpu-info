@@ -57,7 +57,7 @@ import com.roy93group.cpuinfo.R
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun ApplicationsScreen(
-    uiState: NewApplicationsViewModel.UiState,
+    uiState: ViewModelNewApplications.UiState,
     onAppClicked: (packageName: String) -> Unit,
     onRefreshApplications: () -> Unit,
     onSnackbarDismissed: () -> Unit,
@@ -293,7 +293,7 @@ private fun ApplicationItem(
 private fun ApplicationInfoPreview() {
     CpuInfoTheme {
         ApplicationsScreen(
-            uiState = NewApplicationsViewModel.UiState(
+            uiState = ViewModelNewApplications.UiState(
                 applications = persistentListOf(previewAppData1, previewAppData2)
             ),
             onAppClicked = {},
@@ -310,19 +310,19 @@ private fun ApplicationInfoPreview() {
 }
 
 private val previewAppData1 = ExtendedApplicationData(
-    "Cpu Info",
-    "com.roy93group.cpuinfo",
-    "/testDir",
-    null,
-    false,
-    Uri.parse("https://avatars.githubusercontent.com/u/6407041?s=32&v=4")
+    name = "Cpu Info",
+    packageName = "com.roy93group.cpuinfo",
+    sourceDir = "/testDir",
+    nativeLibraryDir = null,
+    hasNativeLibs = false,
+    appIconUri = Uri.parse("https://avatars.githubusercontent.com/u/6407041?s=32&v=4")
 )
 
 private val previewAppData2 = ExtendedApplicationData(
-    "Cpu Info1",
-    "com.roy93group.cpuinfo1",
-    "/testDir",
-    null,
-    false,
-    Uri.parse("https://avatars.githubusercontent.com/u/6407041?s=32&v=4")
+    name = "Cpu Info1",
+    packageName = "com.roy93group.cpuinfo1",
+    sourceDir = "/testDir",
+    nativeLibraryDir = null,
+    hasNativeLibs = false,
+    appIconUri = Uri.parse("https://avatars.githubusercontent.com/u/6407041?s=32&v=4")
 )

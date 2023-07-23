@@ -24,7 +24,7 @@ import java.io.File
 import javax.inject.Inject
 
 @HiltViewModel
-class NewApplicationsViewModel @Inject constructor(
+class ViewModelNewApplications @Inject constructor(
     private val applicationsDataObservable: ApplicationsDataObservable,
     private val getPackageNameInteractor: GetPackageNameInteractor,
 ) : ViewModel() {
@@ -105,6 +105,7 @@ class NewApplicationsViewModel @Inject constructor(
         onRefreshApplications()
     }
 
+    @Suppress("unused")
     fun onSortOrderChange(isAscending: Boolean) {
         _uiStateFlow.update { it.copy(isSortAscending = isAscending) }
         onRefreshApplications()

@@ -12,7 +12,7 @@
 
     <fragment
         android:id="@+id/applications"
-        android:name="com.roy93group.cpuinfo.features.applications.ApplicationsFragment"
+        android:name="com.roy93group.cpuinfo.features.applications.FragmentApplications"
         android:label="@string/applications"
         tools:layout="@layout/f_applications" />
 

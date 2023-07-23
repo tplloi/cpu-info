@@ -29,9 +29,9 @@ import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
 @AndroidEntryPoint
-class NewApplicationsFragment : Fragment() {
+class FragmentNewApplications : Fragment() {
 
-    private val viewModel: NewApplicationsViewModel by viewModels()
+    private val viewModel: ViewModelNewApplications by viewModels()
 
     private val uninstallReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
@@ -86,9 +86,9 @@ class NewApplicationsFragment : Fragment() {
     }
 
     @SuppressLint("InflateParams")
-    private fun handleEvent(event: NewApplicationsViewModel.Event) {
+    private fun handleEvent(event: ViewModelNewApplications.Event) {
         when (event) {
-            is NewApplicationsViewModel.Event.OpenApp -> {
+            is ViewModelNewApplications.Event.OpenApp -> {
                 val intent = requireContext().packageManager.getLaunchIntentForPackage(
                     event.packageName
                 )
@@ -103,7 +103,7 @@ class NewApplicationsFragment : Fragment() {
                 }
             }
 
-            is NewApplicationsViewModel.Event.OpenAppSettings -> {
+            is ViewModelNewApplications.Event.OpenAppSettings -> {
                 val uri = Uri.fromParts("package", event.packageName, null)
                 val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, uri)
                 try {
@@ -113,11 +113,11 @@ class NewApplicationsFragment : Fragment() {
                 }
             }
 
-            is NewApplicationsViewModel.Event.UninstallApp -> {
+            is ViewModelNewApplications.Event.UninstallApp -> {
                 requireActivity().uninstallApp(event.packageName)
             }
 
-            is NewApplicationsViewModel.Event.ShowNativeLibraries -> {
+            is ViewModelNewApplications.Event.ShowNativeLibraries -> {
                 val dialogLayout = LayoutInflater.from(context)
                     .inflate(R.layout.dlg_native_libs, null)
                 val arrayAdapter = ArrayAdapter(

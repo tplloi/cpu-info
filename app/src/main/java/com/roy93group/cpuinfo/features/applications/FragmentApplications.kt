@@ -1,19 +1,3 @@
-/*
- * Copyright 2017 KG Soft
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.roy93group.cpuinfo.features.applications
 
 import android.annotation.SuppressLint
@@ -47,11 +31,11 @@ import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
 
 @AndroidEntryPoint
-class ApplicationsFragment : BaseFragment<FApplicationsBinding>(
+class FragmentApplications : BaseFragment<FApplicationsBinding>(
     R.layout.f_applications
-), ApplicationsAdapter.ItemClickListener {
+), AdapterApplications.ItemClickListener {
 
-    private val viewModel: ApplicationsViewModel by viewModels()
+    private val viewModel: ViewModelApplications by viewModels()
 
     private val uninstallReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
@@ -98,21 +82,21 @@ class ApplicationsFragment : BaseFragment<FApplicationsBinding>(
      * Setup for [SwipeMenuRecyclerView]
      */
     private fun setupRecyclerView() {
-        val applicationsAdapter = ApplicationsAdapter(viewModel.applicationList, this)
+        val adapterApplications = AdapterApplications(viewModel.applicationList, this)
         viewModel.applicationList.listStatusChangeNotificator.observe(
             viewLifecycleOwner,
-            ListLiveDataObserver(applicationsAdapter)
+            ListLiveDataObserver(adapterApplications)
         )
 
         binding.recyclerView.apply {
             layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
-            adapter = applicationsAdapter
+            adapter = adapterApplications
             addItemDecoration(DividerItemDecoration(requireContext()))
         }
     }
 
     /**
-     * Register all fields from [ApplicationsViewModel] which should be observed
+     * Register all fields from [ViewModelApplications] which should be observed
      */
     private fun initObservables() {
         viewModel.shouldStartStorageServiceEvent.observe(viewLifecycleOwner, EventObserver {
