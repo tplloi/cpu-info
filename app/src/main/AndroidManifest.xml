@@ -22,7 +22,7 @@
     </queries>
 
     <application
-        android:name=".CpuInfoApp"
+        android:name=".MyApp"
         android:allowBackup="true"
         android:enableOnBackInvokedCallback="true"
         android:icon="@mipmap/ic_launcher"
