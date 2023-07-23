@@ -37,7 +37,7 @@ import dagger.hilt.android.AndroidEntryPoint
  *
  */
 @AndroidEntryPoint
-abstract class BaseRvFragment : Fragment(), InfoItemsAdapter.OnClickListener {
+abstract class BaseRvFragment : Fragment(), AdapterInfoItems.OnClickListener {
 
     protected lateinit var mainContainer: View
     protected lateinit var recyclerView: RecyclerView
