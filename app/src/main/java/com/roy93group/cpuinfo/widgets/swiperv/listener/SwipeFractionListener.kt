@@ -1,10 +1,8 @@
-package com.roy93group.cpuinfo.widgets.swiperv.listener;
+package com.roy93group.cpuinfo.widgets.swiperv.listener
 
-import com.roy93group.cpuinfo.widgets.swiperv.SwipeMenuLayout;
+import com.roy93group.cpuinfo.widgets.swiperv.SwipeMenuLayout
 
-
-public interface SwipeFractionListener {
-    void beginMenuSwipeFraction(SwipeMenuLayout swipeMenuLayout, float fraction);
-
-    void endMenuSwipeFraction(SwipeMenuLayout swipeMenuLayout, float fraction);
+interface SwipeFractionListener {
+    fun beginMenuSwipeFraction(swipeMenuLayout: SwipeMenuLayout?, fraction: Float)
+    fun endMenuSwipeFraction(swipeMenuLayout: SwipeMenuLayout?, fraction: Float)
 }

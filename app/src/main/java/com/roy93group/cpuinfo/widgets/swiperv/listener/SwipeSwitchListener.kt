@@ -1,15 +1,10 @@
-package com.roy93group.cpuinfo.widgets.swiperv.listener;
+package com.roy93group.cpuinfo.widgets.swiperv.listener
 
-import com.roy93group.cpuinfo.widgets.swiperv.SwipeMenuLayout;
+import com.roy93group.cpuinfo.widgets.swiperv.SwipeMenuLayout
 
-public interface SwipeSwitchListener {
-
-    void beginMenuClosed(SwipeMenuLayout swipeMenuLayout);
-
-    void beginMenuOpened(SwipeMenuLayout swipeMenuLayout);
-
-    void endMenuClosed(SwipeMenuLayout swipeMenuLayout);
-
-    void endMenuOpened(SwipeMenuLayout swipeMenuLayout);
-
+interface SwipeSwitchListener {
+    fun beginMenuClosed(swipeMenuLayout: SwipeMenuLayout?)
+    fun beginMenuOpened(swipeMenuLayout: SwipeMenuLayout?)
+    fun endMenuClosed(swipeMenuLayout: SwipeMenuLayout?)
+    fun endMenuOpened(swipeMenuLayout: SwipeMenuLayout?)
 }
