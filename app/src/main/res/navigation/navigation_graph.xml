@@ -8,13 +8,13 @@
         android:id="@+id/hardware"
         android:name="com.roy93group.cpuinfo.features.information.InfoContainerFragment"
         android:label="@string/hardware"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/f_info" />
 
     <fragment
         android:id="@+id/applications"
         android:name="com.roy93group.cpuinfo.features.applications.ApplicationsFragment"
         android:label="@string/applications"
-        tools:layout="@layout/fragment_applications" />
+        tools:layout="@layout/f_applications" />
 
     <fragment
         android:id="@+id/processes"

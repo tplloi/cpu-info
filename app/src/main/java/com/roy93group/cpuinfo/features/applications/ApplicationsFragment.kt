@@ -35,7 +35,7 @@ import androidx.lifecycle.Lifecycle
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.roy93group.cpuinfo.R
-import com.roy93group.cpuinfo.databinding.FragmentApplicationsBinding
+import com.roy93group.cpuinfo.databinding.FApplicationsBinding
 import com.roy93group.cpuinfo.features.information.base.BaseFragment
 import com.roy93group.cpuinfo.utils.DividerItemDecoration
 import com.roy93group.cpuinfo.utils.Utils
@@ -47,8 +47,8 @@ import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
 
 @AndroidEntryPoint
-class ApplicationsFragment : BaseFragment<FragmentApplicationsBinding>(
-    R.layout.fragment_applications
+class ApplicationsFragment : BaseFragment<FApplicationsBinding>(
+    R.layout.f_applications
 ), ApplicationsAdapter.ItemClickListener {
 
     private val viewModel: ApplicationsViewModel by viewModels()

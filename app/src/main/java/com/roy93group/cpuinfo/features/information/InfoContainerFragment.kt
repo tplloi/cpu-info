@@ -21,7 +21,7 @@ import android.view.View
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.roy93group.cpuinfo.R
-import com.roy93group.cpuinfo.databinding.FragmentInfoBinding
+import com.roy93group.cpuinfo.databinding.FInfoBinding
 import com.roy93group.cpuinfo.features.information.base.BaseFragment
 import com.roy93group.cpuinfo.features.information.base.InfoContainerStateAdapter
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,7 +31,7 @@ import dagger.hilt.android.AndroidEntryPoint
  *
  */
 @AndroidEntryPoint
-class InfoContainerFragment : BaseFragment<FragmentInfoBinding>(R.layout.fragment_info) {
+class InfoContainerFragment : BaseFragment<FInfoBinding>(R.layout.f_info) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
