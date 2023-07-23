@@ -1,19 +1,3 @@
-/*
- * Copyright 2017 KG Soft
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.roy93group.cpuinfo.features.ramwidget
 
 import android.app.Service
@@ -24,7 +8,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.*
 import androidx.preference.PreferenceManager
-import com.roy93group.cpuinfo.features.settings.SettingsFragment
+import com.roy93group.cpuinfo.features.settings.FragmentSettings
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import timber.log.Timber
@@ -35,7 +19,7 @@ import timber.log.Timber
  * </p>
  * Current implementation will hide widget on Android O!
  **/
-class RefreshService : Service() {
+class ServiceRefresh : Service() {
 
     companion object {
         const val RAM_BACKGROUND_DELAY = 60000L
@@ -55,7 +39,7 @@ class RefreshService : Service() {
         powerManager = getSystemService(Context.POWER_SERVICE) as PowerManager
         prefs = PreferenceManager.getDefaultSharedPreferences(this)
         ramUpdateDelay = prefs.getString(
-            SettingsFragment.KEY_RAM_REFRESHING,
+            FragmentSettings.KEY_RAM_REFRESHING,
             "10000"
         )!!.toLong()
 
@@ -63,35 +47,30 @@ class RefreshService : Service() {
         refreshHandler?.postDelayed(object : Runnable {
             override fun run() {
                 ramUpdateDelay = prefs.getString(
-                    SettingsFragment.KEY_RAM_REFRESHING,
+                    FragmentSettings.KEY_RAM_REFRESHING,
                     "10000"
                 )!!.toLong()
                 val isDeviceActive: Boolean =
-                    if (Build.VERSION.SDK_INT >= 20) {
-                        powerManager.isInteractive
-                    } else {
-                        @Suppress("DEPRECATION")
-                        powerManager.isScreenOn
-                    }
+                    powerManager.isInteractive
 
                 Timber.d("Device is active: $isDeviceActive")
 
                 if (isDeviceActive) {
                     Timber.d("Request for ram widget update - delay $ramUpdateDelay")
                     val intent = Intent(
-                        this@RefreshService,
+                        this@ServiceRefresh,
                         RamUsageWidgetProvider::class.java
                     )
                     intent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
-                    val widgetId = AppWidgetManager.getInstance(this@RefreshService)
+                    val widgetId = AppWidgetManager.getInstance(this@ServiceRefresh)
                         .getAppWidgetIds(
                             ComponentName(
-                                this@RefreshService,
+                                this@ServiceRefresh,
                                 RamUsageWidgetProvider::class.java
                             )
                         )
                     intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, widgetId)
-                    this@RefreshService.sendBroadcast(intent)
+                    this@ServiceRefresh.sendBroadcast(intent)
 
                     refreshHandler?.postDelayed(this, ramUpdateDelay)
                 } else {

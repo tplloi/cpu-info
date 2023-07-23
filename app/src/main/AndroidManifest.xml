@@ -48,7 +48,7 @@
 
         <service android:name=".features.applications.StorageUsageService" />
 
-        <service android:name=".features.ramwidget.RefreshService" />
+        <service android:name=".features.ramwidget.ServiceRefresh" />
 
         <receiver
             android:name=".features.ramwidget.RamUsageWidgetProvider"

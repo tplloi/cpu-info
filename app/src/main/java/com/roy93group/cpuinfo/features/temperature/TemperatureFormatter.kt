@@ -1,6 +1,6 @@
 package com.roy93group.cpuinfo.features.temperature
 
-import com.roy93group.cpuinfo.features.settings.SettingsFragment
+import com.roy93group.cpuinfo.features.settings.FragmentSettings
 import com.roy93group.cpuinfo.utils.Prefs
 import com.roy93group.cpuinfo.utils.round2
 import javax.inject.Inject
@@ -23,7 +23,7 @@ class TemperatureFormatter @Inject constructor(val prefs: Prefs) {
      * @param temp formatting temperature which will be formatted (passed in Celsius unit)
      */
     fun format(temp: Float): String {
-        val tempUnit = prefs.get(SettingsFragment.KEY_TEMPERATURE_UNIT, CELSIUS.toString())
+        val tempUnit = prefs.get(FragmentSettings.KEY_TEMPERATURE_UNIT, CELSIUS.toString())
             .toInt()
         return if (tempUnit == FAHRENHEIT) {
             val fahrenheit = temp * 9 / 5 + 32

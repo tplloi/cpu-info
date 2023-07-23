@@ -29,7 +29,7 @@ import android.net.wifi.WifiManager
 import android.os.BatteryManager
 import androidx.lifecycle.ViewModel
 import com.roy93group.cpuinfo.R
-import com.roy93group.cpuinfo.features.settings.SettingsFragment
+import com.roy93group.cpuinfo.features.settings.FragmentSettings
 import com.roy93group.cpuinfo.features.temperature.TemperatureFormatter
 import com.roy93group.cpuinfo.features.temperature.TemperatureProvider
 import com.roy93group.cpuinfo.utils.Utils
@@ -436,7 +436,7 @@ class HardwareInfoViewModel @Inject constructor(
     }
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
-        if (key == SettingsFragment.KEY_TEMPERATURE_UNIT) {
+        if (key == FragmentSettings.KEY_TEMPERATURE_UNIT) {
             refreshHardwareInfo()
         }
     }

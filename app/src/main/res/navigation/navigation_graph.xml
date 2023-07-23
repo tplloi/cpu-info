@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/settings"
-        android:name="com.roy93group.cpuinfo.features.settings.SettingsFragment"
+        android:name="com.roy93group.cpuinfo.features.settings.FragmentSettings"
         android:label="@string/settings" />
 
 </navigation>
