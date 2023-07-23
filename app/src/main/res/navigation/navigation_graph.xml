@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/temperature"
-        android:name="com.roy93group.cpuinfo.features.temperature.TemperatureFragment"
+        android:name="com.roy93group.cpuinfo.features.temperature.FragmentTemperature"
         android:label="@string/temperature"
         tools:layout="@layout/f_temperature" />
 

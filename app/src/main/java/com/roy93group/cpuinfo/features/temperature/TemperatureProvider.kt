@@ -1,19 +1,3 @@
-/*
- * Copyright 2017 KG Soft
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.roy93group.cpuinfo.features.temperature
 
 import android.content.Context
@@ -42,8 +26,7 @@ class TemperatureProvider @Inject constructor(@ApplicationContext val appContext
         val iFilter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
         val batteryStatus = appContext.registerReceiver(null, iFilter)
         return (batteryStatus?.getIntExtra(
-            BatteryManager.EXTRA_TEMPERATURE,
-            0
+            BatteryManager.EXTRA_TEMPERATURE, 0
         ) ?: 0) / 10
     }
 
@@ -52,7 +35,7 @@ class TemperatureProvider @Inject constructor(@ApplicationContext val appContext
      *
      * @return CPU temperature
      */
-    fun getCpuTemp(path: String): Float? {
+    fun getCpuTemp(path: String): Float {
         val temp = Utils.readOneLine(File(path)) ?: 0.0
 
         return if (isTemperatureValid(temp)) {
@@ -66,25 +49,22 @@ class TemperatureProvider @Inject constructor(@ApplicationContext val appContext
      * Scan device looking for CPU temperature in all well known locations
      */
     fun getCpuTemperatureFinder(): Maybe<CpuTemperatureResult> {
-        return Observable.fromIterable(CPU_TEMP_FILE_PATHS)
-            .map { path ->
-                val temp = Utils.readOneLine(File(path))
-                var validPath = ""
-                var currentTemp = 0.0
-                if (temp != null) {
-                    // Verify if we are in normal temperature range
-                    if (isTemperatureValid(temp)) {
-                        validPath = path
-                        currentTemp = temp
-                    } else if (isTemperatureValid(temp / 1000)) {
-                        validPath = path
-                        currentTemp = temp / 1000
-                    }
+        return Observable.fromIterable(CPU_TEMP_FILE_PATHS).map { path ->
+            val temp = Utils.readOneLine(File(path))
+            var validPath = ""
+            var currentTemp = 0.0
+            if (temp != null) {
+                // Verify if we are in normal temperature range
+                if (isTemperatureValid(temp)) {
+                    validPath = path
+                    currentTemp = temp
+                } else if (isTemperatureValid(temp / 1000)) {
+                    validPath = path
+                    currentTemp = temp / 1000
                 }
-                CpuTemperatureResult(validPath, currentTemp.toInt())
             }
-            .filter { (filePath) -> !filePath.isEmpty() }
-            .firstElement()
+            CpuTemperatureResult(validPath, currentTemp.toInt())
+        }.filter { (filePath) -> filePath.isNotEmpty() }.firstElement()
     }
 
     /**

@@ -28,7 +28,7 @@ import android.graphics.Canvas
 import android.os.Build
 import android.widget.RemoteViews
 import com.roy93group.cpuinfo.R
-import com.roy93group.cpuinfo.features.HostActivity
+import com.roy93group.cpuinfo.features.AHost
 import com.roy93group.cpuinfo.utils.runOnApiBelow
 import com.roy93group.cpuinfo.widgets.arc.ArcProgress
 import org.greenrobot.eventbus.EventBus
@@ -99,7 +99,7 @@ class RamUsageWidgetProvider : AppWidgetProvider() {
     }
 
     private fun buildButtonPendingIntent(context: Context): PendingIntent {
-        val intent = Intent(context, HostActivity::class.java)
+        val intent = Intent(context, AHost::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
         val mutableFlag = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE

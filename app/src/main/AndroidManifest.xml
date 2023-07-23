@@ -36,7 +36,7 @@
         tools:targetApi="tiramisu">
 
         <activity
-            android:name=".features.HostActivity"
+            android:name=".features.AHost"
             android:exported="true"
             android:theme="@style/AppThemeBase.Launcher">
             <intent-filter>
