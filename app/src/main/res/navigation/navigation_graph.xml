@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/processes"
-        android:name="com.roy93group.cpuinfo.features.processes.ProcessesFragment"
+        android:name="com.roy93group.cpuinfo.features.processes.FragmentProcesses"
         android:label="@string/processes"
         tools:layout="@layout/f_processes" />
 

@@ -1,19 +1,3 @@
-/*
- * Copyright 2017 KG Soft
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.roy93group.cpuinfo.features.processes
 
 import androidx.annotation.VisibleForTesting
@@ -35,7 +19,7 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 /**
- * ViewModel for [ProcessesFragment]
+ * ViewModel for [FragmentProcesses]
  **/
 @HiltViewModel
 class ProcessesViewModel @Inject constructor(
@@ -59,12 +43,9 @@ class ProcessesViewModel @Inject constructor(
     @Synchronized
     fun startProcessRefreshing() {
         if (refreshingDisposable == null || refreshingDisposable?.isDisposed == true) {
-            refreshingDisposable = getRefreshingInvoker()
-                .onBackpressureDrop()
-                .flatMapSingle { getSortedProcessListSingle() }
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ newProcessList ->
+            refreshingDisposable = getRefreshingInvoker().onBackpressureDrop()
+                .flatMapSingle { getSortedProcessListSingle() }.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread()).subscribe({ newProcessList ->
                     Timber.i("Processes refreshed")
                     processList.replace(newProcessList)
                 }, Timber::e)
@@ -82,8 +63,7 @@ class ProcessesViewModel @Inject constructor(
      * Return refreshing invoker
      */
     @VisibleForTesting(otherwise = VisibleForTesting.PACKAGE_PRIVATE)
-    internal fun getRefreshingInvoker(): Flowable<Long> =
-        Flowable.interval(0, 5, TimeUnit.SECONDS)
+    internal fun getRefreshingInvoker(): Flowable<Long> = Flowable.interval(0, 5, TimeUnit.SECONDS)
 
     /**
      * Change process list sorting type from ascending to descending or or vice versa
@@ -120,8 +100,7 @@ class ProcessesViewModel @Inject constructor(
      * Return [Single] with process list
      */
     private fun getSortedProcessListSingle(): Single<List<ProcessItem>> {
-        return psProvider.getPsList()
-            .map { processList ->
+        return psProvider.getPsList().map { processList ->
                 if (processList is ArrayList) {
                     if (isSortingAsc) {
                         processList.sortBy { it.name.uppercase() }

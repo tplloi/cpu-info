@@ -1,19 +1,3 @@
-/*
- * Copyright 2017 KG Soft
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.roy93group.cpuinfo.features.processes
 
 import android.annotation.SuppressLint
@@ -28,16 +12,22 @@ import com.roy93group.cpuinfo.utils.Utils
 /**
  * Simple adapter for processes
  **/
-class ProcessesAdapter(private val processList: List<ProcessItem>) :
-    RecyclerView.Adapter<ProcessesAdapter.ViewHolder>() {
+class AdapterProcesses(private val processList: List<ProcessItem>) :
+    RecyclerView.Adapter<AdapterProcesses.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.v_item_process, parent, false)
         return ViewHolder(v)
     }
 
     @SuppressLint("SetTextI18n")
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int
+    ) {
         val process = processList[position]
         holder.nameTv.text = process.name
         holder.pidTv.text = "PID: ${process.pid}"
