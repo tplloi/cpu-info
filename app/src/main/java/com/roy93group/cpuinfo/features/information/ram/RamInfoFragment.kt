@@ -27,13 +27,13 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import com.google.android.material.snackbar.Snackbar
 import com.roy93group.cpuinfo.R
-import com.roy93group.cpuinfo.databinding.FragmentRecyclerViewBinding
+import com.roy93group.cpuinfo.databinding.FRecyclerViewBinding
 import com.roy93group.cpuinfo.features.information.base.BaseFragment
 import com.roy93group.cpuinfo.utils.runOnApiBelow
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class RamInfoFragment : BaseFragment<FragmentRecyclerViewBinding>(R.layout.fragment_recycler_view) {
+class RamInfoFragment : BaseFragment<FRecyclerViewBinding>(R.layout.f_recycler_view) {
 
     private val viewModel: RamInfoViewModel by viewModels()
 

@@ -20,7 +20,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
 import com.roy93group.cpuinfo.R
-import com.roy93group.cpuinfo.databinding.FragmentRecyclerViewBinding
+import com.roy93group.cpuinfo.databinding.FRecyclerViewBinding
 import com.roy93group.cpuinfo.features.information.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -30,7 +30,7 @@ import dagger.hilt.android.AndroidEntryPoint
  * @author roy93group
  */
 @AndroidEntryPoint
-class CpuInfoFragment : BaseFragment<FragmentRecyclerViewBinding>(R.layout.fragment_recycler_view) {
+class CpuInfoFragment : BaseFragment<FRecyclerViewBinding>(R.layout.f_recycler_view) {
 
     private val viewModel: CpuInfoViewModel by viewModels()
 

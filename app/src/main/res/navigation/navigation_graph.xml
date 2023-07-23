@@ -20,7 +20,7 @@
         android:id="@+id/processes"
         android:name="com.roy93group.cpuinfo.features.processes.ProcessesFragment"
         android:label="@string/processes"
-        tools:layout="@layout/fragment_processes" />
+        tools:layout="@layout/f_processes" />
 
     <fragment
         android:id="@+id/temperature"

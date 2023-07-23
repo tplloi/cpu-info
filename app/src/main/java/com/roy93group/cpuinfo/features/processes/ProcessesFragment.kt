@@ -29,14 +29,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.roy93group.cpuinfo.R
-import com.roy93group.cpuinfo.databinding.FragmentProcessesBinding
+import com.roy93group.cpuinfo.databinding.FProcessesBinding
 import com.roy93group.cpuinfo.features.information.base.BaseFragment
 import com.roy93group.cpuinfo.utils.DividerItemDecoration
 import com.roy93group.cpuinfo.utils.lifecycleawarelist.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ProcessesFragment : BaseFragment<FragmentProcessesBinding>(R.layout.fragment_processes) {
+class ProcessesFragment : BaseFragment<FProcessesBinding>(R.layout.f_processes) {
 
     private val viewModel: ProcessesViewModel by viewModels()
 

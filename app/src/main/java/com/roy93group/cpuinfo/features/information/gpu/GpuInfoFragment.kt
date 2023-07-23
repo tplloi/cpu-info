@@ -25,7 +25,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.roy93group.cpuinfo.R
-import com.roy93group.cpuinfo.databinding.FragmentRecyclerViewBinding
+import com.roy93group.cpuinfo.databinding.FRecyclerViewBinding
 import com.roy93group.cpuinfo.features.information.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import javax.microedition.khronos.egl.EGLConfig
@@ -36,7 +36,7 @@ import javax.microedition.khronos.opengles.GL10
  *
  */
 @AndroidEntryPoint
-class GpuInfoFragment : BaseFragment<FragmentRecyclerViewBinding>(R.layout.fragment_recycler_view) {
+class GpuInfoFragment : BaseFragment<FRecyclerViewBinding>(R.layout.f_recycler_view) {
 
     private val viewModel: GpuInfoViewModel by viewModels()
 
