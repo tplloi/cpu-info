@@ -12,7 +12,6 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.FloatRange;
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.customview.view.AbsSavedState;
 
 import com.roy93group.cpuinfo.R;
@@ -31,13 +30,8 @@ public abstract class AnimatedRoundCornerProgressBar extends BaseRoundCornerProg
 
     private ValueAnimator progressAnimator;
     private ValueAnimator secondaryProgressAnimator;
-    private ValueAnimator.AnimatorUpdateListener progressAnimationUpdateListener = new ValueAnimator.AnimatorUpdateListener() {
-        @Override
-        public void onAnimationUpdate(ValueAnimator animation) {
-            onUpdateProgressByAnimation((float) animation.getAnimatedValue());
-        }
-    };
-    private AnimatorListenerAdapter progressAnimationAdapterListener = new AnimatorListenerAdapter() {
+    private final ValueAnimator.AnimatorUpdateListener progressAnimationUpdateListener = animation -> onUpdateProgressByAnimation((float) animation.getAnimatedValue());
+    private final AnimatorListenerAdapter progressAnimationAdapterListener = new AnimatorListenerAdapter() {
         @Override
         public void onAnimationEnd(Animator animation) {
             isProgressAnimating = false;
@@ -49,13 +43,8 @@ public abstract class AnimatedRoundCornerProgressBar extends BaseRoundCornerProg
             isProgressAnimating = false;
         }
     };
-    private ValueAnimator.AnimatorUpdateListener secondaryProgressAnimationUpdateListener = new ValueAnimator.AnimatorUpdateListener() {
-        @Override
-        public void onAnimationUpdate(ValueAnimator animation) {
-            onUpdateSecondaryProgressByAnimation((float) animation.getAnimatedValue());
-        }
-    };
-    private AnimatorListenerAdapter secondaryProgressAnimationAdapterListener = new AnimatorListenerAdapter() {
+    private final ValueAnimator.AnimatorUpdateListener secondaryProgressAnimationUpdateListener = animation -> onUpdateSecondaryProgressByAnimation((float) animation.getAnimatedValue());
+    private final AnimatorListenerAdapter secondaryProgressAnimationAdapterListener = new AnimatorListenerAdapter() {
         @Override
         public void onAnimationEnd(Animator animation) {
             isSecondaryProgressAnimating = false;
