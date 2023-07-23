@@ -116,7 +116,7 @@ class ApplicationsFragment : BaseFragment<FApplicationsBinding>(
      */
     private fun initObservables() {
         viewModel.shouldStartStorageServiceEvent.observe(viewLifecycleOwner, EventObserver {
-            StorageUsageService.startService(requireContext(), viewModel.applicationList)
+            ServiceStorageUsage.startService(requireContext(), viewModel.applicationList)
         })
     }
 

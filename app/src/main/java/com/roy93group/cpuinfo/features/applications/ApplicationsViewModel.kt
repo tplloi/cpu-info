@@ -163,7 +163,7 @@ class ApplicationsViewModel @Inject constructor(
      */
     @Suppress("unused")
     @Subscribe
-    fun onUpdatePackageSizeEvent(event: StorageUsageService.UpdatePackageSizeEvent) {
+    fun onUpdatePackageSizeEvent(event: ServiceStorageUsage.UpdatePackageSizeEvent) {
         viewModelScope.launch {
             val newAppPair = withContext(dispatchersProvider.io) {
                 getUpdatedApp(event)
@@ -177,7 +177,7 @@ class ApplicationsViewModel @Inject constructor(
     /**
      * @return updated [ExtendedAppInfo] instance with corresponding index
      */
-    private fun getUpdatedApp(event: StorageUsageService.UpdatePackageSizeEvent)
+    private fun getUpdatedApp(event: ServiceStorageUsage.UpdatePackageSizeEvent)
             : Pair<Int, ExtendedAppInfo?> {
         val app = applicationList.find { it.packageName == event.packageName }
         if (app != null) {

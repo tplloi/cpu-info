@@ -46,7 +46,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".features.applications.StorageUsageService" />
+        <service android:name=".features.applications.ServiceStorageUsage" />
 
         <service android:name=".features.ramwidget.ServiceRefresh" />
 
@@ -64,7 +64,7 @@
         </receiver>
 
         <service
-            android:name=".features.cputile.CpuTileService"
+            android:name=".features.cputile.ServiceCpuTile"
             android:exported="true"
             android:icon="@drawable/ic_cpu_low"
             android:label="@string/app_name"

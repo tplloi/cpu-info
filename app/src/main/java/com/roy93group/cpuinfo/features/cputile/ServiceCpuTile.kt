@@ -19,7 +19,7 @@ import kotlin.coroutines.CoroutineContext
 
 @RequiresApi(api = Build.VERSION_CODES.N)
 @AndroidEntryPoint
-class CpuTileService : TileService(), CoroutineScope {
+class ServiceCpuTile : TileService(), CoroutineScope {
 
     @Inject
     lateinit var cpuDataProvider: CpuDataProvider
@@ -46,7 +46,7 @@ class CpuTileService : TileService(), CoroutineScope {
     }
 
     private val icons by lazy {
-        mapOf<CPULoad, Icon>(
+        mapOf(
             CPULoad.Low to Icon.createWithResource(this, R.drawable.ic_cpu_low),
             CPULoad.Medium to Icon.createWithResource(this, R.drawable.ic_cpu_med),
             CPULoad.High to Icon.createWithResource(this, R.drawable.ic_cpu_high)
