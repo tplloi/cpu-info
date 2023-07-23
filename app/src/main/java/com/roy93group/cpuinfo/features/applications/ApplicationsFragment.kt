@@ -39,7 +39,7 @@ import com.roy93group.cpuinfo.databinding.FApplicationsBinding
 import com.roy93group.cpuinfo.features.information.base.BaseFragment
 import com.roy93group.cpuinfo.utils.DividerItemDecoration
 import com.roy93group.cpuinfo.utils.Utils
-import com.roy93group.cpuinfo.utils.lifecycleawarelist.ListLiveDataObserver
+import com.roy93group.cpuinfo.utils.lifecycle.ListLiveDataObserver
 import com.roy93group.cpuinfo.utils.uninstallApp
 import com.roy93group.cpuinfo.utils.wrappers.EventObserver
 import com.roy93group.cpuinfo.widgets.swiperv.SwipeMenuRecyclerView

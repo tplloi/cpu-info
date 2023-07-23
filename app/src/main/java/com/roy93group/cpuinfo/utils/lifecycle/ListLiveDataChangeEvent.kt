@@ -1,4 +1,4 @@
-package com.roy93group.cpuinfo.utils.lifecycleawarelist
+package com.roy93group.cpuinfo.utils.lifecycle
 
 /**
  * Wrapper for [ListLiveData] changes which contains type of the change [ListLiveDataState], index

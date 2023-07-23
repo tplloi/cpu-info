@@ -27,7 +27,7 @@ import android.os.Build
 import android.provider.Settings
 import androidx.lifecycle.AndroidViewModel
 import com.roy93group.cpuinfo.R
-import com.roy93group.cpuinfo.utils.lifecycleawarelist.ListLiveData
+import com.roy93group.cpuinfo.utils.lifecycle.ListLiveData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import java.io.BufferedReader
 import java.io.File

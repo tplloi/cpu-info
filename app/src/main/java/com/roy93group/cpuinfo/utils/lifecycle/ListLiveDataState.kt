@@ -1,4 +1,4 @@
-package com.roy93group.cpuinfo.utils.lifecycleawarelist
+package com.roy93group.cpuinfo.utils.lifecycle
 
 /**
  * Representation of all possible list state changes

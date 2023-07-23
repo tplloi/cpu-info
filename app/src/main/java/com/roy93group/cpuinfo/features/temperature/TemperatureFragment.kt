@@ -25,7 +25,7 @@ import com.roy93group.cpuinfo.R
 import com.roy93group.cpuinfo.databinding.FTemperatureBinding
 import com.roy93group.cpuinfo.features.information.base.BaseFragment
 import com.roy93group.cpuinfo.features.temperature.list.TemperatureAdapter
-import com.roy93group.cpuinfo.utils.lifecycleawarelist.ListLiveDataObserver
+import com.roy93group.cpuinfo.utils.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

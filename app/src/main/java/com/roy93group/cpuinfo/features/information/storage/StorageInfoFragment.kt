@@ -24,7 +24,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.fragment.app.viewModels
 import com.roy93group.cpuinfo.features.information.base.BaseRvFragment
-import com.roy93group.cpuinfo.utils.lifecycleawarelist.ListLiveDataObserver
+import com.roy93group.cpuinfo.utils.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

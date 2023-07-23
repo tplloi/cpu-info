@@ -33,7 +33,7 @@ import com.roy93group.cpuinfo.features.settings.SettingsFragment
 import com.roy93group.cpuinfo.features.temperature.TemperatureFormatter
 import com.roy93group.cpuinfo.features.temperature.TemperatureProvider
 import com.roy93group.cpuinfo.utils.Utils
-import com.roy93group.cpuinfo.utils.lifecycleawarelist.ListLiveData
+import com.roy93group.cpuinfo.utils.lifecycle.ListLiveData
 import com.roy93group.cpuinfo.utils.round2
 import dagger.hilt.android.lifecycle.HiltViewModel
 import timber.log.Timber

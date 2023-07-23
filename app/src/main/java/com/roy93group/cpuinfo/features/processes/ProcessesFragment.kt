@@ -32,7 +32,7 @@ import com.roy93group.cpuinfo.R
 import com.roy93group.cpuinfo.databinding.FProcessesBinding
 import com.roy93group.cpuinfo.features.information.base.BaseFragment
 import com.roy93group.cpuinfo.utils.DividerItemDecoration
-import com.roy93group.cpuinfo.utils.lifecycleawarelist.ListLiveDataObserver
+import com.roy93group.cpuinfo.utils.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

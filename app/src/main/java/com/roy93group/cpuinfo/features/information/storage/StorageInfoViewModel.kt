@@ -22,7 +22,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.roy93group.cpuinfo.R
 import com.roy93group.cpuinfo.utils.DispatchersProvider
-import com.roy93group.cpuinfo.utils.lifecycleawarelist.ListLiveData
+import com.roy93group.cpuinfo.utils.lifecycle.ListLiveData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Single

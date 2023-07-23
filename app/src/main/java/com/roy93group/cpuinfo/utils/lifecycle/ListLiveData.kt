@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.roy93group.cpuinfo.utils.lifecycleawarelist
+package com.roy93group.cpuinfo.utils.lifecycle
 
 import androidx.lifecycle.MutableLiveData
 

@@ -24,7 +24,7 @@ import android.view.Display
 import android.view.WindowManager
 import androidx.lifecycle.ViewModel
 import com.roy93group.cpuinfo.R
-import com.roy93group.cpuinfo.utils.lifecycleawarelist.ListLiveData
+import com.roy93group.cpuinfo.utils.lifecycle.ListLiveData
 import com.roy93group.cpuinfo.utils.round2
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject

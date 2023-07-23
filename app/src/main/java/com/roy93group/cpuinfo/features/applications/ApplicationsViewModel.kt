@@ -30,7 +30,7 @@ import androidx.lifecycle.viewModelScope
 import com.roy93group.cpuinfo.utils.DispatchersProvider
 import com.roy93group.cpuinfo.utils.NonNullMutableLiveData
 import com.roy93group.cpuinfo.utils.Prefs
-import com.roy93group.cpuinfo.utils.lifecycleawarelist.ListLiveData
+import com.roy93group.cpuinfo.utils.lifecycle.ListLiveData
 import com.roy93group.cpuinfo.utils.runOnApiBelow
 import com.roy93group.cpuinfo.utils.wrappers.Event
 import dagger.hilt.android.lifecycle.HiltViewModel

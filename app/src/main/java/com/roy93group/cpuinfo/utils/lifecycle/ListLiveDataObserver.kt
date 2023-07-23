@@ -1,4 +1,4 @@
-package com.roy93group.cpuinfo.utils.lifecycleawarelist
+package com.roy93group.cpuinfo.utils.lifecycle
 
 import android.annotation.SuppressLint
 import androidx.lifecycle.Observer
