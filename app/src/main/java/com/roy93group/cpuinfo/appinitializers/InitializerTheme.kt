@@ -9,7 +9,7 @@ import javax.inject.Inject
  * Apply theme on app start
  *
  */
-class ThemeInitializer @Inject constructor(
+class InitializerTheme @Inject constructor(
     private val sharedPreferences: SharedPreferences
 ) : AppInitializer {
 

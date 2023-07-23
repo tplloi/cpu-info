@@ -1,12 +1,12 @@
 package com.roy93group.cpuinfo.di.modules
 
 import com.roy93group.cpuinfo.appinitializers.AppInitializer
-import com.roy93group.cpuinfo.appinitializers.EpoxyInitializer
+import com.roy93group.cpuinfo.appinitializers.InitializerEpoxy
 import com.roy93group.cpuinfo.appinitializers.NativeToolsInitializer
-import com.roy93group.cpuinfo.appinitializers.RamWidgetInitializer
-import com.roy93group.cpuinfo.appinitializers.RxInitializer
-import com.roy93group.cpuinfo.appinitializers.ThemeInitializer
-import com.roy93group.cpuinfo.appinitializers.TimberInitializer
+import com.roy93group.cpuinfo.appinitializers.InitializerRamWidget
+import com.roy93group.cpuinfo.appinitializers.InitializerRx
+import com.roy93group.cpuinfo.appinitializers.InitializerTheme
+import com.roy93group.cpuinfo.appinitializers.InitializerTimber
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -24,21 +24,21 @@ abstract class AppModuleBinds {
 
     @Binds
     @IntoSet
-    abstract fun provideRxInitializer(bind: RxInitializer): AppInitializer
+    abstract fun provideRxInitializer(bind: InitializerRx): AppInitializer
 
     @Binds
     @IntoSet
-    abstract fun provideTimberInitializer(bind: TimberInitializer): AppInitializer
+    abstract fun provideTimberInitializer(bind: InitializerTimber): AppInitializer
 
     @Binds
     @IntoSet
-    abstract fun provideRamWidgetInitializer(bind: RamWidgetInitializer): AppInitializer
+    abstract fun provideRamWidgetInitializer(bind: InitializerRamWidget): AppInitializer
 
     @Binds
     @IntoSet
-    abstract fun provideThemeInitializer(bind: ThemeInitializer): AppInitializer
+    abstract fun provideThemeInitializer(bind: InitializerTheme): AppInitializer
 
     @Binds
     @IntoSet
-    abstract fun provideEpoxyInitializer(bind: EpoxyInitializer): AppInitializer
+    abstract fun provideEpoxyInitializer(bind: InitializerEpoxy): AppInitializer
 }

@@ -14,7 +14,7 @@ import javax.inject.Inject
  * Custom ram widget initialization. It will try to create refresh service for ram widget.
  * Currently it will work only on API below 26.
  **/
-class RamWidgetInitializer @Inject constructor() : AppInitializer {
+class InitializerRamWidget @Inject constructor() : AppInitializer {
 
     override fun init(application: Application) {
         runOnApiBelow(Build.VERSION_CODES.O) {

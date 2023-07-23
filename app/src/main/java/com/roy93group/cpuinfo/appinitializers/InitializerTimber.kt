@@ -5,7 +5,7 @@ import com.roy93group.cpuinfo.BuildConfig
 import timber.log.Timber
 import javax.inject.Inject
 
-class TimberInitializer @Inject constructor() : AppInitializer {
+class InitializerTimber @Inject constructor() : AppInitializer {
 
     override fun init(application: Application) {
         if (BuildConfig.DEBUG) {

@@ -11,7 +11,7 @@ import javax.inject.Inject
  * error emitted to the disposed observer or because some blocking code was interrupted by a
  * dispose call.
  */
-class RxInitializer @Inject constructor() : AppInitializer {
+class InitializerRx @Inject constructor() : AppInitializer {
 
     override fun init(application: Application) {
         RxJavaPlugins.setErrorHandler { e ->

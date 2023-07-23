@@ -1,7 +1,7 @@
 package com.roy93group.cpuinfo
 
 import androidx.multidex.MultiDexApplication
-import com.roy93group.cpuinfo.appinitializers.AppInitializers
+import com.roy93group.cpuinfo.appinitializers.InitializersApp
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 
@@ -14,7 +14,7 @@ import javax.inject.Inject
 //TODO change color primary
 //TODO icon launcher
 //TODO keystore
-//TODO rate, more, share, fb fanpage, policy
+//TODO rate, more, share, fb fan page, policy
 //TODO firebase
 //TODO proguard
 //TODO leak canary
@@ -26,7 +26,7 @@ import javax.inject.Inject
 class MyApp : MultiDexApplication() {
 
     @Inject
-    lateinit var initializers: AppInitializers
+    lateinit var initializers: InitializersApp
 
     override fun onCreate() {
         super.onCreate()

@@ -3,7 +3,7 @@ package com.roy93group.cpuinfo.appinitializers
 import android.app.Application
 import javax.inject.Inject
 
-class AppInitializers @Inject constructor(
+class InitializersApp @Inject constructor(
     private val initializers: Set<@JvmSuppressWildcards AppInitializer>
 ) {
     fun init(application: Application) {
