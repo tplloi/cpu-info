@@ -3,7 +3,7 @@ package com.roy93group.cpuinfo.features.information.gpu
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.roy93group.cpuinfo.domain.observable.GpuDataObservable
+import com.roy93group.cpuinfo.domain.observable.ObservableGpuData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
@@ -15,7 +15,7 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class ViewModelGpuInfo @Inject constructor(
-    private val observableGpuData: GpuDataObservable
+    private val observableGpuData: ObservableGpuData
 ) : ViewModel() {
 
     val viewState = observableGpuData.observe()
@@ -24,10 +24,10 @@ class ViewModelGpuInfo @Inject constructor(
         .asLiveData(viewModelScope.coroutineContext)
 
     init {
-        observableGpuData(GpuDataObservable.Params())
+        observableGpuData(ObservableGpuData.Params())
     }
 
     fun onGlInfoReceived(glVendor: String?, glRenderer: String?, glExtensions: String?) {
-        observableGpuData(GpuDataObservable.Params(glVendor, glRenderer, glExtensions))
+        observableGpuData(ObservableGpuData.Params(glVendor, glRenderer, glExtensions))
     }
 }

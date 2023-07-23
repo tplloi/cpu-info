@@ -45,8 +45,8 @@ fun <T> ImmutableInteractor<Unit, T>.observe() = observe(Unit)
 
 operator fun <T> MutableInteractor<Unit, T>.invoke() = invoke(Unit)
 
+@Suppress("unused")
 fun <I : MutableInteractor<P, T>, P, T> CoroutineScope.launchObserve(
     interactor: I,
     f: suspend (Flow<T>) -> Unit
 ) = launch(interactor.dispatcher) { f(interactor.observe()) }
-

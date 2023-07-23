@@ -17,11 +17,11 @@ import kotlinx.coroutines.flow.Flow
 import java.io.File
 import javax.inject.Inject
 
-class ApplicationsDataObservable @Inject constructor(
+class ObservableApplicationsData @Inject constructor(
     dispatchersProvider: DispatchersProvider,
     private val applicationsDataProvider: ApplicationsDataProvider,
     private val packageManager: PackageManager
-) : MutableInteractor<ApplicationsDataObservable.Params, MyResult<List<ExtendedApplicationData>>>() {
+) : MutableInteractor<ObservableApplicationsData.Params, MyResult<List<ExtendedApplicationData>>>() {
 
     override val dispatcher = dispatchersProvider.io
 
@@ -30,12 +30,12 @@ class ApplicationsDataObservable @Inject constructor(
             val apps = applicationsDataProvider.getInstalledApplications(params.withSystemApps)
                 .map {
                     ExtendedApplicationData(
-                        it.loadLabel(packageManager).toString(),
-                        it.packageName,
-                        it.sourceDir,
-                        it.nativeLibraryDir,
-                        it.hasNativeLibs(),
-                        getAppIconUri(it.packageName)
+                        name = it.loadLabel(packageManager).toString(),
+                        packageName = it.packageName,
+                        sourceDir = it.sourceDir,
+                        nativeLibraryDir = it.nativeLibraryDir,
+                        hasNativeLibs = it.hasNativeLibs(),
+                        appIconUri = getAppIconUri(it.packageName)
                     )
                 }
             when (params.sortOrder) {

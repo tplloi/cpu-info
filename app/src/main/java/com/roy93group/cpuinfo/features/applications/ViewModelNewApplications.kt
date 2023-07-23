@@ -6,8 +6,8 @@ import androidx.lifecycle.viewModelScope
 import com.roy93group.cpuinfo.R
 import com.roy93group.cpuinfo.domain.model.ExtendedApplicationData
 import com.roy93group.cpuinfo.domain.model.sortOrderFromBoolean
-import com.roy93group.cpuinfo.domain.observable.ApplicationsDataObservable
-import com.roy93group.cpuinfo.domain.result.GetPackageNameInteractor
+import com.roy93group.cpuinfo.domain.observable.ObservableApplicationsData
+import com.roy93group.cpuinfo.domain.result.InteractorGetPackageName
 import com.roy93group.cpuinfo.utils.SingleLiveEvent
 import com.roy93group.cpuinfo.utils.wrappers.MyResult
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -25,8 +25,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ViewModelNewApplications @Inject constructor(
-    private val applicationsDataObservable: ApplicationsDataObservable,
-    private val getPackageNameInteractor: GetPackageNameInteractor,
+    private val observableApplicationsData: ObservableApplicationsData,
+    private val interactorGetPackageName: InteractorGetPackageName,
 ) : ViewModel() {
 
     private val _uiStateFlow = MutableStateFlow(UiState())
@@ -36,7 +36,7 @@ class ViewModelNewApplications @Inject constructor(
     val events: LiveData<Event> = _events.asLiveData()
 
     init {
-        applicationsDataObservable.observe()
+        observableApplicationsData.observe()
             .onEach(::handleApplicationsResult)
             .launchIn(viewModelScope)
         onRefreshApplications()
@@ -44,8 +44,8 @@ class ViewModelNewApplications @Inject constructor(
 
     fun onRefreshApplications() {
         val currentUiState = _uiStateFlow.value
-        applicationsDataObservable.invoke(
-            ApplicationsDataObservable.Params(
+        observableApplicationsData.invoke(
+            ObservableApplicationsData.Params(
                 withSystemApps = currentUiState.withSystemApps,
                 sortOrderFromBoolean(currentUiState.isSortAscending)
             )
@@ -54,7 +54,7 @@ class ViewModelNewApplications @Inject constructor(
 
     fun onApplicationClicked(packageName: String) {
         viewModelScope.launch {
-            if (getPackageNameInteractor.invoke(Unit) == packageName) {
+            if (interactorGetPackageName.invoke(Unit) == packageName) {
                 _uiStateFlow.update { it.copy(snackbarMessage = R.string.cpu_open) }
             } else {
                 _events.value = Event.OpenApp(packageName)
@@ -84,7 +84,7 @@ class ViewModelNewApplications @Inject constructor(
 
     fun onAppUninstallClicked(id: String) {
         viewModelScope.launch {
-            if (getPackageNameInteractor.invoke(Unit) == id) {
+            if (interactorGetPackageName.invoke(Unit) == id) {
                 _uiStateFlow.update { it.copy(snackbarMessage = R.string.cpu_uninstall) }
             } else {
                 _events.value = Event.UninstallApp(id)

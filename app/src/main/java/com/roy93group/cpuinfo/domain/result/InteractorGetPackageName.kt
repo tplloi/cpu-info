@@ -6,7 +6,7 @@ import com.roy93group.cpuinfo.utils.DispatchersProvider
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
-class GetPackageNameInteractor @Inject constructor(
+class InteractorGetPackageName @Inject constructor(
     dispatchersProvider: DispatchersProvider,
     @ApplicationContext private val context: Context
 ) : ResultInteractor<Unit, String>() {
