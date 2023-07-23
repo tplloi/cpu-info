@@ -1,26 +1,8 @@
-/*
- * Copyright 2017 KG Soft
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.roy93group.cpuinfo.features.information.screen
 
 import android.content.res.Configuration
 import android.content.res.Resources
-import android.os.Build
 import android.util.DisplayMetrics
-import android.view.Display
 import android.view.WindowManager
 import androidx.lifecycle.ViewModel
 import com.roy93group.cpuinfo.R
@@ -34,7 +16,7 @@ import javax.inject.Inject
  *
  */
 @HiltViewModel
-class ScreenInfoViewModel @Inject constructor(
+class ViewModelScreenInfo @Inject constructor(
     private val resources: Resources,
     private val windowManager: WindowManager
 ) : ViewModel() {
@@ -125,29 +107,19 @@ class ScreenInfoViewModel @Inject constructor(
 
         val metrics = DisplayMetrics()
         try {
-            if (Build.VERSION.SDK_INT >= 17) {
-                display.getRealMetrics(metrics)
-                functionsList.add(
-                    Pair(
-                        resources.getString(R.string.width),
-                        "${metrics.widthPixels}px"
-                    )
+            display.getRealMetrics(metrics)
+            functionsList.add(
+                Pair(
+                    resources.getString(R.string.width),
+                    "${metrics.widthPixels}px"
                 )
-                functionsList.add(
-                    Pair(
-                        resources.getString(R.string.height),
-                        "${metrics.heightPixels}px"
-                    )
+            )
+            functionsList.add(
+                Pair(
+                    resources.getString(R.string.height),
+                    "${metrics.heightPixels}px"
                 )
-            } else {
-                val getRawH = Display::class.java.getMethod("getRawHeight")
-                val getRawW = Display::class.java.getMethod("getRawWidth")
-
-                val height = getRawH.invoke(display) as Int
-                val width = getRawW.invoke(display) as Int
-                functionsList.add(Pair(resources.getString(R.string.width), "${width}px"))
-                functionsList.add(Pair(resources.getString(R.string.height), "${height}px"))
-            }
+            )
 
             val density = metrics.density
             val dpHeight = metrics.heightPixels / density
