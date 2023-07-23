@@ -1,19 +1,3 @@
-/*
- * Copyright 2017 KG Soft
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.roy93group.cpuinfo.widgets.swiperv;
 
 import android.content.Context;
@@ -32,18 +16,17 @@ import com.roy93group.cpuinfo.R;
 import com.roy93group.cpuinfo.widgets.swiperv.listener.SwipeFractionListener;
 import com.roy93group.cpuinfo.widgets.swiperv.listener.SwipeSwitchListener;
 import com.roy93group.cpuinfo.widgets.swiperv.swiper.Swiper;
-import com.roy93group.cpuinfo.widgets.swiperv.listener.SwipeFractionListener;
-import com.roy93group.cpuinfo.widgets.swiperv.listener.SwipeSwitchListener;
-import com.roy93group.cpuinfo.widgets.swiperv.swiper.Swiper;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.Locale;
 
+import kotlin.Suppress;
+
 public abstract class SwipeMenuLayout extends FrameLayout {
 
-    public static final String TAG = "sml";
+    //    public static final String TAG = "sml";
     public static final int DEFAULT_SCROLLER_DURATION = 250;
     public static final float DEFAULT_AUTO_OPEN_PERCENT = 0.5f;
     protected float mAutoOpenPercent = DEFAULT_AUTO_OPEN_PERCENT;
@@ -92,24 +75,28 @@ public abstract class SwipeMenuLayout extends FrameLayout {
         init();
     }
 
+    @Suppress(names = "unused")
     public void smoothOpenBeginMenu() {
         if (mBeginSwiper == null) throw new IllegalArgumentException("Not have begin menu!");
         mCurrentSwiper = mBeginSwiper;
         smoothOpenMenu();
     }
 
+    @Suppress(names = "unused")
     public void smoothOpenEndMenu() {
         if (mEndSwiper == null) throw new IllegalArgumentException("Not have end menu!");
         mCurrentSwiper = mEndSwiper;
         smoothOpenMenu();
     }
 
+    @Suppress(names = "unused")
     public void smoothCloseBeginMenu() {
         if (mBeginSwiper == null) throw new IllegalArgumentException("Not have begin menu!");
         mCurrentSwiper = mBeginSwiper;
         smoothCloseMenu();
     }
 
+    @Suppress(names = "unused")
     public void smoothCloseEndMenu() {
         if (mEndSwiper == null) throw new IllegalArgumentException("Not have end menu!");
         mCurrentSwiper = mEndSwiper;
@@ -136,6 +123,7 @@ public abstract class SwipeMenuLayout extends FrameLayout {
         mScaledMaximumFlingVelocity = mViewConfig.getScaledMaximumFlingVelocity();
     }
 
+    @Suppress(names = "unused")
     public void setSwipeEnable(boolean swipeEnable) {
         this.swipeEnable = swipeEnable;
     }
@@ -144,10 +132,12 @@ public abstract class SwipeMenuLayout extends FrameLayout {
         return swipeEnable;
     }
 
+    @Suppress(names = "unused")
     public void setSwipeListener(SwipeSwitchListener swipeSwitchListener) {
         mSwipeSwitchListener = swipeSwitchListener;
     }
 
+    @Suppress(names = "unused")
     public void setSwipeFractionListener(SwipeFractionListener swipeFractionListener) {
         mSwipeFractionListener = swipeFractionListener;
     }
