@@ -27,7 +27,7 @@
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/main_container"
+        android:id="@+id/mainContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -39,7 +39,7 @@
             app:refreshing="@{safeUnbox(viewModel.isLoading)}">
 
             <com.roy93group.cpuinfo.widgets.swiperv.SwipeMenuRecyclerView
-                android:id="@+id/recycler_view"
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:splitMotionEvents="false"
