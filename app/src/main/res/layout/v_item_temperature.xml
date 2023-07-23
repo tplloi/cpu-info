@@ -15,7 +15,7 @@
         android:contentDescription="@string/cpu"
         android:scaleType="fitCenter"
         app:tint="?attr/colorOnBackground"
-        tools:src="@mipmap/ic_launcher" />
+        tools:src="@drawable/ic_launcher" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"

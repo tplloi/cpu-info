@@ -1,16 +1,12 @@
 <resources>
 
     <string name="app_name" translatable="false">CPU Info</string>
-    <string name="action_settings">設定</string>
     <string name="action_sorting">排序</string>
-    <string name="action_refresh">重新整理</string>
     <string name="action_not_supported">動作不可用</string>
-    <string name="open_drawer">開啟應用程式抽屜</string>
     <string name="close_drawer">關閉應用程式抽屜</string>
     <string name="yes">是</string>
     <string name="no">否</string>
     <string name="ok">確定</string>
-    <string name="permission_rationale">需要相機權限以取得相機規格</string>
     <!--Tabs-->
     <string name="cpu">CPU</string>
     <string name="gpu">GPU</string>
@@ -43,10 +39,8 @@
     <string name="available_memory">可用的記憶體</string>
     <string name="threshold">閾值</string>
     <!--Storage-->
-    <string name="storage_hint">外部記憶體可能和內部的一樣</string>
     <string name="internal">內部</string>
     <string name="external">外部</string>
-    <string name="sd_card">SD卡</string>
     <!--Screen-->
     <string name="screen_class">螢幕等級</string>
     <string name="small">小</string>
@@ -105,7 +99,6 @@
     <string name="battery_unspecified_failure">不明確的問題發生</string>
     <string name="ir_emitter">IR Emitter</string>
     <!--Prefs-->
-    <string name="default_refreshing">Android預設值</string>
     <string name="ram_refreshing">小工具更新頻率</string>
     <string name="general">一般</string>
     <string name="temperature_unit">溫度單位</string>
@@ -117,6 +110,5 @@
     <string name="pref_theme_choose">選擇主題</string>
     <!--Temp-->
     <string name="cpu_temperature">處理器溫度</string>
-    <string name="battery_temperature">電池溫度</string>
     <string name="no_temp_data">抱歉我找不到溫度感測器 :-(</string>
 </resources>

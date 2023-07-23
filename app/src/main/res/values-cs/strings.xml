@@ -1,14 +1,10 @@
 <resources>
-    <string name="action_settings">Nastavení</string>
     <string name="action_sorting">Řazení</string>
-    <string name="action_refresh">Interval opětovného načítání</string>
     <string name="action_not_supported">Akce není k dispozici</string>
-    <string name="open_drawer">Otevřít panel</string>
     <string name="close_drawer">Zavřít panel</string>
     <string name="yes">Ano</string>
     <string name="no">Ne</string>
     <string name="ok">OK</string>
-    <string name="permission_rationale">Přístup ke kameře je potřeba pro zjištění jejích parametrů</string>
     <!--Tabs-->
     <string name="cpu">Procesor</string>
     <string name="gpu">Grafický čip</string>
@@ -42,10 +38,8 @@
     <string name="available_memory">Volná paměť</string>
     <string name="threshold">Hranice minima</string>
     <!--Storage-->
-    <string name="storage_hint">Při nepřítomnosti rozšiřujícího úložiště může být zobrazováno dvakrát to vestavěné</string>
     <string name="internal">Vestavěné</string>
     <string name="external">Rozšiřující</string>
-    <string name="sd_card">SD karta</string>
     <!--Screen-->
     <string name="screen_class">Třída obrazovky</string>
     <string name="small">Malá</string>
@@ -102,7 +96,6 @@
     <string name="battery_unspecified_failure">Neurčený nezdar</string>
     <string name="ir_emitter">IR Emitter</string>
     <!--Prefs-->
-    <string name="default_refreshing">Výchozí hodnota z Android</string>
     <string name="ram_refreshing">Interval opakování načítání hodnot</string>
     <string name="general">Obecné</string>
     <string name="temperature_unit">Jednotka teploty</string>
@@ -114,6 +107,5 @@
     <string name="pref_theme_choose">Vyberte téma</string>
     <!--Temp-->
     <string name="cpu_temperature">Teplota procesoru</string>
-    <string name="battery_temperature">Teplota akumulátoru</string>
     <string name="no_temp_data">Je nám líto, ale nedaří se najít čidla teploty :-(</string>
 </resources>

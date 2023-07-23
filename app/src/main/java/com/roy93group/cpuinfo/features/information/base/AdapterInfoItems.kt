@@ -3,8 +3,8 @@ package com.roy93group.cpuinfo.features.information.base
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.roy93group.cpuinfo.R
@@ -58,15 +58,16 @@ class AdapterInfoItems(
         private var item: Pair<String, String>? = null
 
         init {
-            itemView.findViewById<LinearLayout>(R.id.itemContainer).setOnLongClickListener { _ ->
-                item?.let {
-                    if (it.second.isNotEmpty()) {
-                        onClickListener?.onItemLongPressed(it)
-                        return@setOnLongClickListener true
+            itemView.findViewById<LinearLayoutCompat>(R.id.itemContainer)
+                .setOnLongClickListener { _ ->
+                    item?.let {
+                        if (it.second.isNotEmpty()) {
+                            onClickListener?.onItemLongPressed(it)
+                            return@setOnLongClickListener true
+                        }
                     }
+                    false
                 }
-                false
-            }
         }
 
         fun bind(item: Pair<String, String>) {

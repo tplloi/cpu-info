@@ -18,7 +18,7 @@
             android:layout_weight="1"
             android:scaleType="fitCenter"
             tools:ignore="ContentDescription"
-            tools:src="@mipmap/ic_launcher" />
+            tools:src="@drawable/ic_launcher" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/clearRamButton"
