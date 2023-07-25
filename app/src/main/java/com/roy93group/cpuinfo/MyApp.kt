@@ -13,7 +13,6 @@ import javax.inject.Inject
 
 //TODO change color primary
 //TODO keystore
-//TODO rate, more, share, fb fan page, policy
 
 //TODO ad applovin
 //TODO firebase
@@ -22,6 +21,7 @@ import javax.inject.Inject
 //icon launcher
 //leak canary
 //proguard
+//rate, more, share, fb fan page, policy
 
 @HiltAndroidApp
 class MyApp : MultiDexApplication() {

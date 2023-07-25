@@ -20,6 +20,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.roy93group.cpuinfo.R
 import com.roy93group.cpuinfo.databinding.FApplicationsBinding
+import com.roy93group.cpuinfo.ext.openBrowserPolicy
 import com.roy93group.cpuinfo.features.information.base.BaseFragment
 import com.roy93group.cpuinfo.utils.DividerItemDecoration
 import com.roy93group.cpuinfo.utils.Utils
@@ -28,6 +29,9 @@ import com.roy93group.cpuinfo.utils.uninstallApp
 import com.roy93group.cpuinfo.utils.wrappers.EventObserver
 import com.roy93group.cpuinfo.widgets.swiperv.SwipeMenuRecyclerView
 import dagger.hilt.android.AndroidEntryPoint
+import moreApp
+import rateApp
+import shareApp
 import java.io.File
 
 @AndroidEntryPoint
@@ -67,6 +71,24 @@ class FragmentApplications : BaseFragment<FApplicationsBinding>(
                 return when (menuItem.itemId) {
                     R.id.actionSorting -> {
                         viewModel.changeAppsSorting()
+                        true
+                    }
+                    R.id.actionRate -> {
+                        activity?.let{
+                            it.rateApp(it.packageName)
+                        }
+                        true
+                    }
+                    R.id.actionMore -> {
+                        activity?.moreApp()
+                        true
+                    }
+                    R.id.actionShare -> {
+                        activity?.shareApp()
+                        true
+                    }
+                    R.id.actionPolicy -> {
+                        context?.openBrowserPolicy()
                         true
                     }
 
