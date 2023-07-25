@@ -11,7 +11,6 @@ import javax.inject.Inject
  * @author roy93group
  */
 
-//TODO change color primary
 //TODO keystore
 
 //TODO ad applovin
@@ -22,6 +21,7 @@ import javax.inject.Inject
 //leak canary
 //proguard
 //rate, more, share, fb fan page, policy
+//change color primary
 
 @HiltAndroidApp
 class MyApp : MultiDexApplication() {
