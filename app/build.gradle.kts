@@ -145,6 +145,7 @@ dependencies {
     implementation(Libs.timber)
     implementation(Libs.relinker)
     implementation(Libs.coil)
+    debugImplementation ("com.squareup.leakcanary:leakcanary-android:2.10")
 
 //    testImplementation(Libs.junit)
 //    testImplementation(Libs.AndroidX.Test.core)
