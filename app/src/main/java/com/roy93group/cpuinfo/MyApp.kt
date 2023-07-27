@@ -11,8 +11,6 @@ import javax.inject.Inject
  * @author roy93group
  */
 
-//TODO keystore
-
 //TODO ad applovin
 //TODO firebase
 
@@ -22,6 +20,7 @@ import javax.inject.Inject
 //proguard
 //rate, more, share, fb fan page, policy
 //change color primary
+//keystore
 
 @HiltAndroidApp
 class MyApp : MultiDexApplication() {

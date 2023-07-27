@@ -20,8 +20,8 @@ android {
 
         minSdk = Versions.MIN_SDK
         targetSdk = Versions.TARGET_SDK
-        versionCode = 20230718
-        versionName = "2023.07.18"
+        versionCode = 20230728
+        versionName = "2023.07.28"
 
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled = true
@@ -37,18 +37,23 @@ android {
 
     signingConfigs {
         getByName("debug") {
-            val debugSigningConfig = SigningConfig.getDebugProperties(rootProject.rootDir)
-            storeFile = file(debugSigningConfig.getProperty(SigningConfig.KEY_PATH))
-            keyAlias = debugSigningConfig.getProperty(SigningConfig.KEY_ALIAS)
-            keyPassword = debugSigningConfig.getProperty(SigningConfig.KEY_PASS)
-            storePassword = debugSigningConfig.getProperty(SigningConfig.KEY_PASS)
+//            val debugSigningConfig = SigningConfig.getDebugProperties(rootProject.rootDir)
+//            storeFile = file(debugSigningConfig.getProperty(SigningConfig.KEY_PATH))
+//            keyAlias = debugSigningConfig.getProperty(SigningConfig.KEY_ALIAS)
+//            keyPassword = debugSigningConfig.getProperty(SigningConfig.KEY_PASS)
+//            storePassword = debugSigningConfig.getProperty(SigningConfig.KEY_PASS)
         }
         create("release") {
-            val releaseSigningConfig = SigningConfig.getReleaseProperties(rootProject.rootDir)
-            storeFile = file(releaseSigningConfig.getProperty(SigningConfig.KEY_PATH))
-            keyAlias = releaseSigningConfig.getProperty(SigningConfig.KEY_ALIAS)
-            keyPassword = releaseSigningConfig.getProperty(SigningConfig.KEY_PASS)
-            storePassword = releaseSigningConfig.getProperty(SigningConfig.KEY_PASS)
+//            val releaseSigningConfig = SigningConfig.getReleaseProperties(rootProject.rootDir)
+//            storeFile = file(releaseSigningConfig.getProperty(SigningConfig.KEY_PATH))
+//            keyAlias = releaseSigningConfig.getProperty(SigningConfig.KEY_ALIAS)
+//            keyPassword = releaseSigningConfig.getProperty(SigningConfig.KEY_PASS)
+//            storePassword = releaseSigningConfig.getProperty(SigningConfig.KEY_PASS)
+
+            storeFile = file("keystore.jks")
+            storePassword = "04021993"
+            keyAlias = "loi"
+            keyPassword = "04021993"
         }
     }
 
