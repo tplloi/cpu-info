@@ -101,6 +101,39 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = Libs.AndroidX.Compose.compilerVersion
     }
+
+    flavorDimensions.add("type")
+
+    productFlavors {
+        create("dev") {
+            setDimension("type")
+//            buildConfigField("String", "FLAVOR_buildEnv", "dev")
+
+            resValue ("string", "app_name", "CPU Info DEV")
+
+            //TODO correct key
+            resValue("string", "SDK_KEY", "e75FnQfS9XTTqM1Kne69U7PW_MBgAnGQTFvtwVVui6kRPKs5L7ws9twr5IQWwVfzPKZ5pF2IfDa7lguMgGlCyt")
+            resValue("string", "BANNER", "xxx")
+            resValue("string", "INTER", "xxx")
+
+            resValue("string", "EnableAdInter", "true")
+            resValue("string", "EnableAdBanner", "true")
+        }
+        create("production") {
+            setDimension("type")
+//            buildConfigField("String", "FLAVOR_buildEnv", "prod")
+
+            resValue ("string", "app_name", "CPU Info")
+
+            //TODO correct key
+            resValue("string", "SDK_KEY", "e75FnQfS9XTTqM1Kne69U7PW_MBgAnGQTFvtwVVui6kRPKs5L7ws9twr5IQWwVfzPKZ5pF2IfDa7lguMgGlCyt")
+            resValue("string", "BANNER", "xxx")
+            resValue("string", "INTER", "xxx")
+
+            resValue("string", "EnableAdInter", "true")
+            resValue("string", "EnableAdBanner", "true")
+        }
+    }
 }
 
 dependencies {
@@ -145,6 +178,7 @@ dependencies {
     implementation(Libs.timber)
     implementation(Libs.relinker)
     implementation(Libs.coil)
+    implementation ("com.applovin:applovin-sdk:11.10.1")
     debugImplementation ("com.squareup.leakcanary:leakcanary-android:2.10")
 
 //    testImplementation(Libs.junit)
