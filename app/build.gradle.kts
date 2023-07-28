@@ -183,8 +183,8 @@ dependencies {
     implementation(Libs.timber)
     implementation(Libs.relinker)
     implementation(Libs.coil)
-    implementation ("com.applovin:applovin-sdk:11.10.1")
-    debugImplementation ("com.squareup.leakcanary:leakcanary-android:2.10")
+    implementation ("com.applovin:applovin-sdk:11.11.1")
+    debugImplementation ("com.squareup.leakcanary:leakcanary-android:2.12")
 
 //    testImplementation(Libs.junit)
 //    testImplementation(Libs.AndroidX.Test.core)
