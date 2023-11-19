@@ -20,8 +20,8 @@ android {
 
         minSdk = Versions.MIN_SDK
         targetSdk = Versions.TARGET_SDK
-        versionCode = 20230728
-        versionName = "2023.07.28"
+        versionCode = 20231119
+        versionName = "2023.11.19"
 
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled = true
@@ -183,7 +183,7 @@ dependencies {
     implementation(Libs.timber)
     implementation(Libs.relinker)
     implementation(Libs.coil)
-    implementation ("com.applovin:applovin-sdk:11.11.1")
+    implementation ("com.applovin:applovin-sdk:11.11.3")
     debugImplementation ("com.squareup.leakcanary:leakcanary-android:2.12")
 
 //    testImplementation(Libs.junit)
