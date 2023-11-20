@@ -1,6 +1,7 @@
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
 import com.roy93group.cpuinfo.R
 
 //package com.roy93group.cpuinfo.ext
@@ -164,6 +165,7 @@ fun Activity.rateApp(
     if (packageName.isNullOrEmpty()) {
         return
     }
+//    Log.d("roy93~", "rateApp: packageName $packageName")
     try {
         this.startActivity(
             Intent(

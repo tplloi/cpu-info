@@ -75,7 +75,7 @@ class FragmentApplications : BaseFragment<FApplicationsBinding>(
                     }
                     R.id.actionRate -> {
                         activity?.let{
-                            it.rateApp(it.packageName)
+                            it.rateApp("com.roy93group.cpuinfo")
                         }
                         true
                     }
