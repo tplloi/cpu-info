@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.roy93group.cpuinfo.features.temperature.TemperatureViewModel" />
+            type="com.galaxyjoy.cpuinfo.features.temperature.TemperatureViewModel" />
 
     </data>
 

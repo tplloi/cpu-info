@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.roy93group.cpuinfo.features.processes.ProcessesViewModel" />
+            type="com.galaxyjoy.cpuinfo.features.processes.ProcessesViewModel" />
 
     </data>
 

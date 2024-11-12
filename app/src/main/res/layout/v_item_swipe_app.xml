@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.roy93group.cpuinfo.widgets.swiperv.SwipeHorizontalMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.galaxyjoy.cpuinfo.widgets.swiperv.SwipeHorizontalMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:sml="http://schemas.android.com/apk/res-auto"
     android:id="@+id/sml"
     android:layout_width="match_parent"
@@ -15,4 +15,4 @@
         android:id="@id/smMenuViewRight"
         layout="@layout/v_item_swipe_app_right" />
 
-</com.roy93group.cpuinfo.widgets.swiperv.SwipeHorizontalMenuLayout>
+</com.galaxyjoy.cpuinfo.widgets.swiperv.SwipeHorizontalMenuLayout>

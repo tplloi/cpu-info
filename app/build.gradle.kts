@@ -12,11 +12,11 @@ kapt {
 }
 
 android {
-    namespace = "com.roy93group.cpuinfo"
+    namespace = "com.galaxyjoy.cpuinfo"
     compileSdk = Versions.COMPILE_SDK
 
     defaultConfig {
-        applicationId = "com.roy93group.cpuinfo"
+        applicationId = "com.galaxyjoy.cpuinfo"
 
         minSdk = Versions.MIN_SDK
         targetSdk = Versions.TARGET_SDK

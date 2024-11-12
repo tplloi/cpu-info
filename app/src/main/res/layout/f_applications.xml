@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.roy93group.cpuinfo.features.applications.ViewModelApplications" />
+            type="com.galaxyjoy.cpuinfo.features.applications.ViewModelApplications" />
 
     </data>
 
@@ -23,7 +23,7 @@
             app:onRefreshListener="@{() -> viewModel.refreshApplicationsList()}"
             app:refreshing="@{safeUnbox(viewModel.isLoading)}">
 
-            <com.roy93group.cpuinfo.widgets.swiperv.SwipeMenuRecyclerView
+            <com.galaxyjoy.cpuinfo.widgets.swiperv.SwipeMenuRecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
