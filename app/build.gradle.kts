@@ -13,13 +13,13 @@ kapt {
 
 android {
     namespace = "com.galaxyjoy.cpuinfo"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.galaxyjoy.cpuinfo"
 
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 20241112
         versionName = "2024.11.12"
 
@@ -33,7 +33,7 @@ android {
         }
     }
 
-    ndkVersion = Versions.NDK_VERSION
+    ndkVersion = "25.1.8937393"
 
     signingConfigs {
         getByName("debug") {

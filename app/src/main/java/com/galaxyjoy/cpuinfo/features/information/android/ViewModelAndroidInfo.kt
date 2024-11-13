@@ -101,7 +101,7 @@ class ViewModelAndroidInfo @Inject constructor(
             val statusText = when (devicePolicyManager.storageEncryptionStatus) {
                 DevicePolicyManager.ENCRYPTION_STATUS_UNSUPPORTED -> ENCRYPTION_STATUS_UNSUPPORTED
                 DevicePolicyManager.ENCRYPTION_STATUS_INACTIVE -> ENCRYPTION_STATUS_INACTIVE
-                DevicePolicyManager.ENCRYPTION_STATUS_ACTIVATING -> ENCRYPTION_STATUS_ACTIVATING
+//                DevicePolicyManager.ENCRYPTION_STATUS_ACTIVATING -> ENCRYPTION_STATUS_ACTIVATING
                 DevicePolicyManager.ENCRYPTION_STATUS_ACTIVE -> ENCRYPTION_STATUS_ACTIVE
                 DevicePolicyManager.ENCRYPTION_STATUS_ACTIVE_PER_USER ->
                     ENCRYPTION_STATUS_ACTIVE_PER_USER

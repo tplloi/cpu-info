@@ -419,7 +419,7 @@ class ViewModelHardwareInfo @Inject constructor(
         resources.getString(R.string.no)
     }
 
-    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String?) {
         if (key == FragmentSettings.KEY_TEMPERATURE_UNIT) {
             refreshHardwareInfo()
         }

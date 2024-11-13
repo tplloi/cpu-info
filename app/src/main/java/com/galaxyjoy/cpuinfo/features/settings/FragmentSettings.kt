@@ -40,7 +40,7 @@ class FragmentSettings : PreferenceFragmentCompat(),
         preferenceScreen.sharedPreferences?.unregisterOnSharedPreferenceChangeListener(this)
     }
 
-    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String?) {
         when (key) {
             KEY_THEME_CONFIG -> {
                 ThemeHelper.applyTheme(
