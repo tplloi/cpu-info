@@ -1,7 +1,7 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="action_sorting">Řazení</string>
     <string name="action_not_supported">Akce není k dispozici</string>
-    <string name="close_drawer">Zavřít panel</string>
+    <string name="close_drawer" tools:ignore="PrivateResource">Zavřít panel</string>
     <string name="yes">Ano</string>
     <string name="no">Ne</string>
     <string name="ok">OK</string>

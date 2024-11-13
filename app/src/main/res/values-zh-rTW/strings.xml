@@ -1,9 +1,9 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-<!--    <string name="app_name" translatable="false">CPU Info</string>-->
+    <!--    <string name="app_name" translatable="false">CPU Info</string>-->
     <string name="action_sorting">排序</string>
     <string name="action_not_supported">動作不可用</string>
-    <string name="close_drawer">關閉應用程式抽屜</string>
+    <string name="close_drawer" tools:ignore="PrivateResource">關閉應用程式抽屜</string>
     <string name="yes">是</string>
     <string name="no">否</string>
     <string name="ok">確定</string>

@@ -1,7 +1,7 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="action_sorting">Sortuj</string>
     <string name="action_not_supported">Wybrana akcja nie jest dostępna</string>
-    <string name="close_drawer">Zamknij panel</string>
+    <string name="close_drawer" tools:ignore="PrivateResource">Zamknij panel</string>
     <string name="yes">Tak</string>
     <string name="no">Nie</string>
     <string name="ok">OK</string>

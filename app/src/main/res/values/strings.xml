@@ -1,9 +1,9 @@
-<resources>
-<!--    <string name="app_name" translatable="false">CPU Info</string>-->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <!--    <string name="app_name" translatable="false">CPU Info</string>-->
     <string name="action_sorting">Sorting</string>
     <string name="action_gc" translatable="false">Garbage collector</string>
     <string name="action_not_supported">Action not available</string>
-    <string name="close_drawer">Close drawer</string>
+    <string name="close_drawer" tools:ignore="PrivateResource">Close drawer</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="ok">OK</string>

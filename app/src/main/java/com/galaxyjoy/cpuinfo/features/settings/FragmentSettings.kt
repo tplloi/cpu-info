@@ -20,7 +20,7 @@ class FragmentSettings : PreferenceFragmentCompat(),
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        addPreferencesFromResource(R.xml.preferences)
+        addPreferencesFromResource(R.xml.pref)
 
         // RAM widget isn't supported currently on O and above
         runOnApiAbove(Build.VERSION_CODES.N_MR1) {
