@@ -13,23 +13,23 @@
         android:icon="@drawable/baseline_star_rate_24"
         android:orderInCategory="100"
         android:title="@string/rate_app"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/actionMore"
         android:icon="@drawable/baseline_star_rate_24"
         android:orderInCategory="100"
         android:title="@string/more_app"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/actionShare"
         android:icon="@drawable/baseline_star_rate_24"
         android:orderInCategory="100"
         android:title="@string/share_app"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/actionPolicy"
         android:icon="@drawable/baseline_star_rate_24"
         android:orderInCategory="100"
         android:title="@string/term_policy"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
 </menu>

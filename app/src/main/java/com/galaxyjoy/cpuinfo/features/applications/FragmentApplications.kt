@@ -27,7 +27,6 @@ import com.galaxyjoy.cpuinfo.utils.Utils
 import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveDataObserver
 import com.galaxyjoy.cpuinfo.utils.uninstallApp
 import com.galaxyjoy.cpuinfo.utils.wrappers.EventObserver
-import com.galaxyjoy.cpuinfo.widgets.swiperv.SwipeMenuRecyclerView
 import dagger.hilt.android.AndroidEntryPoint
 import moreApp
 import rateApp
@@ -64,7 +63,7 @@ class FragmentApplications : BaseFragment<FApplicationsBinding>(
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-                menuInflater.inflate(R.menu.menu_apps, menu)
+                menuInflater.inflate(R.menu.menu_app, menu)
             }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
