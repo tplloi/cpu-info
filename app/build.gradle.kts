@@ -13,13 +13,13 @@ kapt {
 
 android {
     namespace = "com.galaxyjoy.cpuinfo"
-    compileSdk = Versions.COMPILE_SDK
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.galaxyjoy.cpuinfo"
 
-        minSdk = Versions.MIN_SDK
-        targetSdk = Versions.TARGET_SDK
+        minSdk = 21
+        targetSdk = 33
         versionCode = 20241112
         versionName = "2024.11.12"
 
@@ -177,15 +177,15 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.2")
     implementation("com.google.dagger:hilt-android:2.47")
     kapt("com.google.dagger:hilt-android-compiler:2.47")
-    implementation(Libs.Glide.glide)
-    kapt(Libs.Glide.compiler)
-    implementation(Libs.Airbnb.epoxy)
-    implementation(Libs.Airbnb.dataBinding)
-    kapt(Libs.Airbnb.processor)
-    implementation(Libs.bus)
-    implementation(Libs.timber)
-    implementation(Libs.relinker)
-    implementation(Libs.coil)
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    kapt("com.github.bumptech.glide:compiler:4.15.1")
+    implementation("com.airbnb.android:epoxy:5.1.3")
+    implementation("com.airbnb.android:epoxy-databinding:5.1.3")
+    kapt("com.airbnb.android:epoxy-processor:5.1.3")
+    implementation("org.greenrobot:eventbus:3.3.1")
+    implementation("com.jakewharton.timber:timber:5.0.1")
+    implementation("com.getkeepsafe.relinker:relinker:1.4.5")
+    implementation("io.coil-kt:coil-compose:2.4.0")
     implementation("com.applovin:applovin-sdk:13.0.1")
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.14")
 

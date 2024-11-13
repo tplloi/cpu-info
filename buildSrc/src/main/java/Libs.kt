@@ -1,11 +1,11 @@
 object Libs {
 
     const val androidGradlePlugin = "com.android.tools.build:gradle:8.6.1"
-    const val bus = "org.greenrobot:eventbus:3.3.1"
-    const val timber = "com.jakewharton.timber:timber:5.0.1"
-    const val relinker = "com.getkeepsafe.relinker:relinker:1.4.5"
+//    const val bus = "org.greenrobot:eventbus:3.3.1"
+//    const val timber = "com.jakewharton.timber:timber:5.0.1"
+//    const val relinker = "com.getkeepsafe.relinker:relinker:1.4.5"
     const val junit = "junit:junit:4.13.2"
-    const val coil = "io.coil-kt:coil-compose:2.4.0"
+//    const val coil = "io.coil-kt:coil-compose:2.4.0"
 
     object Kotlin {
 //        private const val version = "1.8.22"
@@ -94,16 +94,16 @@ object Libs {
     }
 
     object Glide {
-        private const val version = "4.15.1"
-        const val glide = "com.github.bumptech.glide:glide:$version"
-        const val compiler = "com.github.bumptech.glide:compiler:$version"
+//        private const val version = "4.15.1"
+//        const val glide = "com.github.bumptech.glide:glide:4.15.1"
+//        const val compiler = "com.github.bumptech.glide:compiler:4.15.1"
     }
 
     object Airbnb {
-        private const val version = "5.1.3"
-        const val epoxy = "com.airbnb.android:epoxy:$version"
-        const val processor = "com.airbnb.android:epoxy-processor:$version"
-        const val dataBinding = "com.airbnb.android:epoxy-databinding:$version"
+//        private const val version = "5.1.3"
+//        const val epoxy = "com.airbnb.android:epoxy:5.1.3"
+//        const val processor = "com.airbnb.android:epoxy-processor:5.1.3"
+//        const val dataBinding = "com.airbnb.android:epoxy-databinding:5.1.3"
     }
 
 //    object Mockito {
