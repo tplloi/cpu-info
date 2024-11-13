@@ -145,14 +145,14 @@ android {
 }
 
 dependencies {
-    implementation(Libs.Kotlin.stdlib)
-    implementation(Libs.Kotlin.immutable)
-    implementation(Libs.AndroidX.coreKtx)
-    implementation(Libs.AndroidX.activityKtx)
-    implementation(Libs.AndroidX.fragmentKtx)
-    implementation(Libs.AndroidX.appCompat)
-    implementation(Libs.AndroidX.preference)
-    implementation(Libs.AndroidX.swipeRefreshLayout)
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22")
+    implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.5")
+    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.activity:activity-compose:1.7.2")
+    implementation("androidx.fragment:fragment-ktx:1.6.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.preference:preference:1.2.0")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation(Libs.AndroidX.constraintLayout)
     implementation(Libs.AndroidX.multiDex)
     implementation(Libs.AndroidX.viewPager2)
