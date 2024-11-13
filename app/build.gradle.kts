@@ -114,7 +114,7 @@ android {
     flavorDimensions.add("type")
     productFlavors {
         create("dev") {
-            setDimension("type")
+            dimension = "type"
             resValue("string", "app_name", "CPU Info DEV")
             resValue(
                 "string",
@@ -128,7 +128,7 @@ android {
             resValue("string", "EnableAdBanner", "true")
         }
         create("production") {
-            setDimension("type")
+            dimension = "type"
             resValue("string", "app_name", "CPU Info")
             resValue(
                 "string",
