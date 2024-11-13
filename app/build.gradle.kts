@@ -62,7 +62,7 @@ android {
             signingConfig = signingConfigs.getByName("debug")
             isMinifyEnabled = false
             enableUnitTestCoverage = true
-            applicationIdSuffix = ".debug"
+//            applicationIdSuffix = ".debug"
         }
         release {
             signingConfig = signingConfigs.getByName("release")
