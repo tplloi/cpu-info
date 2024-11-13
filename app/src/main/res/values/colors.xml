@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#03A9F4</color>
-    <color name="primaryDark">#01579B</color>
+    <color name="primary">#36C2CE</color>
+    <color name="primaryDark">#4535C1</color>
     <color name="onPrimary">#FFFFFF</color>
     <color name="error">#F06292</color>
     <color name="onError">#FFFFFF</color>
-    <color name="accent">#F06292</color>
+    <color name="accent">#36C2CE</color>
     <color name="surface">#FFFFFF</color>
     <color name="onSurface">#000000</color>
     <color name="background">#FFFFFF</color>
@@ -13,6 +13,6 @@
     <color name="red">#F06292</color>
     <color name="nav_bar">#B3000000</color>
     <color name="status_bar">@color/primary</color>
-    <color name="blueLight">#2979FF</color>
+    <color name="blueLight">@color/primaryDark</color>
     <color name="progressBackground">#E4E5E7</color>
 </resources>

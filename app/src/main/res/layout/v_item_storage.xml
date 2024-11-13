@@ -30,7 +30,7 @@
         app:iconSize="40dp"
         app:iconSrc="@drawable/ic_root"
         app:max="100.0"
-        app:progressColor="@color/accent"
+        app:progressColor="@color/primary"
         app:radius="10dp" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

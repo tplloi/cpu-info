@@ -51,7 +51,7 @@
             app:iconPadding="10dp"
             app:max="@{maxFrequency}"
             app:progress="@{currentFrequency}"
-            app:progressColor="@color/accent"
+            app:progressColor="@color/primary"
             app:radius="10dp" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
