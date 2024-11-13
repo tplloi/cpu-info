@@ -15,10 +15,10 @@ object Libs {
     }
 
     object Coroutines {
-        private const val version = "1.7.2"
-        const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
-        const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
-        const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$version"
+//        private const val version = "1.7.2"
+//        const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2"
+//        const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.2"
+        const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.2"
     }
 
     object AndroidX {
@@ -42,10 +42,10 @@ object Libs {
         }
 
         object Navigation {
-            private const val version = "2.6.0"
-            const val fragment = "androidx.navigation:navigation-fragment-ktx:$version"
-            const val ui = "androidx.navigation:navigation-ui-ktx:$version"
-            const val safeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:$version"
+//            private const val version = "2.6.0"
+//            const val fragment = "androidx.navigation:navigation-fragment-ktx:2.6.0"
+//            const val ui = "androidx.navigation:navigation-ui-ktx:2.6.0"
+            const val safeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:2.6.0"
         }
 
         object Compose {
@@ -76,21 +76,21 @@ object Libs {
     }
 
     object Google {
-        const val material = "com.google.android.material:material:1.9.0"
-        const val gson = "com.google.code.gson:gson:2.10.1"
+//        const val material = "com.google.android.material:material:1.9.0"
+//        const val gson = "com.google.code.gson:gson:2.10.1"
     }
 
     object Rx {
-        const val rxJava = "io.reactivex.rxjava3:rxjava:3.1.6"
-        const val rxAndroid = "io.reactivex.rxjava3:rxandroid:3.0.2"
+//        const val rxJava = "io.reactivex.rxjava3:rxjava:3.1.6"
+//        const val rxAndroid = "io.reactivex.rxjava3:rxandroid:3.0.2"
     }
 
     object Hilt {
-        private const val version = "2.47"
-        const val gradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:$version"
-        const val android = "com.google.dagger:hilt-android:$version"
-        const val androidCompiler = "com.google.dagger:hilt-android-compiler:$version"
-        const val androidTesting = "com.google.dagger:hilt-android-testing:$version"
+//        private const val version = "2.47"
+        const val gradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:2.47"
+//        const val android = "com.google.dagger:hilt-android:2.47"
+//        const val androidCompiler = "com.google.dagger:hilt-android-compiler:2.47"
+        const val androidTesting = "com.google.dagger:hilt-android-testing:2.47"
     }
 
     object Glide {
