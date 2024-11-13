@@ -28,17 +28,17 @@ object Libs {
 //        const val appCompat = "androidx.appcompat:appcompat:1.6.1"
 //        const val preference = "androidx.preference:preference:1.2.0"
 //        const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
-        const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
-        const val multiDex = "androidx.multidex:multidex:2.0.1"
-        const val viewPager2 = "androidx.viewpager2:viewpager2:1.0.0"
-        const val datastorePreferences = "androidx.datastore:datastore-preferences:1.0.0"
+//        const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
+//        const val multiDex = "androidx.multidex:multidex:2.0.1"
+//        const val viewPager2 = "androidx.viewpager2:viewpager2:1.0.0"
+//        const val datastorePreferences = "androidx.datastore:datastore-preferences:1.0.0"
 
         object Lifecycle {
-            private const val version = "2.6.1"
-            const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-compose:$version"
-            const val runtimeCompose = "androidx.lifecycle:lifecycle-runtime-compose:$version"
-            const val liveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:$version"
-            const val common = "androidx.lifecycle:lifecycle-common-java8:$version"
+//            private const val version = "2.6.1"
+//            const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1"
+//            const val runtimeCompose = "androidx.lifecycle:lifecycle-runtime-compose:2.6.1"
+//            const val liveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
+//            const val common = "androidx.lifecycle:lifecycle-common-java8:2.6.1"
         }
 
         object Navigation {
