@@ -58,7 +58,7 @@ public class IconRoundCornerProgressBar extends AnimatedRoundCornerProgressBar {
 
     @Override
     public int initLayout() {
-        return R.layout.v_layout_icon_round_corner_progress_bar;
+        return R.layout.vi_layout_icon_round_corner_progress_bar;
     }
 
     @Override

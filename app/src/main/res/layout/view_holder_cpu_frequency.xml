@@ -48,7 +48,7 @@
             app:animationEnable="true"
             app:backgroundColor="@color/progressBackground"
             app:backgroundPadding="5dp"
-            app:iconPadding="10dp"
+            app:iconPadding="16dp"
             app:max="@{maxFrequency}"
             app:progress="@{currentFrequency}"
             app:progressColor="@color/primary"
