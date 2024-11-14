@@ -48,7 +48,7 @@ class RamUsageWidgetProvider : AppWidgetProvider() {
                 Timber.d("Ram state changed from $previousRamState to $actualRamState")
                 previousRamState = actualRamState
 
-                val remoteViews = RemoteViews(context.packageName, R.layout.v_widget)
+                val remoteViews = RemoteViews(context.packageName, R.layout.vi_widget)
                 remoteViews.setOnClickPendingIntent(
                     R.id.arcRamStatus,
                     buildButtonPendingIntent(context)
