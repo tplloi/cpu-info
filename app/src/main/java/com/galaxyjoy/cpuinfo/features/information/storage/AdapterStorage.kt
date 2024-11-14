@@ -21,7 +21,7 @@ class AdapterStorage(private val storageList: List<StorageItem>) :
     override fun getItemCount(): Int = storageList.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.v_item_storage, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.vi_item_storage, parent, false)
         return ViewHolder(v)
     }
 

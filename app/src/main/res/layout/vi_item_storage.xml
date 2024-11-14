@@ -26,9 +26,9 @@
         android:layout_marginRight="16dp"
         app:backgroundColor="@color/progressBackground"
         app:backgroundPadding="8dp"
+        app:iconPadding="16dp"
         app:iconSize="40dp"
         app:iconSrc="@drawable/ic_root"
-        app:iconPadding="16dp"
         app:max="100.0"
         app:progressColor="@color/primary"
         app:radius="16dp" />

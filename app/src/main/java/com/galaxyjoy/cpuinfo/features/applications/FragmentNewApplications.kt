@@ -122,7 +122,7 @@ class FragmentNewApplications : Fragment() {
                     .inflate(R.layout.dlg_native_libs, null)
                 val arrayAdapter = ArrayAdapter(
                     requireContext(),
-                    R.layout.v_item_native_libs,
+                    R.layout.vi_item_native_libs,
                     R.id.nativeNameTv,
                     event.nativeLibs,
                 )

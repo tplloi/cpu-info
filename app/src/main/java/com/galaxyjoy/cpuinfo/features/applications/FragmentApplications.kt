@@ -213,7 +213,7 @@ class FragmentApplications : BaseFragment<FApplicationsBinding>(
 
         val listView: ListView = dialogLayout.findViewById(R.id.dialogLv)
         val arrayAdapter = ArrayAdapter(
-            requireContext(), R.layout.v_item_native_libs,
+            requireContext(), R.layout.vi_item_native_libs,
             R.id.nativeNameTv, libs
         )
         listView.adapter = arrayAdapter

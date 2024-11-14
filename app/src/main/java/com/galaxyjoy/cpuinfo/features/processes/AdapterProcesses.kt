@@ -19,7 +19,7 @@ class AdapterProcesses(private val processList: List<ProcessItem>) :
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.v_item_process, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.vi_item_process, parent, false)
         return ViewHolder(v)
     }
 
