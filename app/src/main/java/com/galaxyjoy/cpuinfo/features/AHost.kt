@@ -33,7 +33,7 @@ class AHost : AppCompatActivity() {
         runOnApiAbove(Build.VERSION_CODES.M) {
             // Processes cannot be listed above M
             val menu = binding.bottomNavigation.menu
-            menu.findItem(R.id.processes).isVisible = false
+            menu.findItem(R.id.menuProcesses).isVisible = false
         }
     }
 
@@ -61,7 +61,7 @@ class AHost : AppCompatActivity() {
     private fun setToolbarTitleAndElevation(title: String) {
         binding.toolbar.title = title
         // binding.toolbar.isVisible = navController.currentDestination?.id != R.id.applications
-        if (navController.currentDestination?.id == R.id.hardware) {
+        if (navController.currentDestination?.id == R.id.menuHardware) {
             binding.toolbar.elevation = 0f
         } else {
             binding.toolbar.elevation = resources.getDimension(R.dimen.elevation_height)

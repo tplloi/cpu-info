@@ -2,34 +2,34 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/hardware">
+    app:startDestination="@id/menuHardware">
 
     <fragment
-        android:id="@+id/hardware"
+        android:id="@+id/menuHardware"
         android:name="com.galaxyjoy.cpuinfo.features.information.FragmentInfoContainer"
         android:label="@string/hardware"
         tools:layout="@layout/f_info" />
 
     <fragment
-        android:id="@+id/applications"
+        android:id="@+id/menuApplications"
         android:name="com.galaxyjoy.cpuinfo.features.applications.FragmentApplications"
         android:label="@string/applications"
         tools:layout="@layout/f_applications" />
 
     <fragment
-        android:id="@+id/processes"
+        android:id="@+id/menuProcesses"
         android:name="com.galaxyjoy.cpuinfo.features.processes.FragmentProcesses"
         android:label="@string/processes"
         tools:layout="@layout/f_processes" />
 
     <fragment
-        android:id="@+id/temperature"
+        android:id="@+id/menuTemperature"
         android:name="com.galaxyjoy.cpuinfo.features.temperature.FragmentTemperature"
         android:label="@string/temperature"
         tools:layout="@layout/f_temperature" />
 
     <fragment
-        android:id="@+id/settings"
+        android:id="@+id/menuSettings"
         android:name="com.galaxyjoy.cpuinfo.features.settings.FragmentSettings"
         android:label="@string/settings" />
 

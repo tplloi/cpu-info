@@ -68,25 +68,25 @@ class FragmentApplications : BaseFragment<FApplicationsBinding>(
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 return when (menuItem.itemId) {
-                    R.id.actionSorting -> {
+                    R.id.menuActionSorting -> {
                         viewModel.changeAppsSorting()
                         true
                     }
-                    R.id.actionRate -> {
+                    R.id.menuActionRate -> {
                         activity?.let{
                             it.rateApp("com.galaxyjoy.cpuinfo")
                         }
                         true
                     }
-                    R.id.actionMore -> {
+                    R.id.menuActionMore -> {
                         activity?.moreApp()
                         true
                     }
-                    R.id.actionShare -> {
+                    R.id.menuActionShare -> {
                         activity?.shareApp()
                         true
                     }
-                    R.id.actionPolicy -> {
+                    R.id.menuActionPolicy -> {
                         context?.openBrowserPolicy()
                         true
                     }

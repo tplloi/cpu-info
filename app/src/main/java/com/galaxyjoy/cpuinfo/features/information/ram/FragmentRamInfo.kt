@@ -36,7 +36,7 @@ class FragmentRamInfo : BaseFragment<FRecyclerViewBinding>(R.layout.f_recycler_v
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 return when (menuItem.itemId) {
-                    R.id.actionGc -> {
+                    R.id.menuActionGc -> {
                         viewModel.onClearRamClicked()
                         Snackbar.make(
                             binding.mainContainer, getString(R.string.running_gc),

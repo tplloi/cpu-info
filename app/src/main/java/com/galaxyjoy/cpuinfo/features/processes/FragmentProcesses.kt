@@ -39,7 +39,7 @@ class FragmentProcesses : BaseFragment<FProcessesBinding>(R.layout.f_processes) 
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 return when (menuItem.itemId) {
-                    R.id.actionSorting -> {
+                    R.id.menuActionSorting -> {
                         viewModel.changeProcessSorting()
                         true
                     }

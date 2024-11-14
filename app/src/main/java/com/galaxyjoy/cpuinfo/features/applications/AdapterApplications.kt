@@ -55,7 +55,7 @@ class AdapterApplications(
         private val storageTv: TextView = itemView.findViewById(R.id.storageUsage)
         private val sml: SwipeHorizontalMenuLayout = itemView.findViewById(R.id.sml)
         private val mainContainer: View = itemView.findViewById(R.id.smContentView)
-        private val settingsV: View = itemView.findViewById(R.id.settings)
+        private val settingsV: View = itemView.findViewById(R.id.menuSettings)
         private val deleteView: View = itemView.findViewById(R.id.delete)
         private val nativeButtonIV: ImageView = itemView.findViewById(R.id.nativeButton)
 

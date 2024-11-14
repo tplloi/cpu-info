@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/actionSorting"
+        android:id="@+id/menuActionSorting"
         android:icon="@drawable/ic_sort"
         android:orderInCategory="100"
         android:title="@string/action_sorting"
