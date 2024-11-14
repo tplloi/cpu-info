@@ -11,9 +11,9 @@
         style="@style/TextBody2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
         android:textStyle="bold"
         tools:text="Internal: 1.3GB / 4GB" />
 
@@ -21,16 +21,16 @@
         android:id="@+id/storageProgress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
         app:backgroundColor="@color/progressBackground"
-        app:backgroundPadding="5dp"
+        app:backgroundPadding="8dp"
         app:iconSize="40dp"
         app:iconSrc="@drawable/ic_root"
         app:iconPadding="16dp"
         app:max="100.0"
         app:progressColor="@color/primary"
-        app:radius="10dp" />
+        app:radius="16dp" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

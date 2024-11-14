@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:background="?colorPrimary"
-            android:elevation="4dp"
+            android:elevation="8dp"
             app:itemIconTint="@color/nav_drawer_tint_color"
             app:itemTextColor="@color/nav_drawer_tint_color"
             app:layout_constraintBottom_toBottomOf="parent"

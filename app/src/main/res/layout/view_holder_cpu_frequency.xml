@@ -47,17 +47,17 @@
             android:layout_marginTop="8dp"
             app:animationEnable="true"
             app:backgroundColor="@color/progressBackground"
-            app:backgroundPadding="5dp"
+            app:backgroundPadding="8dp"
             app:iconPadding="16dp"
             app:max="@{maxFrequency}"
             app:progress="@{currentFrequency}"
             app:progressColor="@color/primary"
-            app:radius="10dp" />
+            app:radius="16dp" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatTextView
