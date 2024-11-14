@@ -3,7 +3,7 @@ package com.galaxyjoy.cpuinfo.features.temperature.list
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.galaxyjoy.cpuinfo.databinding.VItemTemperatureBinding
+import com.galaxyjoy.cpuinfo.databinding.ViItemTemperatureBinding
 import com.galaxyjoy.cpuinfo.features.temperature.TemperatureFormatter
 
 /**
@@ -16,7 +16,7 @@ class AdapterTemperature(
 ) : RecyclerView.Adapter<AdapterTemperature.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = VItemTemperatureBinding.inflate(
+        val binding = ViItemTemperatureBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
         return ViewHolder(binding, temperatureFormatter)
@@ -32,7 +32,7 @@ class AdapterTemperature(
     override fun getItemCount(): Int = temperatureList.size
 
     class ViewHolder(
-        private val binding: VItemTemperatureBinding,
+        private val binding: ViItemTemperatureBinding,
         private val temperatureFormatter: TemperatureFormatter
     ) : RecyclerView.ViewHolder(binding.root) {
 

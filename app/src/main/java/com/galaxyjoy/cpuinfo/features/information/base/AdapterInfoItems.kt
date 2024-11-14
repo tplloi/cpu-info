@@ -30,7 +30,7 @@ class AdapterInfoItems(
         viewType: Int
     ): SingleItemViewHolder {
         val layout = if (layoutType == LayoutType.HORIZONTAL_LAYOUT)
-            R.layout.v_item_value else R.layout.vi_item_value_vertical
+            R.layout.vi_item_value else R.layout.vi_item_value_vertical
         return SingleItemViewHolder(
             LayoutInflater.from(parent.context).inflate(
                 layout, parent,
