@@ -9,7 +9,7 @@
 
     <include
         android:id="@id/smContentView"
-        layout="@layout/v_item_application" />
+        layout="@layout/vi_item_application" />
 
     <include
         android:id="@id/smMenuViewRight"
