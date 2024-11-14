@@ -13,6 +13,6 @@
 
     <include
         android:id="@id/smMenuViewRight"
-        layout="@layout/v_item_swipe_app_right" />
+        layout="@layout/vi_item_swipe_app_right" />
 
 </com.galaxyjoy.cpuinfo.widgets.swiperv.SwipeHorizontalMenuLayout>

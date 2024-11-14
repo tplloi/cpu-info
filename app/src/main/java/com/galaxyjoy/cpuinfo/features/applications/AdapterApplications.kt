@@ -31,7 +31,7 @@ class AdapterApplications(
         viewType: Int
     ): ApplicationViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.v_item_swipe_app, parent, false)
+            .inflate(R.layout.vi_item_swipe_app, parent, false)
         return ApplicationViewHolder(view)
     }
 
