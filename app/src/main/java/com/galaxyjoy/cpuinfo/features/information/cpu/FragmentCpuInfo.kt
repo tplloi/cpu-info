@@ -22,7 +22,7 @@ class FragmentCpuInfo : BaseFragment<FRecyclerViewBinding>(R.layout.f_recycler_v
         super.onViewCreated(view, savedInstanceState)
 
         val controller = CpuInfoEpoxyController(requireContext())
-        binding.recyclerView.adapter = controller.adapter
+        binding.rv.adapter = controller.adapter
         viewModel.viewState.observe(viewLifecycleOwner) { controller.setData(it) }
     }
 }

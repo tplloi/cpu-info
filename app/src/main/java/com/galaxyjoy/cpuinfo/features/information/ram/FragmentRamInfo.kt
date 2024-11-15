@@ -24,7 +24,7 @@ class FragmentRamInfo : BaseFragment<FRecyclerViewBinding>(R.layout.f_recycler_v
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val controller = RamInfoEpoxyController(requireContext())
-        binding.recyclerView.adapter = controller.adapter
+        binding.rv.adapter = controller.adapter
 
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(object : MenuProvider {

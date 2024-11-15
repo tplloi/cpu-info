@@ -6,7 +6,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.galaxyjoy.cpuinfo.R
-import com.galaxyjoy.cpuinfo.databinding.FTemperatureBinding
+import com.galaxyjoy.cpuinfo.databinding.FrmTemperatureBinding
 import com.galaxyjoy.cpuinfo.features.information.base.BaseFragment
 import com.galaxyjoy.cpuinfo.features.temperature.list.AdapterTemperature
 import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveDataObserver
@@ -14,8 +14,8 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class FragmentTemperature : BaseFragment<FTemperatureBinding>(
-    R.layout.f_temperature
+class FragmentTemperature : BaseFragment<FrmTemperatureBinding>(
+    R.layout.frm_temperature
 ) {
 
     private val viewModel: TemperatureViewModel by viewModels()

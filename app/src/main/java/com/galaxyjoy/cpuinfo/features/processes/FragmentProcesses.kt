@@ -51,7 +51,7 @@ class FragmentProcesses : BaseFragment<FProcessesBinding>(R.layout.f_processes) 
     }
 
     override fun onDestroyView() {
-        binding.recyclerView.adapter = null
+        binding.rv.adapter = null
         super.onDestroyView()
     }
 
@@ -66,11 +66,11 @@ class FragmentProcesses : BaseFragment<FProcessesBinding>(R.layout.f_processes) 
         )
 
         val rvLayoutManager = LinearLayoutManager(requireContext())
-        binding.apply {
-            recyclerView.layoutManager = rvLayoutManager
-            recyclerView.adapter = adapterProcesses
-            recyclerView.addItemDecoration(DividerItemDecoration(requireContext()))
-            (recyclerView.itemAnimator as? SimpleItemAnimator)?.supportsChangeAnimations = false
+        binding.rv.apply {
+            layoutManager = rvLayoutManager
+            adapter = adapterProcesses
+            addItemDecoration(DividerItemDecoration(requireContext()))
+            (this.itemAnimator as? SimpleItemAnimator)?.supportsChangeAnimations = false
         }
     }
 

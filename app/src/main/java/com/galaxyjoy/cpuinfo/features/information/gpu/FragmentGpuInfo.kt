@@ -76,7 +76,7 @@ class FragmentGpuInfo : BaseFragment<FRecyclerViewBinding>(R.layout.f_recycler_v
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val controller = GpuInfoEpoxyController(requireContext())
-        binding.recyclerView.adapter = controller.adapter
+        binding.rv.adapter = controller.adapter
         viewModel.viewState.observe(viewLifecycleOwner) { controller.setData(it) }
     }
 

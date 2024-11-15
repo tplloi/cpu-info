@@ -23,7 +23,7 @@
             tools:listitem="@layout/vi_item_temperature" />
 
         <ProgressBar
-            android:id="@+id/progressBar"
+            android:id="@+id/pb"
             style="@style/TintedProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
 
         <!--No data-->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/noDataTv"
+            android:id="@+id/tvNoData"
             style="@style/TextH6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -24,7 +24,7 @@
             app:refreshing="@{safeUnbox(viewModel.isLoading)}">
 
             <com.galaxyjoy.cpuinfo.widgets.swiperv.SwipeMenuRecyclerView
-                android:id="@+id/recyclerView"
+                android:id="@+id/rv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:splitMotionEvents="false"

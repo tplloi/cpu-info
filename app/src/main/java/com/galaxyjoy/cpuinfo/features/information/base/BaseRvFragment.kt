@@ -46,9 +46,9 @@ abstract class BaseRvFragment : Fragment(), AdapterInfoItems.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val view = inflater.inflate(R.layout.f_rv, container, false)
+        val view = inflater.inflate(R.layout.frm_rv, container, false)
         mainContainer = view.findViewById(R.id.mainContainer)
-        recyclerView = view.findViewById(R.id.recyclerView)
+        recyclerView = view.findViewById(R.id.rv)
         setupRecyclerView()
         setupRecyclerViewAdapter()
         return view

@@ -109,7 +109,7 @@ class FragmentApplications : BaseFragment<FApplicationsBinding>(
             ListLiveDataObserver(adapterApplications)
         )
 
-        binding.recyclerView.apply {
+        binding.rv.apply {
             layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
             adapter = adapterApplications
             addItemDecoration(DividerItemDecoration(requireContext()))
