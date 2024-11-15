@@ -22,7 +22,7 @@
     </queries>
 
     <application
-        android:name=".MyApp"
+        android:name=".GalaxyApp"
         android:allowBackup="true"
         android:enableOnBackInvokedCallback="true"
         android:icon="@mipmap/ic_launcher"
