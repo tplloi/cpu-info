@@ -5,19 +5,20 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import com.google.android.material.snackbar.Snackbar
 import com.galaxyjoy.cpuinfo.R
-import com.galaxyjoy.cpuinfo.databinding.FRecyclerViewBinding
+import com.galaxyjoy.cpuinfo.databinding.FrmRecyclerViewBinding
 import com.galaxyjoy.cpuinfo.features.information.base.BaseFragment
 import com.galaxyjoy.cpuinfo.utils.runOnApiBelow
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FragmentRamInfo : BaseFragment<FRecyclerViewBinding>(R.layout.f_recycler_view) {
+class FragmentRamInfo : BaseFragment<FrmRecyclerViewBinding>(R.layout.frm_recycler_view) {
 
     private val viewModel: ViewModelRamInfo by viewModels()
 
