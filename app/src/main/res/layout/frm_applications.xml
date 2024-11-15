@@ -17,7 +17,7 @@
         android:layout_height="match_parent">
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:id="@+id/swipeRefreshLayout"
+            android:id="@+id/srl"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:onRefreshListener="@{() -> viewModel.refreshApplicationsList()}"

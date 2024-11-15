@@ -19,7 +19,7 @@ import androidx.lifecycle.Lifecycle
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.galaxyjoy.cpuinfo.R
-import com.galaxyjoy.cpuinfo.databinding.FApplicationsBinding
+import com.galaxyjoy.cpuinfo.databinding.FrmApplicationsBinding
 import com.galaxyjoy.cpuinfo.ext.openBrowserPolicy
 import com.galaxyjoy.cpuinfo.features.information.base.BaseFragment
 import com.galaxyjoy.cpuinfo.utils.DividerItemDecoration
@@ -34,8 +34,8 @@ import shareApp
 import java.io.File
 
 @AndroidEntryPoint
-class FragmentApplications : BaseFragment<FApplicationsBinding>(
-    R.layout.f_applications
+class FragmentApplications : BaseFragment<FrmApplicationsBinding>(
+    R.layout.frm_applications
 ), AdapterApplications.ItemClickListener {
 
     private val viewModel: ViewModelApplications by viewModels()
@@ -55,7 +55,7 @@ class FragmentApplications : BaseFragment<FApplicationsBinding>(
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
-        binding.swipeRefreshLayout.setColorSchemeResources(
+        binding.srl.setColorSchemeResources(
             R.color.accent,
             R.color.primaryDark
         )

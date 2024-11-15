@@ -9,7 +9,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.galaxyjoy.cpuinfo.R
-import com.galaxyjoy.cpuinfo.databinding.AHostLayoutBinding
+import com.galaxyjoy.cpuinfo.databinding.ActHostLayoutBinding
 import com.galaxyjoy.cpuinfo.utils.runOnApiAbove
 import com.galaxyjoy.cpuinfo.utils.setupEdgeToEdge
 import dagger.hilt.android.AndroidEntryPoint
@@ -21,12 +21,12 @@ import dagger.hilt.android.AndroidEntryPoint
 class AHost : AppCompatActivity() {
 
     private lateinit var navController: NavController
-    private lateinit var binding: AHostLayoutBinding
+    private lateinit var binding: ActHostLayoutBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppThemeBase)
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.a_host_layout)
+        binding = DataBindingUtil.setContentView(this, R.layout.act_host_layout)
         setupEdgeToEdge()
         setupNavigation()
         setSupportActionBar(binding.toolbar)
