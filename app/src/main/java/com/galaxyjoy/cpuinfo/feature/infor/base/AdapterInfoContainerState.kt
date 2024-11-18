@@ -6,8 +6,8 @@ import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.feature.infor.android.FragmentAndroidInfo
 import com.galaxyjoy.cpuinfo.feature.infor.cpu.FragmentCpuInfo
 import com.galaxyjoy.cpuinfo.feature.infor.gpu.FragmentGpuInfo
-import com.galaxyjoy.cpuinfo.feature.infor.hardware.FragmentHardwareInfo
-import com.galaxyjoy.cpuinfo.feature.infor.ram.FragmentRamInfo
+import com.galaxyjoy.cpuinfo.feature.infor.hardware.FrmHardwareInfo
+import com.galaxyjoy.cpuinfo.feature.infor.ram.FrmRamInfo
 import com.galaxyjoy.cpuinfo.feature.infor.screen.FrmScreenInfo
 import com.galaxyjoy.cpuinfo.feature.infor.sensor.FrmSensorsInfo
 import com.galaxyjoy.cpuinfo.feature.infor.storage.FrmStorageInfo
@@ -21,11 +21,11 @@ class AdapterInfoContainerState(fragment: Fragment) : FragmentStateAdapter(fragm
         when (position) {
             CPU_POS -> FragmentCpuInfo()
             GPU_POS -> FragmentGpuInfo()
-            RAM_POS -> FragmentRamInfo()
+            RAM_POS -> FrmRamInfo()
             STORAGE_POS -> FrmStorageInfo()
             SCREEN_POS -> FrmScreenInfo()
             ANDROID_POS -> FragmentAndroidInfo()
-            HARDWARE_POS -> FragmentHardwareInfo()
+            HARDWARE_POS -> FrmHardwareInfo()
             SENSORS_POS -> FrmSensorsInfo()
             else -> throw IllegalArgumentException("Unknown position for ViewPager2")
         }

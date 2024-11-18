@@ -17,9 +17,9 @@ import com.galaxyjoy.cpuinfo.util.runOnApiBelow
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FragmentRamInfo : BaseFragment<FrmRecyclerViewBinding>(R.layout.frm_recycler_view) {
+class FrmRamInfo : BaseFragment<FrmRecyclerViewBinding>(R.layout.frm_recycler_view) {
 
-    private val viewModel: ViewModelRamInfo by viewModels()
+    private val viewModel: VMRamInfo by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

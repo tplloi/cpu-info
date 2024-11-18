@@ -18,7 +18,7 @@ import javax.inject.Inject
  * @author galaxyjoy
  */
 @HiltViewModel
-class ViewModelRamInfo @Inject constructor(
+class VMRamInfo @Inject constructor(
     observableRamData: ObservableRamData,
     private val ramCleanupAction: RamCleanupAction
 ) : ViewModel() {

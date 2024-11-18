@@ -28,11 +28,11 @@ import java.util.regex.Pattern
 import javax.inject.Inject
 
 /**
- * ViewModel for [FragmentHardwareInfo]
+ * ViewModel for [FrmHardwareInfo]
  *
  */
 @HiltViewModel
-class ViewModelHardwareInfo @Inject constructor(
+class VMHardwareInfo @Inject constructor(
     private val resources: Resources,
     private val temperatureProvider: TemperatureProvider,
     private val temperatureFormatter: TemperatureFormatter,
@@ -254,7 +254,7 @@ class ViewModelHardwareInfo @Inject constructor(
             )
             if (bluetoothMac != null && bluetoothMac.isNotEmpty())
                 functionsList.add(resources.getString(R.string.bluetooth_mac) to bluetoothMac)
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             // ignored
         }
 
@@ -265,11 +265,11 @@ class ViewModelHardwareInfo @Inject constructor(
             val value = reader.readLine()
             reader.close()
             functionsList.add(resources.getString(R.string.wifi_mac) to value)
-        } catch (ignored: Exception) {
+        } catch (_: Exception) {
         }
 
         // IR
-        val hasIr = irManager?.hasIrEmitter() ?: false
+        val hasIr = irManager?.hasIrEmitter() == true
         functionsList.add(resources.getString(R.string.ir_emitter) to getYesNoString(hasIr))
 
         return functionsList
@@ -298,7 +298,7 @@ class ViewModelHardwareInfo @Inject constructor(
 
         return try {
             File("/proc/asound/").listFiles(AudioFilter())!!.size
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             1
         }
     }
@@ -340,7 +340,7 @@ class ViewModelHardwareInfo @Inject constructor(
         try {
             reader = RandomAccessFile(filePath, "r")
             id = reader.readLine()
-        } catch (ignored: Exception) {
+        } catch (_: Exception) {
         } finally {
             reader?.close()
         }
@@ -360,7 +360,7 @@ class ViewModelHardwareInfo @Inject constructor(
             reader = RandomAccessFile(filePath, "r")
             val version = reader.readLine()
             alsa = version
-        } catch (ignored: Exception) {
+        } catch (_: Exception) {
         } finally {
             reader?.close()
         }

@@ -12,9 +12,9 @@ import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FragmentHardwareInfo : BaseRvFragment() {
+class FrmHardwareInfo : BaseRvFragment() {
 
-    private val viewModel: ViewModelHardwareInfo by viewModels()
+    private val viewModel: VMHardwareInfo by viewModels()
 
     private val powerReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
@@ -37,8 +37,8 @@ class FragmentHardwareInfo : BaseRvFragment() {
 
     override fun setupRecyclerViewAdapter() {
         val adapterInfoItems = AdapterInfoItems(
-            viewModel.listLiveData,
-            AdapterInfoItems.LayoutType.HORIZONTAL_LAYOUT, onClickListener = this
+            itemsObservableList = viewModel.listLiveData,
+            layoutType = AdapterInfoItems.LayoutType.HORIZONTAL_LAYOUT, onClickListener = this
         )
         viewModel.listLiveData.listStatusChangeNotificator.observe(
             viewLifecycleOwner,
