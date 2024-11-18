@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.ui.components
+package com.galaxyjoy.cpuinfo.ui.component
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Snackbar

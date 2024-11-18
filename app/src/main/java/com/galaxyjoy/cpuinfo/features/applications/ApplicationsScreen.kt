@@ -42,10 +42,10 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.galaxyjoy.cpuinfo.domain.model.ExtendedApplicationData
-import com.galaxyjoy.cpuinfo.ui.components.CpuSnackbar
-import com.galaxyjoy.cpuinfo.ui.components.CpuSwitchBox
-import com.galaxyjoy.cpuinfo.ui.components.DraggableBox
-import com.galaxyjoy.cpuinfo.ui.components.SurfaceTopAppBar
+import com.galaxyjoy.cpuinfo.ui.component.CpuSnackbar
+import com.galaxyjoy.cpuinfo.ui.component.CpuSwitchBox
+import com.galaxyjoy.cpuinfo.ui.component.DraggableBox
+import com.galaxyjoy.cpuinfo.ui.component.SurfaceTopAppBar
 import com.galaxyjoy.cpuinfo.ui.theme.CpuInfoTheme
 import com.galaxyjoy.cpuinfo.ui.theme.rowActionIconSize
 import com.galaxyjoy.cpuinfo.ui.theme.spacingSmall

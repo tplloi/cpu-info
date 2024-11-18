@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.ui.components
+package com.galaxyjoy.cpuinfo.ui.component
 
 import android.annotation.SuppressLint
 import androidx.compose.animation.core.*
