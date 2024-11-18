@@ -6,8 +6,8 @@ import android.util.DisplayMetrics
 import android.view.WindowManager
 import androidx.lifecycle.ViewModel
 import com.galaxyjoy.cpuinfo.R
-import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveData
-import com.galaxyjoy.cpuinfo.utils.round2
+import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveData
+import com.galaxyjoy.cpuinfo.util.round2
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

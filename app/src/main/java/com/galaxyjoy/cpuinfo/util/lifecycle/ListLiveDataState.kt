@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.utils.lifecycle
+package com.galaxyjoy.cpuinfo.util.lifecycle
 
 /**
  * Representation of all possible list state changes

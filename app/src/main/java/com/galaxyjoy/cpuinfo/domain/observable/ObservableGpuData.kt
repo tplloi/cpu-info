@@ -3,7 +3,7 @@ package com.galaxyjoy.cpuinfo.domain.observable
 import com.galaxyjoy.cpuinfo.data.provider.DataProviderGpu
 import com.galaxyjoy.cpuinfo.domain.MutableInteractor
 import com.galaxyjoy.cpuinfo.domain.model.GpuData
-import com.galaxyjoy.cpuinfo.utils.DispatchersProvider
+import com.galaxyjoy.cpuinfo.util.DispatchersProvider
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 

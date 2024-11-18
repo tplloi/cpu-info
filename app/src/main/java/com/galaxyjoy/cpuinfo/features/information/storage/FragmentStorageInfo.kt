@@ -8,7 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.fragment.app.viewModels
 import com.galaxyjoy.cpuinfo.features.information.base.BaseRvFragment
-import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveDataObserver
+import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

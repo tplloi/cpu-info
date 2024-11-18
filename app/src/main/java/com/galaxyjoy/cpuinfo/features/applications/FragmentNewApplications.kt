@@ -23,8 +23,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.ui.theme.CpuInfoTheme
-import com.galaxyjoy.cpuinfo.utils.Utils
-import com.galaxyjoy.cpuinfo.utils.uninstallApp
+import com.galaxyjoy.cpuinfo.util.Utils
+import com.galaxyjoy.cpuinfo.util.uninstallApp
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 

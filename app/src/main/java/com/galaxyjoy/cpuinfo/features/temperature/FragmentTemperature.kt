@@ -9,7 +9,7 @@ import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.FrmTemperatureBinding
 import com.galaxyjoy.cpuinfo.features.information.base.BaseFragment
 import com.galaxyjoy.cpuinfo.features.temperature.list.AdapterTemperature
-import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveDataObserver
+import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

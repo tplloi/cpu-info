@@ -6,7 +6,7 @@ import android.content.Intent
 import android.os.Build
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.features.ramwidget.RamUsageWidgetProvider
-import com.galaxyjoy.cpuinfo.utils.runOnApiBelow
+import com.galaxyjoy.cpuinfo.util.runOnApiBelow
 import timber.log.Timber
 import javax.inject.Inject
 

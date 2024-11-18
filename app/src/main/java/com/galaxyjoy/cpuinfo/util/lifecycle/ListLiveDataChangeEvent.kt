@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.utils.lifecycle
+package com.galaxyjoy.cpuinfo.util.lifecycle
 
 /**
  * Wrapper for [ListLiveData] changes which contains type of the change [ListLiveDataState], index

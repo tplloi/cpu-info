@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.galaxyjoy.cpuinfo.utils.lifecycle
+package com.galaxyjoy.cpuinfo.util.lifecycle
 
 import androidx.lifecycle.MutableLiveData
 

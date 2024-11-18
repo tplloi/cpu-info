@@ -10,9 +10,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.galaxyjoy.cpuinfo.R
-import com.galaxyjoy.cpuinfo.utils.Utils
-import com.galaxyjoy.cpuinfo.utils.glide.GlideApp
-import com.galaxyjoy.cpuinfo.utils.runOnApiBelow
+import com.galaxyjoy.cpuinfo.util.Utils
+import com.galaxyjoy.cpuinfo.util.glide.GlideApp
+import com.galaxyjoy.cpuinfo.util.runOnApiBelow
 import com.galaxyjoy.cpuinfo.widget.swiperv.SwipeHorizontalMenuLayout
 
 

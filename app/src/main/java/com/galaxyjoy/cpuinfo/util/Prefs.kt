@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.utils
+package com.galaxyjoy.cpuinfo.util
 
 import android.content.SharedPreferences
 import com.google.gson.Gson

@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.BatteryManager
-import com.galaxyjoy.cpuinfo.utils.Utils
+import com.galaxyjoy.cpuinfo.util.Utils
 import dagger.hilt.android.qualifiers.ApplicationContext
 import io.reactivex.rxjava3.core.Maybe
 import io.reactivex.rxjava3.core.Observable

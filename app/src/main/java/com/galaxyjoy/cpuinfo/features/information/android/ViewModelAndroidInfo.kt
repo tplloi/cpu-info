@@ -11,7 +11,7 @@ import android.os.Build
 import android.provider.Settings
 import androidx.lifecycle.AndroidViewModel
 import com.galaxyjoy.cpuinfo.R
-import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveData
+import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import java.io.BufferedReader
 import java.io.File

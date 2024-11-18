@@ -10,13 +10,12 @@ import androidx.core.view.MenuProvider
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.FrmProcessesBinding
 import com.galaxyjoy.cpuinfo.features.information.base.BaseFragment
-import com.galaxyjoy.cpuinfo.utils.DividerItemDecoration
-import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveDataObserver
+import com.galaxyjoy.cpuinfo.util.DividerItemDecoration
+import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

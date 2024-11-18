@@ -4,8 +4,8 @@ import com.galaxyjoy.cpuinfo.data.provider.DataNativeProviderCpu
 import com.galaxyjoy.cpuinfo.data.provider.DataProviderCpu
 import com.galaxyjoy.cpuinfo.domain.ImmutableInteractor
 import com.galaxyjoy.cpuinfo.domain.model.CpuData
-import com.galaxyjoy.cpuinfo.utils.DispatchersProvider
-import com.galaxyjoy.cpuinfo.utils.Utils
+import com.galaxyjoy.cpuinfo.util.DispatchersProvider
+import com.galaxyjoy.cpuinfo.util.Utils
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject

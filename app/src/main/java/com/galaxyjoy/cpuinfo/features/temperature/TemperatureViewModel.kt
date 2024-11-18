@@ -5,9 +5,9 @@ import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.features.temperature.list.TemperatureItem
-import com.galaxyjoy.cpuinfo.utils.NonNullMutableLiveData
-import com.galaxyjoy.cpuinfo.utils.Prefs
-import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveData
+import com.galaxyjoy.cpuinfo.util.NonNullMutableLiveData
+import com.galaxyjoy.cpuinfo.util.Prefs
+import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable

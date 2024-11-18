@@ -2,7 +2,7 @@ package com.galaxyjoy.cpuinfo.domain.result
 
 import android.content.Context
 import com.galaxyjoy.cpuinfo.domain.ResultInteractor
-import com.galaxyjoy.cpuinfo.utils.DispatchersProvider
+import com.galaxyjoy.cpuinfo.util.DispatchersProvider
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 

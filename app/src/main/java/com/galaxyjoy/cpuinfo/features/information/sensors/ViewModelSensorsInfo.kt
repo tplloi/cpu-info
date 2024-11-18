@@ -5,9 +5,9 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import androidx.lifecycle.ViewModel
-import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveData
-import com.galaxyjoy.cpuinfo.utils.round1
-import com.galaxyjoy.cpuinfo.utils.runOnApiAbove
+import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveData
+import com.galaxyjoy.cpuinfo.util.round1
+import com.galaxyjoy.cpuinfo.util.runOnApiAbove
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

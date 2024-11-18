@@ -5,8 +5,8 @@ import android.os.Build
 import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat
 import com.galaxyjoy.cpuinfo.R
-import com.galaxyjoy.cpuinfo.utils.ThemeHelper
-import com.galaxyjoy.cpuinfo.utils.runOnApiAbove
+import com.galaxyjoy.cpuinfo.util.ThemeHelper
+import com.galaxyjoy.cpuinfo.util.runOnApiAbove
 
 class FragmentSettings : PreferenceFragmentCompat(),
     SharedPreferences.OnSharedPreferenceChangeListener {

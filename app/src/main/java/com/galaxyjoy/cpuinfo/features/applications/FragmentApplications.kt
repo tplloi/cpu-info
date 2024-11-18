@@ -22,11 +22,11 @@ import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.FrmApplicationsBinding
 import com.galaxyjoy.cpuinfo.ext.openBrowserPolicy
 import com.galaxyjoy.cpuinfo.features.information.base.BaseFragment
-import com.galaxyjoy.cpuinfo.utils.DividerItemDecoration
-import com.galaxyjoy.cpuinfo.utils.Utils
-import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveDataObserver
-import com.galaxyjoy.cpuinfo.utils.uninstallApp
-import com.galaxyjoy.cpuinfo.utils.wrapper.EventObserver
+import com.galaxyjoy.cpuinfo.util.DividerItemDecoration
+import com.galaxyjoy.cpuinfo.util.Utils
+import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
+import com.galaxyjoy.cpuinfo.util.uninstallApp
+import com.galaxyjoy.cpuinfo.util.wrapper.EventObserver
 import dagger.hilt.android.AndroidEntryPoint
 import moreApp
 import rateApp

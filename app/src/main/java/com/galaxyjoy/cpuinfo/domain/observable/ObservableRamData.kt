@@ -3,7 +3,7 @@ package com.galaxyjoy.cpuinfo.domain.observable
 import com.galaxyjoy.cpuinfo.data.provider.DataProviderRam
 import com.galaxyjoy.cpuinfo.domain.ImmutableInteractor
 import com.galaxyjoy.cpuinfo.domain.model.RamData
-import com.galaxyjoy.cpuinfo.utils.DispatchersProvider
+import com.galaxyjoy.cpuinfo.util.DispatchersProvider
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject

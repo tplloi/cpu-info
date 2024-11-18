@@ -10,8 +10,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.ActHostLayoutBinding
-import com.galaxyjoy.cpuinfo.utils.runOnApiAbove
-import com.galaxyjoy.cpuinfo.utils.setupEdgeToEdge
+import com.galaxyjoy.cpuinfo.util.runOnApiAbove
+import com.galaxyjoy.cpuinfo.util.setupEdgeToEdge
 import dagger.hilt.android.AndroidEntryPoint
 
 /**

@@ -5,7 +5,6 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.viewModels
@@ -14,7 +13,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.FrmRecyclerViewBinding
 import com.galaxyjoy.cpuinfo.features.information.base.BaseFragment
-import com.galaxyjoy.cpuinfo.utils.runOnApiBelow
+import com.galaxyjoy.cpuinfo.util.runOnApiBelow
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

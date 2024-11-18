@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.utils
+package com.galaxyjoy.cpuinfo.util
 
 import androidx.appcompat.app.AppCompatDelegate
 

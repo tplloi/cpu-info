@@ -13,7 +13,7 @@ import android.os.Build
 import android.widget.RemoteViews
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.features.AHost
-import com.galaxyjoy.cpuinfo.utils.runOnApiBelow
+import com.galaxyjoy.cpuinfo.util.runOnApiBelow
 import com.galaxyjoy.cpuinfo.widget.arc.ArcProgress
 import org.greenrobot.eventbus.EventBus
 import timber.log.Timber

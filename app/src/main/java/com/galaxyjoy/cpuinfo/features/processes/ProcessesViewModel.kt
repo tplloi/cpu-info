@@ -3,9 +3,9 @@ package com.galaxyjoy.cpuinfo.features.processes
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.galaxyjoy.cpuinfo.utils.DispatchersProvider
-import com.galaxyjoy.cpuinfo.utils.Prefs
-import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveData
+import com.galaxyjoy.cpuinfo.util.DispatchersProvider
+import com.galaxyjoy.cpuinfo.util.Prefs
+import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Flowable

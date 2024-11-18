@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.utils.wrapper
+package com.galaxyjoy.cpuinfo.util.wrapper
 
 import androidx.lifecycle.Observer
 

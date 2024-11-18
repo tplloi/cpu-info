@@ -1,8 +1,8 @@
 package com.galaxyjoy.cpuinfo.features.temperature
 
 import com.galaxyjoy.cpuinfo.features.settings.FragmentSettings
-import com.galaxyjoy.cpuinfo.utils.Prefs
-import com.galaxyjoy.cpuinfo.utils.round2
+import com.galaxyjoy.cpuinfo.util.Prefs
+import com.galaxyjoy.cpuinfo.util.round2
 import javax.inject.Inject
 
 /**

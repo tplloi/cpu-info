@@ -16,9 +16,9 @@ import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.features.settings.FragmentSettings
 import com.galaxyjoy.cpuinfo.features.temperature.TemperatureFormatter
 import com.galaxyjoy.cpuinfo.features.temperature.TemperatureProvider
-import com.galaxyjoy.cpuinfo.utils.Utils
-import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveData
-import com.galaxyjoy.cpuinfo.utils.round2
+import com.galaxyjoy.cpuinfo.util.Utils
+import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveData
+import com.galaxyjoy.cpuinfo.util.round2
 import dagger.hilt.android.lifecycle.HiltViewModel
 import timber.log.Timber
 import java.io.File

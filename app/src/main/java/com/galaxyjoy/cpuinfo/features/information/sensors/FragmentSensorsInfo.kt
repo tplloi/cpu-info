@@ -3,8 +3,8 @@ package com.galaxyjoy.cpuinfo.features.information.sensors
 import androidx.fragment.app.viewModels
 import com.galaxyjoy.cpuinfo.features.information.base.BaseRvFragment
 import com.galaxyjoy.cpuinfo.features.information.base.AdapterInfoItems
-import com.galaxyjoy.cpuinfo.utils.DividerItemDecoration
-import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveDataObserver
+import com.galaxyjoy.cpuinfo.util.DividerItemDecoration
+import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

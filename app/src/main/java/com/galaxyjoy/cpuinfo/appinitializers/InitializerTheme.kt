@@ -2,7 +2,7 @@ package com.galaxyjoy.cpuinfo.appinitializers
 
 import android.app.Application
 import android.content.SharedPreferences
-import com.galaxyjoy.cpuinfo.utils.ThemeHelper
+import com.galaxyjoy.cpuinfo.util.ThemeHelper
 import javax.inject.Inject
 
 /**

@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.galaxyjoy.cpuinfo.R
-import com.galaxyjoy.cpuinfo.utils.Utils
-import com.galaxyjoy.cpuinfo.utils.round2
+import com.galaxyjoy.cpuinfo.util.Utils
+import com.galaxyjoy.cpuinfo.util.round2
 import com.galaxyjoy.cpuinfo.widget.progress.IconRoundCornerProgressBar
 
 /**

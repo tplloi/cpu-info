@@ -1,6 +1,6 @@
 @file:JvmName("Extensions")
 
-package com.galaxyjoy.cpuinfo.utils
+package com.galaxyjoy.cpuinfo.util
 
 import android.app.Activity
 import android.content.Context

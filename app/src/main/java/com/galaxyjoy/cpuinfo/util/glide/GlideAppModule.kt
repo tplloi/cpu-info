@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.utils.glide
+package com.galaxyjoy.cpuinfo.util.glide
 
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.module.AppGlideModule

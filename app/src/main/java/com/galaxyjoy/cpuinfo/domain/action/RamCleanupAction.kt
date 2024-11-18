@@ -1,7 +1,7 @@
 package com.galaxyjoy.cpuinfo.domain.action
 
 import com.galaxyjoy.cpuinfo.domain.ResultInteractor
-import com.galaxyjoy.cpuinfo.utils.DispatchersProvider
+import com.galaxyjoy.cpuinfo.util.DispatchersProvider
 import javax.inject.Inject
 
 class RamCleanupAction @Inject constructor(
