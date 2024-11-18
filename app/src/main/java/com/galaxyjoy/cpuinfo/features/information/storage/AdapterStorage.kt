@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.utils.Utils
 import com.galaxyjoy.cpuinfo.utils.round2
-import com.galaxyjoy.cpuinfo.widgets.progress.IconRoundCornerProgressBar
+import com.galaxyjoy.cpuinfo.widget.progress.IconRoundCornerProgressBar
 
 /**
  * Adapter for items in [FragmentStorageInfo]

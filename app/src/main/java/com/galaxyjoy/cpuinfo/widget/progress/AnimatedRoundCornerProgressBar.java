@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.widgets.progress;
+package com.galaxyjoy.cpuinfo.widget.progress;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

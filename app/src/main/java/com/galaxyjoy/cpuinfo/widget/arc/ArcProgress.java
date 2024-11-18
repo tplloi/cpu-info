@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.widgets.arc;
+package com.galaxyjoy.cpuinfo.widget.arc;
 
 import android.content.Context;
 import android.content.res.Resources;

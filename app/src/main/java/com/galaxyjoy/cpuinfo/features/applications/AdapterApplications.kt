@@ -13,7 +13,7 @@ import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.utils.Utils
 import com.galaxyjoy.cpuinfo.utils.glide.GlideApp
 import com.galaxyjoy.cpuinfo.utils.runOnApiBelow
-import com.galaxyjoy.cpuinfo.widgets.swiperv.SwipeHorizontalMenuLayout
+import com.galaxyjoy.cpuinfo.widget.swiperv.SwipeHorizontalMenuLayout
 
 
 /**

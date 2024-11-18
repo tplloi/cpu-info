@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.widgets.swiperv;
+package com.galaxyjoy.cpuinfo.widget.swiperv;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -9,10 +9,10 @@ import android.view.View;
 import android.view.ViewParent;
 
 import com.galaxyjoy.cpuinfo.R;
-import com.galaxyjoy.cpuinfo.widgets.swiperv.listener.SwipeSwitchListener;
-import com.galaxyjoy.cpuinfo.widgets.swiperv.swiper.LeftHorizontalSwiper;
-import com.galaxyjoy.cpuinfo.widgets.swiperv.swiper.RightHorizontalSwiper;
-import com.galaxyjoy.cpuinfo.widgets.swiperv.swiper.Swiper;
+import com.galaxyjoy.cpuinfo.widget.swiperv.listener.SwipeSwitchListener;
+import com.galaxyjoy.cpuinfo.widget.swiperv.swiper.LeftHorizontalSwiper;
+import com.galaxyjoy.cpuinfo.widget.swiperv.swiper.RightHorizontalSwiper;
+import com.galaxyjoy.cpuinfo.widget.swiperv.swiper.Swiper;
 
 public class SwipeHorizontalMenuLayout extends SwipeMenuLayout {
 

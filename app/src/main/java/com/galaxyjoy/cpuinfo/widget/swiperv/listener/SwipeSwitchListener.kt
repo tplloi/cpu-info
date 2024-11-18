@@ -1,6 +1,6 @@
-package com.galaxyjoy.cpuinfo.widgets.swiperv.listener
+package com.galaxyjoy.cpuinfo.widget.swiperv.listener
 
-import com.galaxyjoy.cpuinfo.widgets.swiperv.SwipeMenuLayout
+import com.galaxyjoy.cpuinfo.widget.swiperv.SwipeMenuLayout
 
 interface SwipeSwitchListener {
     fun beginMenuClosed(swipeMenuLayout: SwipeMenuLayout?)

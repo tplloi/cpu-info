@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.widgets.swiperv.swiper;
+package com.galaxyjoy.cpuinfo.widget.swiperv.swiper;
 
 import android.view.View;
 import android.widget.OverScroller;

@@ -23,7 +23,7 @@
             app:onRefreshListener="@{() -> viewModel.refreshApplicationsList()}"
             app:refreshing="@{safeUnbox(viewModel.isLoading)}">
 
-            <com.galaxyjoy.cpuinfo.widgets.swiperv.SwipeMenuRV
+            <com.galaxyjoy.cpuinfo.widget.swiperv.SwipeMenuRV
                 android:id="@+id/rv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

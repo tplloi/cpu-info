@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.widgets.progress;
+package com.galaxyjoy.cpuinfo.widget.progress;
 
 import android.content.Context;
 import android.content.res.TypedArray;

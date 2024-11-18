@@ -17,7 +17,7 @@
         android:textStyle="bold"
         tools:text="Internal: 1.3GB / 4GB" />
 
-    <com.galaxyjoy.cpuinfo.widgets.progress.IconRoundCornerProgressBar
+    <com.galaxyjoy.cpuinfo.widget.progress.IconRoundCornerProgressBar
         android:id="@+id/storageProgress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

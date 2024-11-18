@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.widgets.swiperv;
+package com.galaxyjoy.cpuinfo.widget.swiperv;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,9 +14,9 @@ import android.widget.FrameLayout;
 import android.widget.OverScroller;
 
 import com.galaxyjoy.cpuinfo.R;
-import com.galaxyjoy.cpuinfo.widgets.swiperv.listener.SwipeFractionListener;
-import com.galaxyjoy.cpuinfo.widgets.swiperv.listener.SwipeSwitchListener;
-import com.galaxyjoy.cpuinfo.widgets.swiperv.swiper.Swiper;
+import com.galaxyjoy.cpuinfo.widget.swiperv.listener.SwipeFractionListener;
+import com.galaxyjoy.cpuinfo.widget.swiperv.listener.SwipeSwitchListener;
+import com.galaxyjoy.cpuinfo.widget.swiperv.swiper.Swiper;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;

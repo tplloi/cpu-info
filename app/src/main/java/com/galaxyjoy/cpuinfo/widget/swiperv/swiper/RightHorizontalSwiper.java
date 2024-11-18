@@ -1,22 +1,22 @@
-package com.galaxyjoy.cpuinfo.widgets.swiperv.swiper;
+package com.galaxyjoy.cpuinfo.widget.swiperv.swiper;
 
 import android.view.View;
 import android.widget.OverScroller;
 
-public class LeftHorizontalSwiper extends Swiper {
+public class RightHorizontalSwiper extends Swiper {
 
-    public LeftHorizontalSwiper(View menuView) {
-        super(BEGIN_DIRECTION, menuView);
+    public RightHorizontalSwiper(View menuView) {
+        super(END_DIRECTION, menuView);
     }
 
     @Override
     public boolean isMenuOpen(int scrollX) {
-        return scrollX <= -getMenuView().getWidth() * getDirection();
+        return scrollX >= -getMenuView().getWidth() * getDirection();
     }
 
     @Override
     public boolean isMenuOpenNotEqual(int scrollX) {
-        return scrollX < -getMenuView().getWidth() * getDirection();
+        return scrollX > -getMenuView().getWidth() * getDirection();
     }
 
     @Override
@@ -38,17 +38,20 @@ public class LeftHorizontalSwiper extends Swiper {
         mChecker.x = x;
         mChecker.y = y;
         mChecker.shouldResetSwiper = mChecker.x == 0;
-        if (mChecker.x >= 0) {
+        if (mChecker.x < 0) {
             mChecker.x = 0;
         }
-        if (mChecker.x <= -getMenuView().getWidth()) {
-            mChecker.x = -getMenuView().getWidth();
+        if (mChecker.x > getMenuView().getWidth()) {
+            mChecker.x = getMenuView().getWidth();
         }
         return mChecker;
     }
 
     @Override
     public boolean isClickOnContentView(View contentView, float x) {
-        return x > getMenuView().getWidth();
+        if (contentView == null) {
+            return false;
+        }
+        return x < (contentView.getWidth() - getMenuView().getWidth());
     }
 }

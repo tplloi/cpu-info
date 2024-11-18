@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.widgets.swiperv;
+package com.galaxyjoy.cpuinfo.widget.swiperv;
 
 import android.content.Context;
 import android.view.MotionEvent;
