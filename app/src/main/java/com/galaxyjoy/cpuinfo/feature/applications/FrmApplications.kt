@@ -38,7 +38,7 @@ class FrmApplications : BaseFrm<FrmApplicationsBinding>(
     R.layout.frm_applications
 ), AdapterApplications.ItemClickListener {
 
-    private val viewModel: ViewModelApplications by viewModels()
+    private val viewModel: VMApplications by viewModels()
 
     private val uninstallReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
@@ -72,20 +72,24 @@ class FrmApplications : BaseFrm<FrmApplicationsBinding>(
                         viewModel.changeAppsSorting()
                         true
                     }
+
                     R.id.menuActionRate -> {
-                        activity?.let{
+                        activity?.let {
                             it.rateApp("com.galaxyjoy.cpuinfo")
                         }
                         true
                     }
+
                     R.id.menuActionMore -> {
                         activity?.moreApp()
                         true
                     }
+
                     R.id.menuActionShare -> {
                         activity?.shareApp()
                         true
                     }
+
                     R.id.menuActionPolicy -> {
                         context?.openBrowserPolicy()
                         true
@@ -99,9 +103,6 @@ class FrmApplications : BaseFrm<FrmApplicationsBinding>(
         initObservables()
     }
 
-    /**
-     * Setup for [SwipeMenuRecyclerView]
-     */
     private fun setupRecyclerView() {
         val adapterApplications = AdapterApplications(viewModel.applicationList, this)
         viewModel.applicationList.listStatusChangeNotificator.observe(
@@ -117,7 +118,7 @@ class FrmApplications : BaseFrm<FrmApplicationsBinding>(
     }
 
     /**
-     * Register all fields from [ViewModelApplications] which should be observed
+     * Register all fields from [VMApplications] which should be observed
      */
     private fun initObservables() {
         viewModel.shouldStartStorageServiceEvent.observe(viewLifecycleOwner, EventObserver {
@@ -154,7 +155,7 @@ class FrmApplications : BaseFrm<FrmApplicationsBinding>(
         if (intent != null) {
             try {
                 startActivity(intent)
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 Snackbar.make(
                     binding.mainContainer, getString(R.string.app_open),
                     Snackbar.LENGTH_SHORT

@@ -36,7 +36,7 @@ import javax.inject.Inject
  * @author galaxyjoy
  */
 @HiltViewModel
-class ViewModelApplications @Inject constructor(
+class VMApplications @Inject constructor(
     private val dispatchersProvider: DispatchersProvider,
     private val prefs: Prefs,
     private val packageManager: PackageManager
@@ -189,7 +189,7 @@ class ViewModelApplications @Inject constructor(
             } else {
                 packageManager.getPackageInfo(packageName, 0)
             }
-        } catch (e: PackageManager.NameNotFoundException) {
+        } catch (_: PackageManager.NameNotFoundException) {
             return 0
         }
         return packageInfo.applicationInfo.icon

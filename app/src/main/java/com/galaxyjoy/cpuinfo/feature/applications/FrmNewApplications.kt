@@ -29,7 +29,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
 @AndroidEntryPoint
-class FragmentNewApplications : Fragment() {
+class FrmNewApplications : Fragment() {
 
     private val viewModel: VMNewApplications by viewModels()
 
@@ -95,7 +95,7 @@ class FragmentNewApplications : Fragment() {
                 if (intent != null) {
                     try {
                         startActivity(intent)
-                    } catch (e: Exception) {
+                    } catch (_: Exception) {
                         viewModel.onCannotOpenApp()
                     }
                 } else {
@@ -108,7 +108,7 @@ class FragmentNewApplications : Fragment() {
                 val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, uri)
                 try {
                     startActivity(intent)
-                } catch (e: Exception) {
+                } catch (_: Exception) {
                     Timber.e("Can't open app settings")
                 }
             }

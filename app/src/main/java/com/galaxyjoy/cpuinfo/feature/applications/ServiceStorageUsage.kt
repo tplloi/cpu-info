@@ -61,7 +61,7 @@ class ServiceStorageUsage : IntentService("StorageUsageService") {
                     sendSizeEvent(pStats)
                 }
             })
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             Timber.d("Cannot get package size for: $packageName")
         }
     }
