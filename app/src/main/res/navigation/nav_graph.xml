@@ -6,31 +6,31 @@
 
     <fragment
         android:id="@+id/menuHardware"
-        android:name="com.galaxyjoy.cpuinfo.features.information.FragmentInfoContainer"
+        android:name="com.galaxyjoy.cpuinfo.feature.information.FragmentInfoContainer"
         android:label="@string/hardware"
         tools:layout="@layout/frm_info" />
 
     <fragment
         android:id="@+id/menuApplications"
-        android:name="com.galaxyjoy.cpuinfo.features.applications.FragmentApplications"
+        android:name="com.galaxyjoy.cpuinfo.feature.applications.FragmentApplications"
         android:label="@string/applications"
         tools:layout="@layout/frm_applications" />
 
     <fragment
         android:id="@+id/menuProcesses"
-        android:name="com.galaxyjoy.cpuinfo.features.processes.FragmentProcesses"
+        android:name="com.galaxyjoy.cpuinfo.feature.processes.FragmentProcesses"
         android:label="@string/processes"
         tools:layout="@layout/frm_processes" />
 
     <fragment
         android:id="@+id/menuTemperature"
-        android:name="com.galaxyjoy.cpuinfo.features.temperature.FragmentTemperature"
+        android:name="com.galaxyjoy.cpuinfo.feature.temperature.FragmentTemperature"
         android:label="@string/temperature"
         tools:layout="@layout/frm_temperature" />
 
     <fragment
         android:id="@+id/menuSettings"
-        android:name="com.galaxyjoy.cpuinfo.features.settings.FragmentSettings"
+        android:name="com.galaxyjoy.cpuinfo.feature.settings.FragmentSettings"
         android:label="@string/settings" />
 
 </navigation>

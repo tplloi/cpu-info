@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.galaxyjoy.cpuinfo.features.applications.ViewModelApplications" />
+            type="com.galaxyjoy.cpuinfo.feature.applications.ViewModelApplications" />
 
     </data>
 
