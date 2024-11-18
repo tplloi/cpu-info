@@ -1,5 +1,6 @@
 package com.galaxyjoy.cpuinfo.data.provider
 
+import android.annotation.SuppressLint
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.os.Build
@@ -9,6 +10,7 @@ class DataProviderApplications @Inject constructor(
     private val packageManager: PackageManager
 ) {
 
+    @SuppressLint("QueryPermissionsNeeded")
     @Suppress("DEPRECATION")
     fun getInstalledApplications(withSystemApps: Boolean): List<ApplicationInfo> {
         val applications = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {

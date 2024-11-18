@@ -52,7 +52,7 @@ class DataProviderCpu @Inject constructor() {
             val minMhz = RandomAccessFile(minPath, "r").use { it.readLine().toLong() / 1000 }
             val maxMhz = RandomAccessFile(maxPath, "r").use { it.readLine().toLong() / 1000 }
             Pair(minMhz, maxMhz)
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             Timber.e("getMinMaxFreq() - cannot read file")
             Pair(-1, -1)
         }
@@ -68,15 +68,12 @@ class DataProviderCpu @Inject constructor() {
         class CpuFilter : FileFilter {
             override fun accept(pathname: File): Boolean {
                 // Check if filename is "cpu", followed by a single digit number
-                if (Pattern.matches("cpu[0-9]+", pathname.name)) {
-                    return true
-                }
-                return false
+                return Pattern.matches("cpu[0-9]+", pathname.name)
             }
         }
         return try {
             File(CPU_INFO_DIR).listFiles(CpuFilter())!!.size
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             1
         }
     }

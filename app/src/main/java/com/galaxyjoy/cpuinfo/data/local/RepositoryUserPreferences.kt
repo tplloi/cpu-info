@@ -41,7 +41,7 @@ class UserPreferencesRepository @Inject constructor(
     }
 
     private fun mapUserPreferences(preferences: Preferences): UserPreferences {
-        val isApplicationsSortingAscending = preferences[PreferencesKeys.SORTING_APPS] ?: true
+        val isApplicationsSortingAscending = preferences[PreferencesKeys.SORTING_APPS] != false
         return UserPreferences(
             isApplicationsSortingAscending = isApplicationsSortingAscending
         )

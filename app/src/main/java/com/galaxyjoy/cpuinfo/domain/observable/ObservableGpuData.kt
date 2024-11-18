@@ -17,11 +17,11 @@ class ObservableGpuData @Inject constructor(
     override fun createObservable(params: Params) = flow {
         emit(
             GpuData(
-                dataProviderGpu.getVulkanVersion(),
-                dataProviderGpu.getGlEsVersion(),
-                params.glVendor,
-                params.glRenderer,
-                params.glExtensions
+                vulkanVersion = dataProviderGpu.getVulkanVersion(),
+                glesVersio = dataProviderGpu.getGlEsVersion(),
+                glVendor = params.glVendor,
+                glRenderer = params.glRenderer,
+                glExtensions = params.glExtensions
             )
         )
     }

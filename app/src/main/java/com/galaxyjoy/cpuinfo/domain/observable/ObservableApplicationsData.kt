@@ -69,11 +69,14 @@ class ObservableApplicationsData @Inject constructor(
         val packageInfo: PackageInfo
         try {
             packageInfo = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                packageManager.getPackageInfo(packageName, PackageManager.PackageInfoFlags.of(0))
+                packageManager.getPackageInfo(
+                    /* packageName = */ packageName,
+                    /* flags = */ PackageManager.PackageInfoFlags.of(0)
+                )
             } else {
                 packageManager.getPackageInfo(packageName, 0)
             }
-        } catch (e: PackageManager.NameNotFoundException) {
+        } catch (_: PackageManager.NameNotFoundException) {
             return 0
         }
         return packageInfo.applicationInfo.icon

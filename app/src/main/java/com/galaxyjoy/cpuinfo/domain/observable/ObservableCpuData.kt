@@ -47,8 +47,16 @@ class ObservableCpuData @Inject constructor(
             }
             emit(
                 CpuData(
-                    processorName, abi, coreNumber, hasArmNeon, frequencies,
-                    l1dCaches, l1iCaches, l2Caches, l3Caches, l4Caches
+                    processorName = processorName,
+                    abi = abi,
+                    coreNumber = coreNumber,
+                    hasArmNeon = hasArmNeon,
+                    frequencies = frequencies,
+                    l1dCaches = l1dCaches,
+                    l1iCaches = l1iCaches,
+                    l2Caches = l2Caches,
+                    l3Caches = l3Caches,
+                    l4Caches = l4Caches
                 )
             )
             delay(REFRESH_DELAY)
