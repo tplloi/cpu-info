@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/menuHardware"
-        android:name="com.galaxyjoy.cpuinfo.feature.information.FragmentInfoContainer"
+        android:name="com.galaxyjoy.cpuinfo.feature.infor.FrmInfoContainer"
         android:label="@string/hardware"
         tools:layout="@layout/frm_info" />
 
