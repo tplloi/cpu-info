@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.feature.infor.sensors
+package com.galaxyjoy.cpuinfo.feature.infor.sensor
 
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -16,7 +16,7 @@ import javax.inject.Inject
  *
  */
 @HiltViewModel
-class ViewModelSensorsInfo @Inject constructor(
+class VMSensorsInfo @Inject constructor(
     private val sensorManager: SensorManager
 ) : ViewModel(), SensorEventListener {
 

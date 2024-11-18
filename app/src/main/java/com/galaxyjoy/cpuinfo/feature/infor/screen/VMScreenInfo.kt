@@ -16,7 +16,7 @@ import javax.inject.Inject
  *
  */
 @HiltViewModel
-class ViewModelScreenInfo @Inject constructor(
+class VMScreenInfo @Inject constructor(
     private val resources: Resources,
     private val windowManager: WindowManager
 ) : ViewModel() {
@@ -46,9 +46,7 @@ class ViewModelScreenInfo @Inject constructor(
         val screenSize =
             resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK
 
-        val screenClass: String
-
-        screenClass = when (screenSize) {
+        val screenClass: String = when (screenSize) {
             Configuration.SCREENLAYOUT_SIZE_LARGE -> resources.getString(R.string.large)
             Configuration.SCREENLAYOUT_SIZE_NORMAL -> resources.getString(R.string.normal)
             Configuration.SCREENLAYOUT_SIZE_SMALL -> resources.getString(R.string.small)

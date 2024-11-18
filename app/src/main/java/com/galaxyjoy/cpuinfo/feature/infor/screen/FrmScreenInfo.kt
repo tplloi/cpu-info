@@ -8,9 +8,9 @@ import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FragmentScreenInfo : BaseRvFragment() {
+class FrmScreenInfo : BaseRvFragment() {
 
-    private val viewModel: ViewModelScreenInfo by viewModels()
+    private val viewModel: VMScreenInfo by viewModels()
 
     override fun setupRecyclerViewAdapter() {
         val adapterInfoItems = AdapterInfoItems(

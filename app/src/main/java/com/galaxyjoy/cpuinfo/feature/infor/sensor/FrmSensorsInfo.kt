@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.feature.infor.sensors
+package com.galaxyjoy.cpuinfo.feature.infor.sensor
 
 import androidx.fragment.app.viewModels
 import com.galaxyjoy.cpuinfo.feature.infor.base.BaseRvFragment
@@ -8,9 +8,9 @@ import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FragmentSensorsInfo : BaseRvFragment() {
+class FrmSensorsInfo : BaseRvFragment() {
 
-    private val viewModel: ViewModelSensorsInfo by viewModels()
+    private val viewModel: VMSensorsInfo by viewModels()
 
     override fun onStart() {
         super.onStart()
