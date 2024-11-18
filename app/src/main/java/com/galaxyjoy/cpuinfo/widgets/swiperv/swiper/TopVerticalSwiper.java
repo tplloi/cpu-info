@@ -24,11 +24,17 @@ public class TopVerticalSwiper extends Swiper {
 
     @Override
     public void autoOpenMenu(OverScroller scroller, int scrollY, int duration) {
+        if (scroller == null) {
+            return;
+        }
         scroller.startScroll(0, Math.abs(scrollY), 0, getMenuView().getHeight() - Math.abs(scrollY), duration);
     }
 
     @Override
     public void autoCloseMenu(OverScroller scroller, int scrollY, int duration) {
+        if (scroller == null) {
+            return;
+        }
         scroller.startScroll(0, -Math.abs(scrollY), 0, Math.abs(scrollY), duration);
     }
 

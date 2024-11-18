@@ -5,10 +5,6 @@ import com.galaxyjoy.cpuinfo.appinitializers.InitializersApp
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 
-/**
- * Base Application class for required initializations
- */
-
 //TODO roy93~ ad applovin
 //TODO roy93~ firebase
 //TODO roy93~ icon launcher

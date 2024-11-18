@@ -188,6 +188,9 @@ public class SwipeHorizontalMenuLayout extends SwipeMenuLayout {
     @Override
     public void scrollTo(int x, int y) {
         Swiper.Checker checker = mCurrentSwiper.checkXY(x, y);
+        if (checker == null) {
+            return;
+        }
         shouldResetSwiper = checker.shouldResetSwiper;
         if (checker.x != getScrollX()) {
             super.scrollTo(checker.x, checker.y);

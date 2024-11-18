@@ -7,21 +7,21 @@ import android.view.View;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-public class SwipeMenuRecyclerView extends RecyclerView implements SwipeMenuHelper.Callback {
+public class SwipeMenuRV extends RecyclerView implements SwipeMenuHelper.Callback {
 
     protected SwipeMenuHelper mHelper;
 
-    public SwipeMenuRecyclerView(Context context) {
+    public SwipeMenuRV(Context context) {
         super(context);
         init();
     }
 
-    public SwipeMenuRecyclerView(Context context, AttributeSet attrs) {
+    public SwipeMenuRV(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public SwipeMenuRecyclerView(Context context, AttributeSet attrs, int defStyle) {
+    public SwipeMenuRV(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init();
     }

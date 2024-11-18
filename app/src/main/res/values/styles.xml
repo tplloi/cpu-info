@@ -21,7 +21,7 @@
     </style>
 
     <style name="AppThemeBase.Launcher">
-        <item name="android:windowBackground">@drawable/background_splash</item>
+        <item name="android:windowBackground">@drawable/bkg_splash</item>
         <item name="colorPrimaryDark">@color/background</item>
     </style>
 

@@ -1,5 +1,6 @@
 package com.galaxyjoy.cpuinfo.widgets.swiperv;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
@@ -64,7 +65,7 @@ public abstract class SwipeMenuLayout extends FrameLayout {
     public SwipeMenuLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         if (!isInEditMode()) {
-            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SwipeMenu, 0, defStyle);
+            @SuppressLint("CustomViewStyleable") TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SwipeMenu, 0, defStyle);
             int interpolatorId = a.getResourceId(R.styleable.SwipeMenu_sml_scroller_interpolator, -1);
             if (interpolatorId > 0)
                 mInterpolator = AnimationUtils.loadInterpolator(getContext(), interpolatorId);
@@ -173,7 +174,7 @@ public abstract class SwipeMenuLayout extends FrameLayout {
 
     float distanceInfluenceForSnapDuration(float f) {
         f -= 0.5f; // center the values about 0.
-        f *= 0.3f * Math.PI / 2.0f;
+        f *= (float) (0.3f * Math.PI / 2.0f);
         return (float) Math.sin(f);
     }
 }
