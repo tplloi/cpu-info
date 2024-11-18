@@ -12,7 +12,7 @@ import com.galaxyjoy.cpuinfo.domain.model.ExtendedApplicationData
 import com.galaxyjoy.cpuinfo.domain.model.SortOrder
 import com.galaxyjoy.cpuinfo.utils.DispatchersProvider
 import com.galaxyjoy.cpuinfo.utils.wrapToResultFlow
-import com.galaxyjoy.cpuinfo.utils.wrappers.MyResult
+import com.galaxyjoy.cpuinfo.utils.wrapper.MyResult
 import kotlinx.coroutines.flow.Flow
 import java.io.File
 import javax.inject.Inject

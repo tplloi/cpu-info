@@ -26,7 +26,7 @@ import com.galaxyjoy.cpuinfo.utils.DividerItemDecoration
 import com.galaxyjoy.cpuinfo.utils.Utils
 import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveDataObserver
 import com.galaxyjoy.cpuinfo.utils.uninstallApp
-import com.galaxyjoy.cpuinfo.utils.wrappers.EventObserver
+import com.galaxyjoy.cpuinfo.utils.wrapper.EventObserver
 import dagger.hilt.android.AndroidEntryPoint
 import moreApp
 import rateApp

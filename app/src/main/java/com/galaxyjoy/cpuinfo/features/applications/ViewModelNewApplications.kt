@@ -9,7 +9,7 @@ import com.galaxyjoy.cpuinfo.domain.model.sortOrderFromBoolean
 import com.galaxyjoy.cpuinfo.domain.observable.ObservableApplicationsData
 import com.galaxyjoy.cpuinfo.domain.result.InteractorGetPackageName
 import com.galaxyjoy.cpuinfo.utils.SingleLiveEvent
-import com.galaxyjoy.cpuinfo.utils.wrappers.MyResult
+import com.galaxyjoy.cpuinfo.utils.wrapper.MyResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf

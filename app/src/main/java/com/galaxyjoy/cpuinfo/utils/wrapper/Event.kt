@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.utils.wrappers
+package com.galaxyjoy.cpuinfo.utils.wrapper
 
 import androidx.lifecycle.Observer
 
@@ -37,9 +37,7 @@ open class Event<out T>(private val content: T) {
 
         other as Event<*>
 
-        if (content != other.content) return false
-
-        return true
+        return content == other.content
     }
 
     override fun hashCode(): Int {

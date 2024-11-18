@@ -1,6 +1,6 @@
 package com.galaxyjoy.cpuinfo.utils
 
-import com.galaxyjoy.cpuinfo.utils.wrappers.MyResult
+import com.galaxyjoy.cpuinfo.utils.wrapper.MyResult
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import timber.log.Timber

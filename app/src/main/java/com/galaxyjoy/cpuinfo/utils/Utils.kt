@@ -65,7 +65,7 @@ object Utils {
         val intent = Intent(Intent.ACTION_VIEW, uri)
         try {
             context.startActivity(intent)
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             Toast.makeText(context, R.string.action_not_supported, Toast.LENGTH_SHORT).show()
         }
     }
@@ -83,14 +83,14 @@ object Utils {
             br.close()
             sr.close()
             fs.close()
-        } catch (ex: Exception) {
+        } catch (_: Exception) {
             return null
         }
 
         val value: Double?
         try {
             value = text.toDouble()
-        } catch (nfe: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             return null
         }
 

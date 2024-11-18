@@ -16,7 +16,7 @@ import com.galaxyjoy.cpuinfo.utils.NonNullMutableLiveData
 import com.galaxyjoy.cpuinfo.utils.Prefs
 import com.galaxyjoy.cpuinfo.utils.lifecycle.ListLiveData
 import com.galaxyjoy.cpuinfo.utils.runOnApiBelow
-import com.galaxyjoy.cpuinfo.utils.wrappers.Event
+import com.galaxyjoy.cpuinfo.utils.wrapper.Event
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Single

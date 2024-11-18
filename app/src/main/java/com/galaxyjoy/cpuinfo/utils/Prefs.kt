@@ -66,4 +66,3 @@ class Prefs @Inject constructor(private val sharedPreferences: SharedPreferences
         sharedPreferences.edit().remove(key).apply()
     }
 }
-

@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.utils.wrappers
+package com.galaxyjoy.cpuinfo.utils.wrapper
 
 /**
  * A generic class that holds a value with its loading status.
