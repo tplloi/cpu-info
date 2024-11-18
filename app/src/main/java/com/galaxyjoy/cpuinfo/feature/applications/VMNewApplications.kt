@@ -24,7 +24,7 @@ import java.io.File
 import javax.inject.Inject
 
 @HiltViewModel
-class ViewModelNewApplications @Inject constructor(
+class VMNewApplications @Inject constructor(
     private val observableApplicationsData: ObservableApplicationsData,
     private val interactorGetPackageName: InteractorGetPackageName,
 ) : ViewModel() {

@@ -57,7 +57,7 @@ import com.galaxyjoy.cpuinfo.R
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun ApplicationsScreen(
-    uiState: ViewModelNewApplications.UiState,
+    uiState: VMNewApplications.UiState,
     onAppClicked: (packageName: String) -> Unit,
     onRefreshApplications: () -> Unit,
     onSnackbarDismissed: () -> Unit,
@@ -293,7 +293,7 @@ private fun ApplicationItem(
 private fun ApplicationInfoPreview() {
     CpuInfoTheme {
         ApplicationsScreen(
-            uiState = ViewModelNewApplications.UiState(
+            uiState = VMNewApplications.UiState(
                 applications = persistentListOf(previewAppData1, previewAppData2)
             ),
             onAppClicked = {},

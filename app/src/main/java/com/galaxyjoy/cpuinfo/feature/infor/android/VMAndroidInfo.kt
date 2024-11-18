@@ -25,7 +25,7 @@ import javax.inject.Inject
  *
  */
 @HiltViewModel
-class ViewModelAndroidInfo @Inject constructor(
+class VMAndroidInfo @Inject constructor(
     application: Application,
     private val resources: Resources,
     private val contentResolver: ContentResolver,
@@ -109,7 +109,7 @@ class ViewModelAndroidInfo @Inject constructor(
                 else -> resources.getString(R.string.unknown)
             }
             listLiveData.add(Pair(resources.getString(R.string.encrypted_storage), statusText))
-        } catch (ignored: Exception) {
+        } catch (_: Exception) {
         }
     }
 
@@ -139,9 +139,8 @@ class ViewModelAndroidInfo @Inject constructor(
         try {
             process = Runtime.getRuntime().exec(arrayOf("/system/xbin/which", "su"))
             val br = BufferedReader(InputStreamReader(process.inputStream))
-            if (br.readLine() != null) return true
-            return false
-        } catch (t: Throwable) {
+            return br.readLine() != null
+        } catch (_: Throwable) {
             return false
         } finally {
             process?.destroy()
@@ -183,7 +182,7 @@ class ViewModelAndroidInfo @Inject constructor(
                 val hexId = java.lang.Long.toHexString(it.getString(1).toLong())
                 listLiveData.add(Pair("Google Services Framework ID", hexId))
             }
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             // Do nothing
         }
     }

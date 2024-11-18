@@ -8,9 +8,9 @@ import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FragmentAndroidInfo : BaseRvFragment() {
+class FrmAndroidInfo : BaseRvFragment() {
 
-    private val viewModel: ViewModelAndroidInfo by viewModels()
+    private val viewModel: VMAndroidInfo by viewModels()
 
     private lateinit var adtInfoItems: AdtInfoItems
 
