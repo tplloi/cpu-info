@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.feature.applications
+package com.galaxyjoy.cpuinfo.feature.app
 
 import android.annotation.SuppressLint
 import android.os.Build
@@ -15,16 +15,15 @@ import com.galaxyjoy.cpuinfo.util.glide.GlideApp
 import com.galaxyjoy.cpuinfo.util.runOnApiBelow
 import com.galaxyjoy.cpuinfo.widget.swiperv.SwipeHorizontalMenuLayout
 
-
 /**
  * Adapter for application list with sliding items
  *
  * @author galaxyjoy
  */
-class AdapterApplications(
+class AdtApp(
     private val appList: List<ExtendedAppInfo>,
     private val appClickListener: ItemClickListener
-) : RecyclerView.Adapter<AdapterApplications.ApplicationViewHolder>() {
+) : RecyclerView.Adapter<AdtApp.ApplicationViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,

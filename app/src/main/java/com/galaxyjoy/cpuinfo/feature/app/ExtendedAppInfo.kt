@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.feature.applications
+package com.galaxyjoy.cpuinfo.feature.app
 
 import android.net.Uri
 import android.os.Parcelable

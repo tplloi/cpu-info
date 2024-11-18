@@ -50,7 +50,7 @@
             android:name="applovin.sdk.key"
             android:value="@string/SDK_KEY" />
 
-        <service android:name=".feature.applications.ServiceStorageUsage" />
+        <service android:name=".feature.app.ServiceStorageUsage" />
 
         <service android:name=".feature.ramwidget.ServiceRefresh" />
 

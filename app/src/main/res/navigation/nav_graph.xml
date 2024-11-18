@@ -12,7 +12,7 @@
 
     <fragment
         android:id="@+id/menuApplications"
-        android:name="com.galaxyjoy.cpuinfo.feature.applications.FrmApplications"
+        android:name="com.galaxyjoy.cpuinfo.feature.app.FrmApplications"
         android:label="@string/applications"
         tools:layout="@layout/frm_applications" />
 

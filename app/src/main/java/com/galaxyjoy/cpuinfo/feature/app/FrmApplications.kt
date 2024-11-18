@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.feature.applications
+package com.galaxyjoy.cpuinfo.feature.app
 
 import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
@@ -36,7 +36,7 @@ import java.io.File
 @AndroidEntryPoint
 class FrmApplications : BaseFrm<FrmApplicationsBinding>(
     R.layout.frm_applications
-), AdapterApplications.ItemClickListener {
+), AdtApp.ItemClickListener {
 
     private val viewModel: VMApplications by viewModels()
 
@@ -104,15 +104,15 @@ class FrmApplications : BaseFrm<FrmApplicationsBinding>(
     }
 
     private fun setupRecyclerView() {
-        val adapterApplications = AdapterApplications(viewModel.applicationList, this)
+        val adtApp = AdtApp(viewModel.applicationList, this)
         viewModel.applicationList.listStatusChangeNotificator.observe(
             viewLifecycleOwner,
-            ListLiveDataObserver(adapterApplications)
+            ListLiveDataObserver(adtApp)
         )
 
         binding.rv.apply {
             layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
-            adapter = adapterApplications
+            adapter = adtApp
             addItemDecoration(DividerItemDecoration(requireContext()))
         }
     }

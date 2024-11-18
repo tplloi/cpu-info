@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.galaxyjoy.cpuinfo.feature.applications
+package com.galaxyjoy.cpuinfo.feature.app
 
 import android.app.IntentService
 import android.content.Context

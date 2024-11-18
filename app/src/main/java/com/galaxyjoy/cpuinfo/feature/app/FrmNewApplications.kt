@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.feature.applications
+package com.galaxyjoy.cpuinfo.feature.app
 
 import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
