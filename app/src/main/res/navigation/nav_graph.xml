@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/menuProcesses"
-        android:name="com.galaxyjoy.cpuinfo.feature.processes.FragmentProcesses"
+        android:name="com.galaxyjoy.cpuinfo.feature.processes.FrmProcesses"
         android:label="@string/processes"
         tools:layout="@layout/frm_processes" />
 
@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/menuSettings"
-        android:name="com.galaxyjoy.cpuinfo.feature.settings.FragmentSettings"
+        android:name="com.galaxyjoy.cpuinfo.feature.setting.FrmSettings"
         android:label="@string/settings" />
 
 </navigation>

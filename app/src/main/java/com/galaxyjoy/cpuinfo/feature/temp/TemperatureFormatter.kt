@@ -1,6 +1,6 @@
 package com.galaxyjoy.cpuinfo.feature.temp
 
-import com.galaxyjoy.cpuinfo.feature.settings.FragmentSettings
+import com.galaxyjoy.cpuinfo.feature.setting.FrmSettings
 import com.galaxyjoy.cpuinfo.util.Prefs
 import com.galaxyjoy.cpuinfo.util.round2
 import javax.inject.Inject
@@ -23,7 +23,7 @@ class TemperatureFormatter @Inject constructor(val prefs: Prefs) {
      * @param temp formatting temperature which will be formatted (passed in Celsius unit)
      */
     fun format(temp: Float): String {
-        val tempUnit = prefs.get(FragmentSettings.KEY_TEMPERATURE_UNIT, CELSIUS.toString())
+        val tempUnit = prefs.get(FrmSettings.KEY_TEMPERATURE_UNIT, CELSIUS.toString())
             .toInt()
         return if (tempUnit == FAHRENHEIT) {
             val fahrenheit = temp * 9 / 5 + 32

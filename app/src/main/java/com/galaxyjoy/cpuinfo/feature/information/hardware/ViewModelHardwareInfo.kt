@@ -13,7 +13,7 @@ import android.net.wifi.WifiManager
 import android.os.BatteryManager
 import androidx.lifecycle.ViewModel
 import com.galaxyjoy.cpuinfo.R
-import com.galaxyjoy.cpuinfo.feature.settings.FragmentSettings
+import com.galaxyjoy.cpuinfo.feature.setting.FrmSettings
 import com.galaxyjoy.cpuinfo.feature.temp.TemperatureFormatter
 import com.galaxyjoy.cpuinfo.feature.temp.TemperatureProvider
 import com.galaxyjoy.cpuinfo.util.Utils
@@ -420,7 +420,7 @@ class ViewModelHardwareInfo @Inject constructor(
     }
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String?) {
-        if (key == FragmentSettings.KEY_TEMPERATURE_UNIT) {
+        if (key == FrmSettings.KEY_TEMPERATURE_UNIT) {
             refreshHardwareInfo()
         }
     }

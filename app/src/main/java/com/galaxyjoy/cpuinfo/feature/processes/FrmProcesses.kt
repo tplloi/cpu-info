@@ -19,9 +19,9 @@ import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FragmentProcesses : BaseFragment<FrmProcessesBinding>(R.layout.frm_processes) {
+class FrmProcesses : BaseFragment<FrmProcessesBinding>(R.layout.frm_processes) {
 
-    private val viewModel: ProcessesViewModel by viewModels()
+    private val viewModel: ProcessesVM by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -54,20 +54,17 @@ class FragmentProcesses : BaseFragment<FrmProcessesBinding>(R.layout.frm_process
         super.onDestroyView()
     }
 
-    /**
-     * Setup for [RecyclerView]
-     */
     private fun setupRecyclerView() {
-        val adapterProcesses = AdapterProcesses(viewModel.processList)
+        val adtProcesses = AdtProcesses(viewModel.processList)
         viewModel.processList.listStatusChangeNotificator.observe(
             viewLifecycleOwner,
-            ListLiveDataObserver(adapterProcesses)
+            ListLiveDataObserver(adtProcesses)
         )
 
         val rvLayoutManager = LinearLayoutManager(requireContext())
         binding.rv.apply {
             layoutManager = rvLayoutManager
-            adapter = adapterProcesses
+            adapter = adtProcesses
             addItemDecoration(DividerItemDecoration(requireContext()))
             (this.itemAnimator as? SimpleItemAnimator)?.supportsChangeAnimations = false
         }

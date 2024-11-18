@@ -12,8 +12,8 @@ import com.galaxyjoy.cpuinfo.util.Utils
 /**
  * Simple adapter for processes
  **/
-class AdapterProcesses(private val processList: List<ProcessItem>) :
-    RecyclerView.Adapter<AdapterProcesses.ViewHolder>() {
+class AdtProcesses(private val processList: List<ProcessItem>) :
+    RecyclerView.Adapter<AdtProcesses.ViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,

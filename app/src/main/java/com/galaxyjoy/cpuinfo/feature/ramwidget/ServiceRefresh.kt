@@ -8,7 +8,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.*
 import androidx.preference.PreferenceManager
-import com.galaxyjoy.cpuinfo.feature.settings.FragmentSettings
+import com.galaxyjoy.cpuinfo.feature.setting.FrmSettings
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import timber.log.Timber
@@ -36,10 +36,10 @@ class ServiceRefresh : Service() {
 
         EventBus.getDefault().register(this)
 
-        powerManager = getSystemService(Context.POWER_SERVICE) as PowerManager
+        powerManager = getSystemService(POWER_SERVICE) as PowerManager
         prefs = PreferenceManager.getDefaultSharedPreferences(this)
         ramUpdateDelay = prefs.getString(
-            FragmentSettings.KEY_RAM_REFRESHING,
+            FrmSettings.KEY_RAM_REFRESHING,
             "10000"
         )!!.toLong()
 
@@ -47,7 +47,7 @@ class ServiceRefresh : Service() {
         refreshHandler?.postDelayed(object : Runnable {
             override fun run() {
                 ramUpdateDelay = prefs.getString(
-                    FragmentSettings.KEY_RAM_REFRESHING,
+                    FrmSettings.KEY_RAM_REFRESHING,
                     "10000"
                 )!!.toLong()
                 val isDeviceActive: Boolean =

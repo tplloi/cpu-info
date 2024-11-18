@@ -19,10 +19,10 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 /**
- * ViewModel for [FragmentProcesses]
+ * ViewModel for [FrmProcesses]
  **/
 @HiltViewModel
-class ProcessesViewModel @Inject constructor(
+class ProcessesVM @Inject constructor(
     private val dispatchersProvider: DispatchersProvider,
     private val prefs: Prefs,
     private val psProvider: PsProvider
@@ -101,15 +101,15 @@ class ProcessesViewModel @Inject constructor(
      */
     private fun getSortedProcessListSingle(): Single<List<ProcessItem>> {
         return psProvider.getPsList().map { processList ->
-                if (processList is ArrayList) {
-                    if (isSortingAsc) {
-                        processList.sortBy { it.name.uppercase() }
-                    } else {
-                        processList.sortByDescending { it.name.uppercase() }
-                    }
+            if (processList is ArrayList) {
+                if (isSortingAsc) {
+                    processList.sortBy { it.name.uppercase() }
+                } else {
+                    processList.sortByDescending { it.name.uppercase() }
                 }
-                processList
             }
+            processList
+        }
     }
 
     override fun onCleared() {

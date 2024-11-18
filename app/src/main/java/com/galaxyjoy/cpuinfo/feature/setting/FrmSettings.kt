@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.feature.settings
+package com.galaxyjoy.cpuinfo.feature.setting
 
 import android.content.SharedPreferences
 import android.os.Build
@@ -8,7 +8,7 @@ import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.util.ThemeHelper
 import com.galaxyjoy.cpuinfo.util.runOnApiAbove
 
-class FragmentSettings : PreferenceFragmentCompat(),
+class FrmSettings : PreferenceFragmentCompat(),
     SharedPreferences.OnSharedPreferenceChangeListener {
 
     companion object {
