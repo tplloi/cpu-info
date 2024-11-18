@@ -36,7 +36,7 @@
         tools:targetApi="tiramisu">
 
         <activity
-            android:name=".feature.ActHost"
+            android:name=".feat.ActHost"
             android:exported="true"
             android:theme="@style/AppThemeBase.Launcher">
             <intent-filter>
@@ -50,12 +50,12 @@
             android:name="applovin.sdk.key"
             android:value="@string/SDK_KEY" />
 
-        <service android:name=".feature.app.ServiceStorageUsage" />
+        <service android:name=".feat.app.ServiceStorageUsage" />
 
-        <service android:name=".feature.ramwidget.ServiceRefresh" />
+        <service android:name=".feat.ramwidget.ServiceRefresh" />
 
         <receiver
-            android:name=".feature.ramwidget.RamUsageWidgetProvider"
+            android:name=".feat.ramwidget.RamUsageWidgetProvider"
             android:enabled="@bool/belowOreo"
             android:exported="true">
             <intent-filter>
@@ -68,7 +68,7 @@
         </receiver>
 
         <service
-            android:name=".feature.cputile.ServiceCpuTile"
+            android:name=".feat.cputile.ServiceCpuTile"
             android:exported="true"
             android:icon="@drawable/ic_cpu_low"
             android:label="@string/app_name"

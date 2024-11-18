@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.galaxyjoy.cpuinfo.feature.processes.ProcessesVM" />
+            type="com.galaxyjoy.cpuinfo.feat.processes.ProcessesVM" />
 
     </data>
 
