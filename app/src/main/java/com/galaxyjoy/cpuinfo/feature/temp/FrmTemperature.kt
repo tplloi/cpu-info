@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.feature.temperature
+package com.galaxyjoy.cpuinfo.feature.temp
 
 import android.os.Bundle
 import android.view.View
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.SimpleItemAnimator
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.FrmTemperatureBinding
 import com.galaxyjoy.cpuinfo.feature.information.base.BaseFragment
-import com.galaxyjoy.cpuinfo.feature.temperature.list.AdtTemperature
+import com.galaxyjoy.cpuinfo.feature.temp.list.AdtTemperature
 import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject

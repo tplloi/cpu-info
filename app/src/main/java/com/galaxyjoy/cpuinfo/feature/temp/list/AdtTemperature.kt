@@ -1,10 +1,10 @@
-package com.galaxyjoy.cpuinfo.feature.temperature.list
+package com.galaxyjoy.cpuinfo.feature.temp.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.galaxyjoy.cpuinfo.databinding.ViItemTemperatureBinding
-import com.galaxyjoy.cpuinfo.feature.temperature.TemperatureFormatter
+import com.galaxyjoy.cpuinfo.feature.temp.TemperatureFormatter
 
 /**
  * Temperature list adapter which observe temperatureListLiveData

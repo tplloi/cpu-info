@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.feature.temperature
+package com.galaxyjoy.cpuinfo.feature.temp
 
 import com.galaxyjoy.cpuinfo.R
 import javax.inject.Inject

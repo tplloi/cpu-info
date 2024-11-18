@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.feature.temperature
+package com.galaxyjoy.cpuinfo.feature.temp
 
 import com.galaxyjoy.cpuinfo.feature.settings.FragmentSettings
 import com.galaxyjoy.cpuinfo.util.Prefs

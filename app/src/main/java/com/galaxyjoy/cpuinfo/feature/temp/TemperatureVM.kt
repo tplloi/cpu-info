@@ -1,10 +1,10 @@
-package com.galaxyjoy.cpuinfo.feature.temperature
+package com.galaxyjoy.cpuinfo.feature.temp
 
 import android.content.res.Resources
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel
 import com.galaxyjoy.cpuinfo.R
-import com.galaxyjoy.cpuinfo.feature.temperature.list.TemperatureItem
+import com.galaxyjoy.cpuinfo.feature.temp.list.TemperatureItem
 import com.galaxyjoy.cpuinfo.util.NonNullMutableLiveData
 import com.galaxyjoy.cpuinfo.util.Prefs
 import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveData

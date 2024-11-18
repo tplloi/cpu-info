@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.feature.temperature
+package com.galaxyjoy.cpuinfo.feature.temp
 
 import android.content.Context
 import android.content.Intent

@@ -14,8 +14,8 @@ import android.os.BatteryManager
 import androidx.lifecycle.ViewModel
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.feature.settings.FragmentSettings
-import com.galaxyjoy.cpuinfo.feature.temperature.TemperatureFormatter
-import com.galaxyjoy.cpuinfo.feature.temperature.TemperatureProvider
+import com.galaxyjoy.cpuinfo.feature.temp.TemperatureFormatter
+import com.galaxyjoy.cpuinfo.feature.temp.TemperatureProvider
 import com.galaxyjoy.cpuinfo.util.Utils
 import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveData
 import com.galaxyjoy.cpuinfo.util.round2

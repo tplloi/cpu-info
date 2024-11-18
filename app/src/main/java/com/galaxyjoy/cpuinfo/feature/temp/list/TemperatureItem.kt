@@ -1,4 +1,4 @@
-package com.galaxyjoy.cpuinfo.feature.temperature.list
+package com.galaxyjoy.cpuinfo.feature.temp.list
 
 import androidx.annotation.Keep
 
