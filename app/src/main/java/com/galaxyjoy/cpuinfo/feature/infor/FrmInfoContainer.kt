@@ -6,8 +6,8 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.FrmInfoBinding
-import com.galaxyjoy.cpuinfo.feature.infor.base.BaseFragment
-import com.galaxyjoy.cpuinfo.feature.infor.base.AdapterInfoContainerState
+import com.galaxyjoy.cpuinfo.feature.infor.base.BaseFrm
+import com.galaxyjoy.cpuinfo.feature.infor.base.AdtInfoContainerState
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -15,12 +15,12 @@ import dagger.hilt.android.AndroidEntryPoint
  *
  */
 @AndroidEntryPoint
-class FrmInfoContainer : BaseFragment<FrmInfoBinding>(R.layout.frm_info) {
+class FrmInfoContainer : BaseFrm<FrmInfoBinding>(R.layout.frm_info) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = AdapterInfoContainerState(this)
+        val adapter = AdtInfoContainerState(this)
         binding.vp.adapter = adapter
         TabLayoutMediator(binding.tabs, binding.vp) { tab: TabLayout.Tab, position: Int ->
             tab.text = resources.getText(adapter.getTitleRes(position))

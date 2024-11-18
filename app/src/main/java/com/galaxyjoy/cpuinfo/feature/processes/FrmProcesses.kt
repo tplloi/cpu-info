@@ -13,13 +13,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.FrmProcessesBinding
-import com.galaxyjoy.cpuinfo.feature.infor.base.BaseFragment
+import com.galaxyjoy.cpuinfo.feature.infor.base.BaseFrm
 import com.galaxyjoy.cpuinfo.util.DividerItemDecoration
 import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FrmProcesses : BaseFragment<FrmProcessesBinding>(R.layout.frm_processes) {
+class FrmProcesses : BaseFrm<FrmProcessesBinding>(R.layout.frm_processes) {
 
     private val viewModel: ProcessesVM by viewModels()
 

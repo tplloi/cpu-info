@@ -7,14 +7,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.FrmTemperatureBinding
-import com.galaxyjoy.cpuinfo.feature.infor.base.BaseFragment
+import com.galaxyjoy.cpuinfo.feature.infor.base.BaseFrm
 import com.galaxyjoy.cpuinfo.feature.temp.list.AdtTemperature
 import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class FrmTemperature : BaseFragment<FrmTemperatureBinding>(
+class FrmTemperature : BaseFrm<FrmTemperatureBinding>(
     R.layout.frm_temperature
 ) {
 

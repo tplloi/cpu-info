@@ -4,8 +4,8 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.feature.infor.android.FragmentAndroidInfo
-import com.galaxyjoy.cpuinfo.feature.infor.cpu.FragmentCpuInfo
-import com.galaxyjoy.cpuinfo.feature.infor.gpu.FragmentGpuInfo
+import com.galaxyjoy.cpuinfo.feature.infor.cpu.FrmCpuInfo
+import com.galaxyjoy.cpuinfo.feature.infor.gpu.FrmGpuInfo
 import com.galaxyjoy.cpuinfo.feature.infor.hardware.FrmHardwareInfo
 import com.galaxyjoy.cpuinfo.feature.infor.ram.FrmRamInfo
 import com.galaxyjoy.cpuinfo.feature.infor.screen.FrmScreenInfo
@@ -15,12 +15,12 @@ import com.galaxyjoy.cpuinfo.feature.infor.storage.FrmStorageInfo
 /**
  * Simple view pager for info fragments
  */
-class AdapterInfoContainerState(fragment: Fragment) : FragmentStateAdapter(fragment) {
+class AdtInfoContainerState(fragment: Fragment) : FragmentStateAdapter(fragment) {
 
     override fun createFragment(position: Int): Fragment =
         when (position) {
-            CPU_POS -> FragmentCpuInfo()
-            GPU_POS -> FragmentGpuInfo()
+            CPU_POS -> FrmCpuInfo()
+            GPU_POS -> FrmGpuInfo()
             RAM_POS -> FrmRamInfo()
             STORAGE_POS -> FrmStorageInfo()
             SCREEN_POS -> FrmScreenInfo()

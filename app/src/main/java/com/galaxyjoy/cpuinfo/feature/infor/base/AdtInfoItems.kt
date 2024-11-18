@@ -15,11 +15,11 @@ import com.galaxyjoy.cpuinfo.R
  * the second one is empty.
  *
  */
-class AdapterInfoItems(
+class AdtInfoItems(
     private val itemsObservableList: List<Pair<String, String>>,
     private val layoutType: LayoutType = LayoutType.HORIZONTAL_LAYOUT,
     private val onClickListener: OnClickListener? = null
-) : RecyclerView.Adapter<AdapterInfoItems.SingleItemViewHolder>() {
+) : RecyclerView.Adapter<AdtInfoItems.SingleItemViewHolder>() {
 
     enum class LayoutType {
         HORIZONTAL_LAYOUT, VERTICAL_LAYOUT

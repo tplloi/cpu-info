@@ -21,7 +21,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.FrmApplicationsBinding
 import com.galaxyjoy.cpuinfo.ext.openBrowserPolicy
-import com.galaxyjoy.cpuinfo.feature.infor.base.BaseFragment
+import com.galaxyjoy.cpuinfo.feature.infor.base.BaseFrm
 import com.galaxyjoy.cpuinfo.util.DividerItemDecoration
 import com.galaxyjoy.cpuinfo.util.Utils
 import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
@@ -34,7 +34,7 @@ import shareApp
 import java.io.File
 
 @AndroidEntryPoint
-class FragmentApplications : BaseFragment<FrmApplicationsBinding>(
+class FrmApplications : BaseFrm<FrmApplicationsBinding>(
     R.layout.frm_applications
 ), AdapterApplications.ItemClickListener {
 

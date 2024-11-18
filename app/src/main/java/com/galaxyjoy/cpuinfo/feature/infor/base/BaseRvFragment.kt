@@ -31,13 +31,12 @@ import com.google.android.material.snackbar.Snackbar
 import com.galaxyjoy.cpuinfo.R
 import dagger.hilt.android.AndroidEntryPoint
 
-
 /**
  * Simple base for all info fragments which displays data on [RecyclerView]
  *
  */
 @AndroidEntryPoint
-abstract class BaseRvFragment : Fragment(), AdapterInfoItems.OnClickListener {
+abstract class BaseRvFragment : Fragment(), AdtInfoItems.OnClickListener {
 
     protected lateinit var mainContainer: View
     protected lateinit var recyclerView: RecyclerView

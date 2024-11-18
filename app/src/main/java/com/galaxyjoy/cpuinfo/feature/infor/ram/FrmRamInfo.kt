@@ -12,12 +12,12 @@ import androidx.lifecycle.Lifecycle
 import com.google.android.material.snackbar.Snackbar
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.FrmRecyclerViewBinding
-import com.galaxyjoy.cpuinfo.feature.infor.base.BaseFragment
+import com.galaxyjoy.cpuinfo.feature.infor.base.BaseFrm
 import com.galaxyjoy.cpuinfo.util.runOnApiBelow
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FrmRamInfo : BaseFragment<FrmRecyclerViewBinding>(R.layout.frm_recycler_view) {
+class FrmRamInfo : BaseFrm<FrmRecyclerViewBinding>(R.layout.frm_recycler_view) {
 
     private val viewModel: VMRamInfo by viewModels()
 

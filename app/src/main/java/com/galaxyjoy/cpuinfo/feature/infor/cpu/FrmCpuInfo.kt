@@ -5,7 +5,7 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.FrmRecyclerViewBinding
-import com.galaxyjoy.cpuinfo.feature.infor.base.BaseFragment
+import com.galaxyjoy.cpuinfo.feature.infor.base.BaseFrm
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -14,7 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
  * @author galaxyjoy
  */
 @AndroidEntryPoint
-class FragmentCpuInfo : BaseFragment<FrmRecyclerViewBinding>(R.layout.frm_recycler_view) {
+class FrmCpuInfo : BaseFrm<FrmRecyclerViewBinding>(R.layout.frm_recycler_view) {
 
     private val viewModel: ViewModelCpuInfo by viewModels()
 

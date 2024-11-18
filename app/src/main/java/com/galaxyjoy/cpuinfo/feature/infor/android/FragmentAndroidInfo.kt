@@ -1,7 +1,7 @@
 package com.galaxyjoy.cpuinfo.feature.infor.android
 
 import androidx.fragment.app.viewModels
-import com.galaxyjoy.cpuinfo.feature.infor.base.AdapterInfoItems
+import com.galaxyjoy.cpuinfo.feature.infor.base.AdtInfoItems
 import com.galaxyjoy.cpuinfo.feature.infor.base.BaseRvFragment
 import com.galaxyjoy.cpuinfo.util.DividerItemDecoration
 import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
@@ -12,18 +12,18 @@ class FragmentAndroidInfo : BaseRvFragment() {
 
     private val viewModel: ViewModelAndroidInfo by viewModels()
 
-    private lateinit var adapterInfoItems: AdapterInfoItems
+    private lateinit var adtInfoItems: AdtInfoItems
 
     override fun setupRecyclerViewAdapter() {
-        adapterInfoItems = AdapterInfoItems(
+        adtInfoItems = AdtInfoItems(
             viewModel.listLiveData,
-            AdapterInfoItems.LayoutType.HORIZONTAL_LAYOUT, onClickListener = this
+            AdtInfoItems.LayoutType.HORIZONTAL_LAYOUT, onClickListener = this
         )
         viewModel.listLiveData.listStatusChangeNotificator.observe(
             viewLifecycleOwner,
-            ListLiveDataObserver(adapterInfoItems)
+            ListLiveDataObserver(adtInfoItems)
         )
         recyclerView.addItemDecoration(DividerItemDecoration(requireContext()))
-        recyclerView.adapter = adapterInfoItems
+        recyclerView.adapter = adtInfoItems
     }
 }

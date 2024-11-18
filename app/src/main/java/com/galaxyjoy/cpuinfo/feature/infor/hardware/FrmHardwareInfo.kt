@@ -6,7 +6,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import androidx.fragment.app.viewModels
 import com.galaxyjoy.cpuinfo.feature.infor.base.BaseRvFragment
-import com.galaxyjoy.cpuinfo.feature.infor.base.AdapterInfoItems
+import com.galaxyjoy.cpuinfo.feature.infor.base.AdtInfoItems
 import com.galaxyjoy.cpuinfo.util.DividerItemDecoration
 import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
@@ -36,15 +36,15 @@ class FrmHardwareInfo : BaseRvFragment() {
     }
 
     override fun setupRecyclerViewAdapter() {
-        val adapterInfoItems = AdapterInfoItems(
+        val adtInfoItems = AdtInfoItems(
             itemsObservableList = viewModel.listLiveData,
-            layoutType = AdapterInfoItems.LayoutType.HORIZONTAL_LAYOUT, onClickListener = this
+            layoutType = AdtInfoItems.LayoutType.HORIZONTAL_LAYOUT, onClickListener = this
         )
         viewModel.listLiveData.listStatusChangeNotificator.observe(
             viewLifecycleOwner,
-            ListLiveDataObserver(adapterInfoItems)
+            ListLiveDataObserver(adtInfoItems)
         )
         recyclerView.addItemDecoration(DividerItemDecoration(requireContext()))
-        recyclerView.adapter = adapterInfoItems
+        recyclerView.adapter = adtInfoItems
     }
 }

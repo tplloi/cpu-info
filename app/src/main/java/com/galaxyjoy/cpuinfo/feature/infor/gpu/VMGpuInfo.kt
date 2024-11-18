@@ -14,7 +14,7 @@ import javax.inject.Inject
  *
  */
 @HiltViewModel
-class ViewModelGpuInfo @Inject constructor(
+class VMGpuInfo @Inject constructor(
     private val observableGpuData: ObservableGpuData
 ) : ViewModel() {
 

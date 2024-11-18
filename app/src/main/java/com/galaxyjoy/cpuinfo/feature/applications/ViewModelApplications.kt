@@ -31,7 +31,7 @@ import java.io.File
 import javax.inject.Inject
 
 /**
- * ViewModel for [FragmentApplications]
+ * ViewModel for [FrmApplications]
  *
  * @author galaxyjoy
  */
