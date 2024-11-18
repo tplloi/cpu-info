@@ -159,12 +159,9 @@ public abstract class BaseRoundCornerProgressBar extends LinearLayout {
         // when `onSizeChanged(...)` called. Using `post` method then
         // call these methods inside the Runnable will solved this.
         // And I can't reuse the `drawAll()` method because this problem.
-        post(new Runnable() {
-            @Override
-            public void run() {
-                drawPrimaryProgress();
-                drawSecondaryProgress();
-            }
+        post(() -> {
+            drawPrimaryProgress();
+            drawSecondaryProgress();
         });
         onViewDraw();
     }
@@ -499,7 +496,7 @@ public abstract class BaseRoundCornerProgressBar extends LinearLayout {
     }
 
     protected static class SavedState extends AbsSavedState {
-        public static final Parcelable.ClassLoaderCreator<SavedState> CREATOR = new Parcelable.ClassLoaderCreator<SavedState>() {
+        public static final Parcelable.ClassLoaderCreator<SavedState> CREATOR = new Parcelable.ClassLoaderCreator<>() {
             @Override
             public SavedState createFromParcel(Parcel in, ClassLoader loader) {
                 return new SavedState(in, loader);

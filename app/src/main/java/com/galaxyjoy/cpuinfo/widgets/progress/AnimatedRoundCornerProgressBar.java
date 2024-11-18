@@ -297,7 +297,7 @@ public abstract class AnimatedRoundCornerProgressBar extends BaseRoundCornerProg
     }
 
     protected static class SavedState extends AbsSavedState {
-        public static final Parcelable.ClassLoaderCreator<SavedState> CREATOR = new Parcelable.ClassLoaderCreator<SavedState>() {
+        public static final Parcelable.ClassLoaderCreator<SavedState> CREATOR = new Parcelable.ClassLoaderCreator<>() {
             @Override
             public SavedState createFromParcel(Parcel in, ClassLoader loader) {
                 return new SavedState(in, loader);
