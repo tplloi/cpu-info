@@ -10,10 +10,10 @@ import com.galaxyjoy.cpuinfo.feature.temperature.TemperatureFormatter
  * Temperature list adapter which observe temperatureListLiveData
  *
  */
-class AdapterTemperature(
+class AdtTemperature(
     private val temperatureFormatter: TemperatureFormatter,
     private val temperatureList: List<TemperatureItem>
-) : RecyclerView.Adapter<AdapterTemperature.ViewHolder>() {
+) : RecyclerView.Adapter<AdtTemperature.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ViItemTemperatureBinding.inflate(

@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/menuTemperature"
-        android:name="com.galaxyjoy.cpuinfo.feature.temperature.FragmentTemperature"
+        android:name="com.galaxyjoy.cpuinfo.feature.temperature.FrmTemperature"
         android:label="@string/temperature"
         tools:layout="@layout/frm_temperature" />
 

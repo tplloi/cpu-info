@@ -8,17 +8,17 @@ import androidx.recyclerview.widget.SimpleItemAnimator
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.FrmTemperatureBinding
 import com.galaxyjoy.cpuinfo.feature.information.base.BaseFragment
-import com.galaxyjoy.cpuinfo.feature.temperature.list.AdapterTemperature
+import com.galaxyjoy.cpuinfo.feature.temperature.list.AdtTemperature
 import com.galaxyjoy.cpuinfo.util.lifecycle.ListLiveDataObserver
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class FragmentTemperature : BaseFragment<FrmTemperatureBinding>(
+class FrmTemperature : BaseFragment<FrmTemperatureBinding>(
     R.layout.frm_temperature
 ) {
 
-    private val viewModel: TemperatureViewModel by viewModels()
+    private val viewModel: TemperatureVM by viewModels()
 
     @Inject
     lateinit var temperatureFormatter: TemperatureFormatter
@@ -41,17 +41,17 @@ class FragmentTemperature : BaseFragment<FrmTemperatureBinding>(
     }
 
     private fun setupRecycleView() {
-        val adapterTemperature = AdapterTemperature(
+        val adtTemperature = AdtTemperature(
             temperatureFormatter,
             viewModel.temperatureListLiveData
         )
         viewModel.temperatureListLiveData.listStatusChangeNotificator.observe(
             viewLifecycleOwner,
-            ListLiveDataObserver(adapterTemperature)
+            ListLiveDataObserver(adtTemperature)
         )
         binding.apply {
             tempRv.layoutManager = LinearLayoutManager(requireContext())
-            tempRv.adapter = adapterTemperature
+            tempRv.adapter = adtTemperature
             (tempRv.itemAnimator as? SimpleItemAnimator)?.supportsChangeAnimations = false
         }
     }

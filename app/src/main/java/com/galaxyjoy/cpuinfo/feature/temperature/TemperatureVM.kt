@@ -18,11 +18,11 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 /**
- * ViewModel for [FragmentTemperature]
+ * ViewModel for [FrmTemperature]
  *
  */
 @HiltViewModel
-class TemperatureViewModel @Inject constructor(
+class TemperatureVM @Inject constructor(
     private val prefs: Prefs,
     private val resources: Resources,
     private val temperatureIconProvider: TemperatureIconProvider,
