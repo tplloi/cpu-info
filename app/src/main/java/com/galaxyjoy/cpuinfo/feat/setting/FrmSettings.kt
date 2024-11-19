@@ -7,6 +7,7 @@ import android.util.Log
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.galaxyjoy.cpuinfo.R
+import com.galaxyjoy.cpuinfo.ext.openBrowserPolicy
 import com.galaxyjoy.cpuinfo.util.ThemeHelper
 import com.galaxyjoy.cpuinfo.util.runOnApiAbove
 import moreApp
@@ -47,6 +48,11 @@ class FrmSettings : PreferenceFragmentCompat(),
         val shareAppPreference: Preference? = findPreference("key_share_app")
         shareAppPreference?.setOnPreferenceClickListener {
             activity?.shareApp()
+            true
+        }
+        val policyAppPreference: Preference? = findPreference("key_policy_app")
+        policyAppPreference?.setOnPreferenceClickListener {
+            activity?.openBrowserPolicy()
             true
         }
     }

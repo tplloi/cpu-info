@@ -69,5 +69,13 @@
             app:title="This app is amazing—share it with everyone to enjoy together!" />
 
     </PreferenceCategory>
+    <PreferenceCategory app:title="@string/term_policy">
+
+        <Preference
+            app:defaultValue="default"
+            app:key="key_policy_app"
+            app:title="App Terms and Privacy Services" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
