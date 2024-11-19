@@ -9,6 +9,7 @@ import androidx.preference.PreferenceFragmentCompat
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.util.ThemeHelper
 import com.galaxyjoy.cpuinfo.util.runOnApiAbove
+import moreApp
 import rateApp
 
 class FrmSettings : PreferenceFragmentCompat(),
@@ -35,6 +36,11 @@ class FrmSettings : PreferenceFragmentCompat(),
             activity?.let {
                 it.rateApp(it.packageName)
             }
+            true
+        }
+        val moreAppPreference: Preference? = findPreference("key_more_app")
+        moreAppPreference?.setOnPreferenceClickListener {
+            activity?.moreApp()
             true
         }
     }
