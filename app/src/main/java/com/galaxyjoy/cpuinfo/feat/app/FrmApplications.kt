@@ -75,7 +75,7 @@ class FrmApplications : BaseFrm<FrmApplicationsBinding>(
 
                     R.id.menuActionRate -> {
                         activity?.let {
-                            it.rateApp("com.galaxyjoy.cpuinfo")
+                            it.rateApp(it.packageName)
                         }
                         true
                     }

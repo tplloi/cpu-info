@@ -3,10 +3,13 @@ package com.galaxyjoy.cpuinfo.feat.setting
 import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
+import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.util.ThemeHelper
 import com.galaxyjoy.cpuinfo.util.runOnApiAbove
+import rateApp
 
 class FrmSettings : PreferenceFragmentCompat(),
     SharedPreferences.OnSharedPreferenceChangeListener {
@@ -25,6 +28,14 @@ class FrmSettings : PreferenceFragmentCompat(),
         // RAM widget isn't supported currently on O and above
         runOnApiAbove(Build.VERSION_CODES.N_MR1) {
             preferenceScreen.removePreference(preferenceScreen.findPreference(KEY_RAM_CATEGORIES)!!)
+        }
+
+        val rateAppPreference: Preference? = findPreference("key_rate_app")
+        rateAppPreference?.setOnPreferenceClickListener {
+            activity?.let {
+                it.rateApp(it.packageName)
+            }
+            true
         }
     }
 

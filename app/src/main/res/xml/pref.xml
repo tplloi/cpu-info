@@ -44,4 +44,13 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory app:title="@string/rate_app">
+
+        <Preference
+            app:defaultValue="default"
+            app:key="key_rate_app"
+            app:title="If you enjoy the app, we’d greatly appreciate a 5-star rating!" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
