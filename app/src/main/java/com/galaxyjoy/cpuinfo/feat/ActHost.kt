@@ -1,6 +1,8 @@
 package com.galaxyjoy.cpuinfo.feat
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +24,13 @@ class ActHost : AppCompatActivity() {
 
     private lateinit var navController: NavController
     private lateinit var binding: ActHostLayoutBinding
+
+    override fun attachBaseContext(context: Context) {
+        val override = Configuration(context.resources.configuration)
+        override.fontScale = 1.0f
+        applyOverrideConfiguration(override)
+        super.attachBaseContext(context)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppThemeBase)
