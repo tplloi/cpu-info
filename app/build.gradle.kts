@@ -115,7 +115,7 @@ android {
     productFlavors {
         create("dev") {
             dimension = "type"
-            resValue("string", "app_name", "CPU Info DEV")
+            resValue("string", "app_name", "Device Info & System CPU DEV")
             resValue(
                 "string",
                 "SDK_KEY",
@@ -129,7 +129,7 @@ android {
         }
         create("production") {
             dimension = "type"
-            resValue("string", "app_name", "CPU Info")
+            resValue("string", "app_name", "Device Info & System CPU")
             resValue(
                 "string",
                 "SDK_KEY",

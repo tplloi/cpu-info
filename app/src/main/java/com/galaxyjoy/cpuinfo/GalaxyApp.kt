@@ -11,14 +11,13 @@ import javax.inject.Inject
 //TODO roy93~ firebase
 //TODO roy93~ add lottie trang tri cho dep
 //TODO roy93~ splash screen
+//TODO roy93~ github
 
 //TODO roy93~ keystore
-//TODO roy93~ rate, more app, share app
-//TODO roy93~ github
-//TODO roy93~ license
 //TODO roy93~ gen ic_launcher https://easyappicon.com/
-//TODO roy93~ rename app
 
+//rename app
+//license
 //leak canary
 //proguard
 //font scale
