@@ -46,9 +46,9 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="applovin.sdk.key"
-            android:value="@string/SDK_KEY" />
+<!--        <meta-data-->
+<!--            android:name="applovin.sdk.key"-->
+<!--            android:value="@string/SDK_KEY" />-->
 
         <service android:name=".feat.app.ServiceStorageUsage" />
 

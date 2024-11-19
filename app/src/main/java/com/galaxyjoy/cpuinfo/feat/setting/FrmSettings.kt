@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.galaxyjoy.cpuinfo.BuildConfig
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.ext.openBrowserPolicy
 import com.galaxyjoy.cpuinfo.util.ThemeHelper
@@ -53,6 +54,12 @@ class FrmSettings : PreferenceFragmentCompat(),
         val policyAppPreference: Preference? = findPreference("key_policy_app")
         policyAppPreference?.setOnPreferenceClickListener {
             activity?.openBrowserPolicy()
+            true
+        }
+        val versionAppPreference: Preference? = findPreference("key_version_app")
+        versionAppPreference?.title = BuildConfig.VERSION_NAME
+        versionAppPreference?.setOnPreferenceClickListener {
+            //do nothing
             true
         }
     }

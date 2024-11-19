@@ -9,10 +9,9 @@ import javax.inject.Inject
 //TODO roy93~ vung bi mat de show applovin config
 //TODO roy93~ ad applovin
 //TODO roy93~ firebase
+//TODO roy93~ add lottie trang tri cho dep
 
 //TODO roy93~ keystore
-//TODO roy93~ add lottie trang tri cho dep
-//TODO roy93~ them version o man hinh chu
 //TODO roy93~ splash screen
 //TODO roy93~ font scale
 //TODO roy93~ rate, more app, share app
@@ -24,6 +23,7 @@ import javax.inject.Inject
 //TODO roy93~ keystore
 //TODO roy93~ rename app
 
+//them version o man hinh chu
 //rate, more, share, fb fan page, policy
 //leak canary
 //proguard
