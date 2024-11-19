@@ -11,6 +11,7 @@ import com.galaxyjoy.cpuinfo.util.ThemeHelper
 import com.galaxyjoy.cpuinfo.util.runOnApiAbove
 import moreApp
 import rateApp
+import shareApp
 
 class FrmSettings : PreferenceFragmentCompat(),
     SharedPreferences.OnSharedPreferenceChangeListener {
@@ -41,6 +42,11 @@ class FrmSettings : PreferenceFragmentCompat(),
         val moreAppPreference: Preference? = findPreference("key_more_app")
         moreAppPreference?.setOnPreferenceClickListener {
             activity?.moreApp()
+            true
+        }
+        val shareAppPreference: Preference? = findPreference("key_share_app")
+        shareAppPreference?.setOnPreferenceClickListener {
+            activity?.shareApp()
             true
         }
     }

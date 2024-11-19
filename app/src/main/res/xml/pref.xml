@@ -61,5 +61,13 @@
             app:title="Discover more exciting apps from us—download them on the Play Store now!" />
 
     </PreferenceCategory>
+    <PreferenceCategory app:title="@string/share_app">
+
+        <Preference
+            app:defaultValue="default"
+            app:key="key_share_app"
+            app:title="This app is amazing—share it with everyone to enjoy together!" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
