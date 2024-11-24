@@ -13,8 +13,7 @@ import javax.inject.Inject
 //TODO roy93~ splash screen
 //TODO roy93~ github
 
-//TODO roy93~ gen ic_launcher https://easyappicon.com/
-
+//gen ic_launcher https://easyappicon.com/
 //keystore
 //rename app
 //license
