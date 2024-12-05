@@ -1,15 +1,13 @@
 package com.galaxyjoy.cpuinfo.feat
 
 import android.annotation.SuppressLint
-import android.content.Context
-import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.galaxyjoy.cpuinfo.BaseActivity
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.ActHostLayoutBinding
 import com.galaxyjoy.cpuinfo.util.runOnApiAbove
@@ -20,17 +18,10 @@ import dagger.hilt.android.AndroidEntryPoint
  * Base activity which is a host for whole application.
  **/
 @AndroidEntryPoint
-class ActHost : AppCompatActivity() {
+class ActHost : BaseActivity() {
 
     private lateinit var navController: NavController
     private lateinit var binding: ActHostLayoutBinding
-
-    override fun attachBaseContext(context: Context) {
-        val override = Configuration(context.resources.configuration)
-        override.fontScale = 1.0f
-        applyOverrideConfiguration(override)
-        super.attachBaseContext(context)
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppThemeBase)

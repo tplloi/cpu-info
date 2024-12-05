@@ -12,6 +12,7 @@ import javax.inject.Inject
 //TODO roy93~ add lottie trang tri cho dep
 //TODO roy93~ github
 
+//120hz
 //splash screen
 //gen ic_launcher https://easyappicon.com/
 //keystore
