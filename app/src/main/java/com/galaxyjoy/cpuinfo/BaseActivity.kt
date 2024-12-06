@@ -32,16 +32,16 @@ open class BaseActivity : AppCompatActivity() {
             wm.defaultDisplay // Fallback cho API thấp hơn
         }
 
-
         if (display != null) {
-            val supportedModes = display.supportedModes
-            val highestRefreshRateMode = supportedModes.maxByOrNull { it.refreshRate }
-
-            if (highestRefreshRateMode != null) {
-                window.attributes = window.attributes.apply {
-                    preferredDisplayModeId = highestRefreshRateMode.modeId
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                val supportedModes = display.supportedModes
+                val highestRefreshRateMode = supportedModes.maxByOrNull { it.refreshRate }
+                if (highestRefreshRateMode != null) {
+                    window.attributes = window.attributes.apply {
+                        preferredDisplayModeId = highestRefreshRateMode.modeId
+                    }
+                    println("Adaptive refresh rate applied: ${highestRefreshRateMode.refreshRate} Hz")
                 }
-                println("Adaptive refresh rate applied: ${highestRefreshRateMode.refreshRate} Hz")
             }
         }
     }
