@@ -11,6 +11,7 @@ import javax.inject.Inject
 //TODO roy93~ firebase
 //TODO roy93~ add lottie trang tri cho dep
 //TODO roy93~ github
+//TODO roy93~ review in app
 
 //120hz
 //splash screen
