@@ -41,7 +41,8 @@ class AdtTemperature(
                 temperatureIv.setImageResource(temperatureItem.iconRes)
                 temperatureTypeTv.text = temperatureItem.name
                 if (temperatureItem.temperature == null) {
-                    temperatureTv.text = "Unable to read the temperature"
+                    temperatureTv.text =
+                        "Your device does not support providing the necessary information, so I am unable to retrieve the temperature."
                 } else {
                     temperatureItem.temperature?.let {
                         temperatureTv.text = temperatureFormatter.format(it)
