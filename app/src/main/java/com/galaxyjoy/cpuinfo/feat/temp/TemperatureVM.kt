@@ -1,6 +1,7 @@
 package com.galaxyjoy.cpuinfo.feat.temp
 
 import android.content.res.Resources
+import android.util.Log
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel
 import com.galaxyjoy.cpuinfo.R
@@ -113,10 +114,7 @@ class TemperatureVM @Inject constructor(
      * Schedule refreshing process (for 3s)
      */
     private fun scheduleRefreshing() {
-        if (refreshingDisposable != null) {
-            refreshingDisposable!!.dispose()
-        }
-
+        refreshingDisposable?.dispose()
         refreshingDisposable = getRefreshingInvoker()
             .map {
                 var batteryTemp: Int? = null
@@ -133,16 +131,18 @@ class TemperatureVM @Inject constructor(
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ (cpuTemp, batteryTemp) ->
                 val temporaryTempList = ArrayList<TemperatureItem>()
-                if (cpuTemp != null) {
-                    temporaryTempList.add(
-                        TemperatureItem(
-                            temperatureIconProvider.getIcon(
-                                TemperatureIconProvider.Type.CPU
-                            ),
-                            resources.getString(R.string.cpu), cpuTemp
-                        )
-                    )
-                }
+
+                Log.d("roy93~", "cpuTemp ${cpuTemp}")
+//                if (cpuTemp != null) {
+//                    temporaryTempList.add(
+//                        TemperatureItem(
+//                            temperatureIconProvider.getIcon(
+//                                TemperatureIconProvider.Type.CPU
+//                            ),
+//                            resources.getString(R.string.cpu), cpuTemp
+//                        )
+//                    )
+//                }
                 if (batteryTemp != null) {
                     temporaryTempList.add(
                         TemperatureItem(
