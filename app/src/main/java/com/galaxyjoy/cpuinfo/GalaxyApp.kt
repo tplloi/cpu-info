@@ -12,6 +12,7 @@ import javax.inject.Inject
 //TODO roy93~ add lottie trang tri cho dep
 //TODO roy93~ github
 //TODO roy93~ review in app
+//TODO roy93~ uninstall app
 
 //120hz
 //splash screen
