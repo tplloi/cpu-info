@@ -1,7 +1,6 @@
 package com.galaxyjoy.cpuinfo.feat.temp
 
 import android.content.res.Resources
-import android.util.Log
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel
 import com.galaxyjoy.cpuinfo.R
@@ -17,6 +16,11 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
+import kotlin.coroutines.coroutineContext
+import android.content.Context
+import android.os.Build
+import android.util.Log
+import java.io.File
 
 /**
  * ViewModel for [FrmTemperature]
@@ -131,30 +135,25 @@ class TemperatureVM @Inject constructor(
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ (cpuTemp, batteryTemp) ->
                 val temporaryTempList = ArrayList<TemperatureItem>()
-
-                Log.d("roy93~", "cpuTemp ${cpuTemp}")
-//                if (cpuTemp != null) {
-//                    temporaryTempList.add(
-//                        TemperatureItem(
-//                            temperatureIconProvider.getIcon(
-//                                TemperatureIconProvider.Type.CPU
-//                            ),
-//                            resources.getString(R.string.cpu), cpuTemp
-//                        )
-//                    )
-//                }
-                if (batteryTemp != null) {
-                    temporaryTempList.add(
-                        TemperatureItem(
-                            temperatureIconProvider.getIcon(
-                                TemperatureIconProvider.Type.BATTERY
-                            ),
-                            resources.getString(R.string.battery),
-                            batteryTemp.toFloat()
-                        )
+//                Log.d("roy93~", "cpuTemp ${cpuTemp}")
+                temporaryTempList.add(
+                    TemperatureItem(
+                        iconRes = temperatureIconProvider.getIcon(
+                            TemperatureIconProvider.Type.CPU
+                        ),
+                        name = resources.getString(R.string.cpu),
+                        temperature = cpuTemp
                     )
-                }
-
+                )
+                temporaryTempList.add(
+                    TemperatureItem(
+                        iconRes = temperatureIconProvider.getIcon(
+                            TemperatureIconProvider.Type.BATTERY
+                        ),
+                        name = resources.getString(R.string.battery),
+                        temperature = batteryTemp?.toFloat()
+                    )
+                )
                 temperatureListLiveData.replace(temporaryTempList)
             }, Timber::e)
     }

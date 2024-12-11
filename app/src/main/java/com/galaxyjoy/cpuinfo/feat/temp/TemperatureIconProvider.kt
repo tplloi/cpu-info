@@ -10,7 +10,7 @@ import javax.inject.Inject
 class TemperatureIconProvider @Inject constructor() {
 
     enum class Type {
-//        CPU,
+        CPU,
         BATTERY,
     }
 
@@ -19,7 +19,7 @@ class TemperatureIconProvider @Inject constructor() {
      */
     fun getIcon(type: Type): Int =
         when (type) {
-//            Type.CPU -> R.drawable.ic_cpu_temp
+            Type.CPU -> R.drawable.ic_cpu_temp
             Type.BATTERY -> R.drawable.ic_battery
         }
 }

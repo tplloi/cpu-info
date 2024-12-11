@@ -9,5 +9,5 @@ import androidx.annotation.Keep
 data class TemperatureItem(
     val iconRes: Int,
     val name: String,
-    var temperature: Float
+    var temperature: Float?
 )
