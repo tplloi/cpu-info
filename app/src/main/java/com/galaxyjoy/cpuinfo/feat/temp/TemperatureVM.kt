@@ -16,6 +16,11 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
+import kotlin.coroutines.coroutineContext
+import android.content.Context
+import android.os.Build
+import android.util.Log
+import java.io.File
 
 /**
  * ViewModel for [FrmTemperature]
@@ -113,10 +118,7 @@ class TemperatureVM @Inject constructor(
      * Schedule refreshing process (for 3s)
      */
     private fun scheduleRefreshing() {
-        if (refreshingDisposable != null) {
-            refreshingDisposable!!.dispose()
-        }
-
+        refreshingDisposable?.dispose()
         refreshingDisposable = getRefreshingInvoker()
             .map {
                 var batteryTemp: Int? = null
@@ -133,28 +135,25 @@ class TemperatureVM @Inject constructor(
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ (cpuTemp, batteryTemp) ->
                 val temporaryTempList = ArrayList<TemperatureItem>()
-                if (cpuTemp != null) {
-                    temporaryTempList.add(
-                        TemperatureItem(
-                            temperatureIconProvider.getIcon(
-                                TemperatureIconProvider.Type.CPU
-                            ),
-                            resources.getString(R.string.cpu), cpuTemp
-                        )
+//                Log.d("roy93~", "cpuTemp ${cpuTemp}")
+                temporaryTempList.add(
+                    TemperatureItem(
+                        iconRes = temperatureIconProvider.getIcon(
+                            TemperatureIconProvider.Type.CPU
+                        ),
+                        name = resources.getString(R.string.cpu),
+                        temperature = cpuTemp
                     )
-                }
-                if (batteryTemp != null) {
-                    temporaryTempList.add(
-                        TemperatureItem(
-                            temperatureIconProvider.getIcon(
-                                TemperatureIconProvider.Type.BATTERY
-                            ),
-                            resources.getString(R.string.battery),
-                            batteryTemp.toFloat()
-                        )
+                )
+                temporaryTempList.add(
+                    TemperatureItem(
+                        iconRes = temperatureIconProvider.getIcon(
+                            TemperatureIconProvider.Type.BATTERY
+                        ),
+                        name = resources.getString(R.string.battery),
+                        temperature = batteryTemp?.toFloat()
                     )
-                }
-
+                )
                 temperatureListLiveData.replace(temporaryTempList)
             }, Timber::e)
     }

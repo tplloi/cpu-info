@@ -40,7 +40,14 @@ class AdtTemperature(
             with(binding) {
                 temperatureIv.setImageResource(temperatureItem.iconRes)
                 temperatureTypeTv.text = temperatureItem.name
-                temperatureTv.text = temperatureFormatter.format(temperatureItem.temperature)
+                if (temperatureItem.temperature == null) {
+                    temperatureTv.text =
+                        "Your device does not support providing the necessary information, so I am unable to retrieve the temperature."
+                } else {
+                    temperatureItem.temperature?.let {
+                        temperatureTv.text = temperatureFormatter.format(it)
+                    }
+                }
             }
         }
     }

@@ -10,7 +10,8 @@ import javax.inject.Inject
 class TemperatureIconProvider @Inject constructor() {
 
     enum class Type {
-        CPU, BATTERY
+        CPU,
+        BATTERY,
     }
 
     /**
