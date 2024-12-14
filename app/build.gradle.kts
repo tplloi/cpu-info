@@ -171,7 +171,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
     implementation("com.google.android.material:material:1.9.0")
-    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.google.code.gson:gson:2.11.0")
     implementation("io.reactivex.rxjava3:rxjava:3.1.6")
     implementation("io.reactivex.rxjava3:rxandroid:3.0.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2")
@@ -179,9 +179,11 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.47")
     kapt("com.google.dagger:hilt-android-compiler:2.47")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    //noinspection KaptUsageInsteadOfKsp
     kapt("com.github.bumptech.glide:compiler:4.16.0")
     implementation("com.airbnb.android:epoxy:5.1.3")
     implementation("com.airbnb.android:epoxy-databinding:5.1.3")
+    //noinspection KaptUsageInsteadOfKsp
     kapt("com.airbnb.android:epoxy-processor:5.1.3")
     implementation("org.greenrobot:eventbus:3.3.1")
     implementation("com.jakewharton.timber:timber:5.0.1")
