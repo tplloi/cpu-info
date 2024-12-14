@@ -13,15 +13,16 @@ kapt {
 
 android {
     namespace = "com.galaxyjoy.cpuinfo"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.galaxyjoy.cpuinfo"
 
         minSdk = 21
-        targetSdk = 34
-        versionCode = 20241211
-        versionName = "2024.12.11"
+        //noinspection EditedTargetSdkVersion
+        targetSdk = 35
+        versionCode = 20241215
+        versionName = "2024.12.15"
 
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled = true

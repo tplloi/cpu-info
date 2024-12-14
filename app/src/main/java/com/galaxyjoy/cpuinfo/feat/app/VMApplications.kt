@@ -39,7 +39,7 @@ import javax.inject.Inject
 class VMApplications @Inject constructor(
     private val dispatchersProvider: DispatchersProvider,
     private val prefs: Prefs,
-    private val packageManager: PackageManager
+    private val packageManager: PackageManager,
 ) : ViewModel() {
 
     companion object {
@@ -192,7 +192,7 @@ class VMApplications @Inject constructor(
         } catch (_: PackageManager.NameNotFoundException) {
             return 0
         }
-        return packageInfo.applicationInfo.icon
+        return packageInfo.applicationInfo?.icon ?: 0
     }
 
     override fun onCleared() {

@@ -20,7 +20,7 @@ import javax.inject.Inject
 class ObservableApplicationsData @Inject constructor(
     dispatchersProvider: DispatchersProvider,
     private val dataProviderApplications: DataProviderApplications,
-    private val packageManager: PackageManager
+    private val packageManager: PackageManager,
 ) : MutableInteractor<ObservableApplicationsData.Params, MyResult<List<ExtendedApplicationData>>>() {
 
     override val dispatcher = dispatchersProvider.io
@@ -79,11 +79,11 @@ class ObservableApplicationsData @Inject constructor(
         } catch (_: PackageManager.NameNotFoundException) {
             return 0
         }
-        return packageInfo.applicationInfo.icon
+        return packageInfo.applicationInfo?.icon ?: 0
     }
 
     data class Params(
         val withSystemApps: Boolean,
-        val sortOrder: SortOrder = SortOrder.NONE
+        val sortOrder: SortOrder = SortOrder.NONE,
     )
 }
