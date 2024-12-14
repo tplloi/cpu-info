@@ -186,7 +186,7 @@ dependencies {
     implementation("org.greenrobot:eventbus:3.3.1")
     implementation("com.jakewharton.timber:timber:5.0.1")
     implementation("com.getkeepsafe.relinker:relinker:1.4.5")
-    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation("io.coil-kt:coil-compose:2.7.0")
     implementation("com.applovin:applovin-sdk:13.0.1")
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.14")
 
