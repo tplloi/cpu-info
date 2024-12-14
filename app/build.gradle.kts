@@ -205,4 +205,6 @@ dependencies {
 //    androidTestImplementation(Libs.Hilt.androidTesting)
 //    kaptAndroidTest(Libs.Hilt.androidCompiler)
 //    androidTestUtil(Libs.AndroidX.Test.orchestrator)
+    implementation("com.google.android.play:review:2.0.2")
+    implementation("com.google.android.play:review-ktx:2.0.2")
 }
