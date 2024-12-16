@@ -26,7 +26,6 @@ open class BaseActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             enableAdaptiveRefreshRate()
         }
-        rateAppInApp(BuildConfig.DEBUG)
     }
 
     private fun enableAdaptiveRefreshRate() {
@@ -53,6 +52,7 @@ open class BaseActivity : AppCompatActivity() {
     }
 }
 
+//rateAppInApp(BuildConfig.DEBUG)
 fun Activity.rateAppInApp(forceRateInApp: Boolean = false) {
     //import gradle app
 //    implementation("com.google.android.play:review:2.0.2")

@@ -3,13 +3,16 @@ package com.galaxyjoy.cpuinfo.feat
 import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.galaxyjoy.cpuinfo.BaseActivity
+import com.galaxyjoy.cpuinfo.BuildConfig
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.ActHostLayoutBinding
+import com.galaxyjoy.cpuinfo.rateAppInApp
 import com.galaxyjoy.cpuinfo.util.runOnApiAbove
 import com.galaxyjoy.cpuinfo.util.setupEdgeToEdge
 import dagger.hilt.android.AndroidEntryPoint
@@ -45,6 +48,8 @@ class ActHost : BaseActivity() {
                 .navController
         navController.addOnDestinationChangedListener { _, destination, _ ->
             setToolbarTitleAndElevation(destination.label.toString())
+//            Log.d("roy93~", "addOnDestinationChangedListener ${destination.label.toString()}")
+            rateAppInApp(BuildConfig.DEBUG)
         }
         binding.bottomNavigation.apply {
             setupWithNavController(navController)
