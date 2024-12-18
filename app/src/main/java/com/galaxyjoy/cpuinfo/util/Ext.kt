@@ -5,9 +5,11 @@ package com.galaxyjoy.cpuinfo.util
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.IdRes
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
@@ -93,15 +95,18 @@ fun Activity.uninstallApp(packageName: String) {
  * !Warning! It will control only top/left/right insets. Register your own one for bottom ones.
  */
 fun Activity.setupEdgeToEdge(
-    @IdRes containerId: Int = android.R.id.content
+    @IdRes containerId: Int = android.R.id.content,
 ) {
+//    window.setBackgroundDrawable(ColorDrawable(android.graphics.Color.RED))
+    window.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.status_bar)))
     WindowCompat.setDecorFitsSystemWindows(window, false)
     ViewCompat.setOnApplyWindowInsetsListener(findViewById(containerId)) { v, insets ->
         val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
         v.updatePadding(
             top = systemInsets.top,
             left = systemInsets.left,
-            right = systemInsets.right
+            right = systemInsets.right,
+            bottom = 0,
         )
         insets
     }

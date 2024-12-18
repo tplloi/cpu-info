@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.enableEdgeToEdge
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -31,6 +32,7 @@ class ActHost : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.act_host_layout)
         setupEdgeToEdge()
+//        enableEdgeToEdge()
         setupNavigation()
         setSupportActionBar(binding.toolbar)
         runOnApiAbove(Build.VERSION_CODES.M) {
