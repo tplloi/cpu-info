@@ -21,8 +21,8 @@ android {
         minSdk = 21
         //noinspection EditedTargetSdkVersion
         targetSdk = 35
-        versionCode = 20241218
-        versionName = "2024.12.18"
+        versionCode = 20241221
+        versionName = "2024.12.21"
 
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled = true
