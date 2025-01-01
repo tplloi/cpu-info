@@ -2,6 +2,7 @@ package com.galaxyjoy.cpuinfo
 
 import androidx.multidex.MultiDexApplication
 import com.galaxyjoy.cpuinfo.appinitializers.InitializersApp
+import com.galaxyjoy.cpuinfo.ext.setupApplovinAd
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 
@@ -36,7 +37,7 @@ class GalaxyApp : MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
-
+        this.setupApplovinAd()
         initializers.init(this)
     }
 }

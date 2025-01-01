@@ -3,16 +3,17 @@ package com.galaxyjoy.cpuinfo.feat
 import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.enableEdgeToEdge
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.applovin.mediation.ads.MaxAdView
 import com.galaxyjoy.cpuinfo.BaseActivity
 import com.galaxyjoy.cpuinfo.BuildConfig
 import com.galaxyjoy.cpuinfo.R
 import com.galaxyjoy.cpuinfo.databinding.ActHostLayoutBinding
+import com.galaxyjoy.cpuinfo.ext.createAdBanner
+import com.galaxyjoy.cpuinfo.ext.destroyAdBanner
 import com.galaxyjoy.cpuinfo.rateAppInApp
 import com.galaxyjoy.cpuinfo.util.runOnApiAbove
 import com.galaxyjoy.cpuinfo.util.setupEdgeToEdge
@@ -26,6 +27,7 @@ class ActHost : BaseActivity() {
 
     private lateinit var navController: NavController
     private lateinit var binding: ActHostLayoutBinding
+    private var adView: MaxAdView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppThemeBase)
@@ -40,6 +42,12 @@ class ActHost : BaseActivity() {
             val menu = binding.bottomNavigation.menu
             menu.findItem(R.id.menuProcesses).isVisible = false
         }
+
+        adView = this.createAdBanner(
+            logTag = ActHost::class.simpleName,
+            viewGroup = binding.flAd,
+            isAdaptiveBanner = true,
+        )
     }
 
     override fun onSupportNavigateUp() = navController.navigateUp()
@@ -73,5 +81,12 @@ class ActHost : BaseActivity() {
         } else {
             binding.toolbar.elevation = resources.getDimension(R.dimen.elevation_height)
         }
+    }
+
+    override fun onDestroy() {
+        with(binding) {
+            flAd.destroyAdBanner(adView)
+        }
+        super.onDestroy()
     }
 }
