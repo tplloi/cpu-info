@@ -21,8 +21,8 @@ android {
         minSdk = 21
         //noinspection EditedTargetSdkVersion
         targetSdk = 35
-        versionCode = 20241221
-        versionName = "2024.12.21"
+        versionCode = 20250101
+        versionName = "2025.01.01"
 
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled = true
@@ -122,8 +122,8 @@ android {
                 "SDK_KEY",
                 "e75FnQfS9XTTqM1Kne69U7PW_MBgAnGQTFvtwVVui6kRPKs5L7ws9twr5IQWwVfzPKZ5pF2IfDa7lguMgGlCyt"
             )
-            resValue("string", "BANNER", "xxx")
-            resValue("string", "INTER", "xxx")
+            resValue("string", "BANNER", "b568752d68ca93f8")
+            resValue("string", "INTER", "5ce404d8a94fa941")
 
             resValue("string", "EnableAdInter", "true")
             resValue("string", "EnableAdBanner", "true")
@@ -136,8 +136,8 @@ android {
                 "SDK_KEY",
                 "e75FnQfS9XTTqM1Kne69U7PW_MBgAnGQTFvtwVVui6kRPKs5L7ws9twr5IQWwVfzPKZ5pF2IfDa7lguMgGlCyt"
             )
-            resValue("string", "BANNER", "xxx")
-            resValue("string", "INTER", "xxx")
+            resValue("string", "BANNER", "b568752d68ca93f8")
+            resValue("string", "INTER", "5ce404d8a94fa941")
 
             resValue("string", "EnableAdInter", "true")
             resValue("string", "EnableAdBanner", "true")
